@@ -25,7 +25,7 @@
 #import <Foundation/Foundation.h>
 
 #import "HNKHttpSessionManager.h"
-#import "HNKWordLookupFetcher.h"
+#import "HNKLookup.h"
 #import "HNKRandomWord.h"
 #import "HNKWordDefinition.h"
 #import "HNKWordOfTheDay.h"

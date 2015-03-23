@@ -1,5 +1,5 @@
 //
-//  HNKWordLookupFetcher.h
+//  HNKLookup.h
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -26,7 +26,7 @@
 
 @class HNKWordOfTheDay;
 
-@interface HNKWordLookupFetcher : NSObject
+@interface HNKLookup : NSObject
 
 #pragma mark - Initialization
 
@@ -36,7 +36,7 @@
 + (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey;
 
 /**
- * Returns shared HNKWordLookupFetcher instance
+ * Returns shared HNKLookup instance
  */
 + (instancetype)sharedInstance;
 

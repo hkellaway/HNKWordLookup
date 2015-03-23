@@ -20,8 +20,12 @@ DESC
   s.subspec 'Models' do |ss|
     ss.source_files = 'Pod/Classes/Models/*.{h,m}'
 
+    ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+  end
+
   s.subspec 'Utility' do |ss|
     ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+  end
 
   # s.resources = 'Pod/Assets/*.png'  
   
