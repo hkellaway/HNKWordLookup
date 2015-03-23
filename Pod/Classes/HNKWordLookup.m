@@ -1,9 +1,25 @@
 //
 //  HNKDataSource.m
-//  HNKWordLookup
 //
-//  Created by Harlan Kellaway on 3/15/15.
-//  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
+// Copyright (c) 2015 Harlan Kellaway
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 //
 
 #import "HNKWordLookup.h"
@@ -26,10 +42,9 @@ static NSString *const kBaseUrl = @"http://api.wordnik.com:80/v4";
 
 #pragma mark - Initialization
 
-static HNKWordLookup *sharedInstance = nil;
+static HNKWordLookup * sharedInstance = nil;
 
-+ (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey
-{
++ (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey {
 	static dispatch_once_t onceToken;
 
 	dispatch_once(&onceToken, ^{
@@ -39,8 +54,7 @@ static HNKWordLookup *sharedInstance = nil;
 	return sharedInstance;
 }
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
 	if (sharedInstance == nil) {
 		NSAssert(FALSE, @"sharedInstance should not be called before sharedInstanceWithAPIKey");
 	}
@@ -48,8 +62,7 @@ static HNKWordLookup *sharedInstance = nil;
 	return sharedInstance;
 }
 
-- (instancetype)initWithAPIKey:(NSString *)apiKey
-{
+- (instancetype)initWithAPIKey:(NSString *)apiKey {
 	self = [super init];
 
 	if (self) {
@@ -64,124 +77,113 @@ static HNKWordLookup *sharedInstance = nil;
 
 #pragma mark - Lookups
 
-- (NSUInteger)definitionsForWord:(NSString *)word withCompletion:(void (^)(NSArray *, NSError *))completion
-{
+- (NSUInteger)definitionsForWord:(NSString *)word withCompletion:(void (^)(NSArray *, NSError *))completion {
 	return [HNKHttpSessionManager definitionsForWord:word apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                       id responseObject,
 	                                                                                       NSError *error) {
-	                if(error) {
-	                        completion(nil, error);
-	                        return;
-			}
+	    if (error) {
+	        completion(nil, error);
+	        return;
+		}
 
-	                NSError *parseError = nil;
-	                NSArray *definitions = [self modelsOfClass:[HNKWordDefinition class] fromObjectNotation:responseObject error:&parseError];
+	    NSError *parseError = nil;
+	    NSArray *definitions = [self modelsOfClass:[HNKWordDefinition class] fromObjectNotation:responseObject error:&parseError];
 
-	                if (parseError) {
-	                        completion(nil, parseError);
-	                        return;
-			}
-	                else {
-	                        completion(definitions, nil);
-			}
-		}];
+	    if (parseError) {
+	        completion(nil, parseError);
+	        return;
+		}
+	    else {
+	        completion(definitions, nil);
+		}
+	}];
 }
 
-- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech completion:(void (^)(NSArray *, NSError *))completion
-{
-	return [self definitionsForWord:word withCompletion:^(NSArray *definitions, NSError *error) {
-	                if(error) {
-	                        completion(nil, error);
-	                        return;
-			}
+- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
+	return [self definitionsForWord:word withCompletion: ^(NSArray *definitions, NSError *error) {
+	    if (error) {
+	        completion(nil, error);
+	        return;
+		}
 
-	                completion([self definitions:definitions filteredByPartOfSpeech:partOfSpeech], nil);
-
-		}];
+	    completion([self definitions:definitions filteredByPartOfSpeech:partOfSpeech], nil);
+	}];
 }
 
-- (NSUInteger)pronunciationsForWord:(NSString *)word completion:(void (^)(NSArray *, NSError *))completion
-{
+- (NSUInteger)pronunciationsForWord:(NSString *)word completion:(void (^)(NSArray *, NSError *))completion {
 	return [HNKHttpSessionManager pronunciationsForWord:word apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                          id responseObject,
 	                                                                                          NSError *error) {
-	                if(error) {
-	                        completion(nil, error);
-	                        return;
-			}
+	    if (error) {
+	        completion(nil, error);
+	        return;
+		}
 
-	                NSError *parseError = nil;
-	                NSArray *pronunciations = [self modelsOfClass:[HNKWordPronunciation class] fromObjectNotation:responseObject error:&parseError];
+	    NSError *parseError = nil;
+	    NSArray *pronunciations = [self modelsOfClass:[HNKWordPronunciation class] fromObjectNotation:responseObject error:&parseError];
 
-	                if (parseError) {
-	                        completion(nil, parseError);
-	                        return;
-			}
-	                else {
-	                        completion(pronunciations, nil);
-			}
-		}];
-
+	    if (parseError) {
+	        completion(nil, parseError);
+	        return;
+		}
+	    else {
+	        completion(pronunciations, nil);
+		}
+	}];
 }
 
-- (NSUInteger)randomWordWithCompletion:(void (^)(NSString *, NSError *))completion
-{
+- (NSUInteger)randomWordWithCompletion:(void (^)(NSString *, NSError *))completion {
 	return [HNKHttpSessionManager randomWordWithApiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                             id responseObject,
 	                                                                             NSError *error) {
-	                if(error) {
-	                        completion(nil, error);
-	                        return;
-			}
+	    if (error) {
+	        completion(nil, error);
+	        return;
+		}
 
-	                NSAssert([responseObject isKindOfClass:[NSDictionary class]],
-	                         @"Random word object should be a dictionary");
+	    NSAssert([responseObject isKindOfClass:[NSDictionary class]],
+	             @"Random word object should be a dictionary");
 
-	                NSString *randomWord = [responseObject valueForKey:@"word"];
-	                completion(randomWord, nil);
-
-		}];
+	    NSString *randomWord = [responseObject valueForKey:@"word"];
+	    completion(randomWord, nil);
+	}];
 }
 
-- (NSUInteger)wordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *, NSError *))completion
-{
+- (NSUInteger)wordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *, NSError *))completion {
 	return [self wordOfTheDayForDate:[NSDate date] completion:completion];
 }
 
-- (NSUInteger)wordOfTheDayForDate:(NSDate *)date completion:(void (^)(HNKWordOfTheDay *, NSError *))completion
-{
+- (NSUInteger)wordOfTheDayForDate:(NSDate *)date completion:(void (^)(HNKWordOfTheDay *, NSError *))completion {
 	NSAssert(date <= [NSDate date], @"Provided date should not be in the future.");
 
 	return [HNKHttpSessionManager wordOfTheDayForDate:date apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                        id responseObject,
 	                                                                                        NSError *error) {
-	                if(error) {
-	                        completion(nil, error);
-	                        return;
-			}
+	    if (error) {
+	        completion(nil, error);
+	        return;
+		}
 
-	                NSError *parseError = nil;
-	                NSArray *modelsOfClass = [self modelsOfClass:[HNKWordOfTheDay class] fromObjectNotation:responseObject error:&parseError];
+	    NSError *parseError = nil;
+	    NSArray *modelsOfClass = [self modelsOfClass:[HNKWordOfTheDay class] fromObjectNotation:responseObject error:&parseError];
 
-	                NSAssert([modelsOfClass count] == 1, @"Word of the Day should only return one object");
+	    NSAssert([modelsOfClass count] == 1, @"Word of the Day should only return one object");
 
-	                HNKWordOfTheDay *wordOfTheDay = (HNKWordOfTheDay *)[modelsOfClass objectAtIndex:0];
+	    HNKWordOfTheDay *wordOfTheDay = (HNKWordOfTheDay *)[modelsOfClass objectAtIndex:0];
 
-	                if (parseError) {
-	                        completion(nil, parseError);
-	                        return;
-			}
-	                else {
-	                        completion(wordOfTheDay, nil);
-			}
-
-		}];
+	    if (parseError) {
+	        completion(nil, parseError);
+	        return;
+		}
+	    else {
+	        completion(wordOfTheDay, nil);
+		}
+	}];
 }
 
 #pragma mark - Helpers
 
-- (NSArray *)modelsOfClass:(Class)modelClass fromObjectNotation:(id)objectNotation error:(NSError **)error
-{
+- (NSArray *)modelsOfClass:(Class)modelClass fromObjectNotation:(id)objectNotation error:(NSError **)error {
 	NSAssert([objectNotation isKindOfClass:[NSArray class]] || [objectNotation isKindOfClass:[NSDictionary class]],
 	         @"Generic objects should be arrays or dictionaries");
 
@@ -190,20 +192,21 @@ static HNKWordLookup *sharedInstance = nil;
 
 	if ([objectNotation isKindOfClass:[NSArray class]]) {
 		parsedModelOfClass = [MTLJSONAdapter modelsOfClass:modelClass
-		                      fromJSONArray:objectNotation
-		                      error:&mantleError];
+		                                     fromJSONArray:objectNotation
+		                                             error:&mantleError];
 	}
 	else if ([objectNotation isKindOfClass:[NSDictionary class]]) {
 		parsedModelOfClass = [MTLJSONAdapter modelOfClass:modelClass
-		                      fromJSONDictionary:objectNotation
-		                      error:&mantleError];
+		                               fromJSONDictionary:objectNotation
+		                                            error:&mantleError];
 	}
 
-	if(mantleError) {
+	if (mantleError) {
 		*error = mantleError;
 		return nil;
-	} else {
-		if(![parsedModelOfClass isKindOfClass:[NSArray class]]) {
+	}
+	else {
+		if (![parsedModelOfClass isKindOfClass:[NSArray class]]) {
 			return [NSArray arrayWithObject:parsedModelOfClass];
 		}
 
@@ -211,12 +214,11 @@ static HNKWordLookup *sharedInstance = nil;
 	}
 }
 
-- (NSArray *)definitions:(NSArray *)definitions filteredByPartOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech
-{
+- (NSArray *)definitions:(NSArray *)definitions filteredByPartOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech {
 	NSMutableArray *filteredDefinitions = [NSMutableArray array];
 
-	for(HNKWordDefinition *definition in definitions) {
-		if([self isDefinition:definition partOfSpeech:partOfSpeech]) {
+	for (HNKWordDefinition *definition in definitions) {
+		if ([self isDefinition:definition partOfSpeech:partOfSpeech]) {
 			[filteredDefinitions addObject:definition];
 		}
 	}
@@ -224,11 +226,10 @@ static HNKWordLookup *sharedInstance = nil;
 	return [filteredDefinitions copy];
 }
 
-- (BOOL)isDefinition:(HNKWordDefinition *)definition partOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech
-{
-	for(int p = HNKWordDefinitionPartOfSpeechAbbreviation; p <= HNKWordDefinitionPartOfSpeechVerbTransitive; p *= 2) {
-		if([self isPartOfSpeech:p includedIn:partOfSpeech]) {
-			if(definition.partOfSpeech == p) {
+- (BOOL)isDefinition:(HNKWordDefinition *)definition partOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech {
+	for (int p = HNKWordDefinitionPartOfSpeechAbbreviation; p <= HNKWordDefinitionPartOfSpeechVerbTransitive; p *= 2) {
+		if ([self isPartOfSpeech:p includedIn:partOfSpeech]) {
+			if (definition.partOfSpeech == p) {
 				return YES;
 			}
 		}
@@ -237,8 +238,7 @@ static HNKWordLookup *sharedInstance = nil;
 	return NO;
 }
 
-- (BOOL)isPartOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech includedIn:(HNKWordDefinitionPartOfSpeech)partOfSpeechList
-{
+- (BOOL)isPartOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech includedIn:(HNKWordDefinitionPartOfSpeech)partOfSpeechList {
 	return (partOfSpeech | partOfSpeechList) == partOfSpeechList;
 }
 

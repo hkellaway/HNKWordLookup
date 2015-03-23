@@ -1,3 +1,3 @@
 # HNKWordLookup
 
-https://raw.githubusercontent.com/CocoaPods/Specs/2abfb87cb831e832dd7ac90f25f81a2e9760e72a/Specs/HNKWordLookup/0.1.0/HNKWordLookup.podspec.json
+https://raw.githubusercontent.com/CocoaPods/Specs/0e2fd3059891f351e35d320002b6a8bfd6f617b9/Specs/HNKWordLookup/0.2.0/HNKWordLookup.podspec.json
