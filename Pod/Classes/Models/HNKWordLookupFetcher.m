@@ -1,5 +1,5 @@
 //
-//  HNKDataSource.m
+//  HNKWordLookupFetcher.m
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordLookup.h"
+#import "HNKWordLookupFetcher.m"
 #import "HNKHttpSessionManager.h"
 #import "HNKWordDefinition.h"
 #import "HNKWordOfTheDay.h"
@@ -32,17 +32,17 @@
 
 static NSString *const kBaseUrl = @"http://api.wordnik.com:80/v4";
 
-@interface HNKWordLookup ()
+@interface HNKWordLookupFetcher ()
 
 @property (nonatomic, copy) NSString *apiKey;
 
 @end
 
-@implementation HNKWordLookup
+@implementation HNKWordLookupFetcher
 
 #pragma mark - Initialization
 
-static HNKWordLookup * sharedInstance = nil;
+static HNKWordLookupFetcher * sharedInstance = nil;
 
 + (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey {
 	static dispatch_once_t onceToken;
