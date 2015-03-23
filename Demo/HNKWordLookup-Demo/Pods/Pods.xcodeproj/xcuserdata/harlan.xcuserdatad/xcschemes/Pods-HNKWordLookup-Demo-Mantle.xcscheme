@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28D2BEFC3261BA6D1AFACC13"
+               BlueprintIdentifier = "A19308B246F6CCB43E8B0EE6"
                BuildableName = "libPods-HNKWordLookup-Demo-Mantle.a"
                BlueprintName = "Pods-HNKWordLookup-Demo-Mantle"
                ReferencedContainer = "container:Pods.xcodeproj">

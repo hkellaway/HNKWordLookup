@@ -1,1 +1,1 @@
-../../../HNKWordLookup/Pod/Classes/HNKRandomWord.h
+../../../HNKWordLookup/Pod/Classes/Models/HNKRandomWord.h
