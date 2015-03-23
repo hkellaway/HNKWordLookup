@@ -22,8 +22,6 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordDefinition.h"
-#import "HNKWordLookup.h"
 #import "HNKWordOfTheDay.h"
 
 #import "NSDate+HNKAdditions.h"

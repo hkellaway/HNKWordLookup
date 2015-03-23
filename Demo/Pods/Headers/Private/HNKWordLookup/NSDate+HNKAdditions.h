@@ -1,1 +1,1 @@
-../../../HNKWordLookup/Pod/Classes/Utility/NSDate+HNKAdditions.h
+../../../HNKWordLookup/Pod/Classes/NSDate+HNKAdditions.h

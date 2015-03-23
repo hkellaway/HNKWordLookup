@@ -1,1 +1,1 @@
-../../../HNKWordLookup/Pod/Classes/Models/HNKWordPronunciation.h
+../../../HNKWordLookup/Pod/Classes/HNKWordPronunciation.h

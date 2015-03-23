@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "Provides dictionary information about words."
   s.description  = <<-DESC
 Provides dictionary information about words, such as definitions, pronunciations, random words, and word of the day.
@@ -18,13 +18,13 @@ DESC
   s.source_files  = "Pod/Classes/HNKWordLookup.h"
 
   s.subspec 'Models' do |ss|
-    ss.source_files = 'Pod/Classes/Models/*.{h,m}'
+    ss.dependency 'HNKWordLookup/Utility'
 
-    ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+    ss.source_files = 'Pod/Classes/HNKHttpSessionManager.{h,m}', 'Pod/Classes/HNKLookup.{h,m}', 'Pod/Classes/HNKRandomWord.{h,m}', 'Pod/Classes/HNKWordDefinition.{h,m}', 'Pod/Classes/HNKWordOfTheDay.{h,m}', 'Pod/Classes/HNKWordPronunciation.{h,m}'
   end
 
   s.subspec 'Utility' do |ss|
-    ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+    ss.source_files = 'Pod/Classes/NSDate+HNKAdditions.{h,m}'
   end
 
   # s.resources = 'Pod/Assets/*.png'  
