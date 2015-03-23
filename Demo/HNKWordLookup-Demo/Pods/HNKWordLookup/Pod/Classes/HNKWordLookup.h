@@ -1,25 +1,9 @@
 //
 //  HNKDataSource.h
+//  HNKWordLookup
 //
-// Copyright (c) 2015 Harlan Kellaway
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  Created by Harlan Kellaway on 3/15/15.
+//  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
 #import "HNKWordDefinition.h"
@@ -33,7 +17,7 @@
 /**
  *  Sets up shared HNKWordLookup instance with provided API key
  */
-+ (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey;
++(instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey;
 
 /**
  * Returns shared HNKWordLookup instance
@@ -51,8 +35,8 @@
  *  @return Identifier for this request
  */
 - (NSUInteger)definitionsForWord:(NSString *)word
-                  withCompletion:(void (^)(NSArray *definitions,
-                             NSError *error))completion;
+        withCompletion:(void (^)(NSArray *definitions,
+                                 NSError *error))completion;
 
 /**
  *  Retrieves an array of definitions with only the specified part of speech
@@ -64,9 +48,9 @@
  *  @return Identifier for this request
  */
 - (NSUInteger)definitionsForWord:(NSString *)word
-               withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech
-                      completion:(void (^)(NSArray *definitions,
-                         NSError *error))completion;
+        withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech
+        completion:(void (^)(NSArray *definitions,
+                             NSError *error))completion;
 
 /**
  *  Retrieves an array of pronunciations
@@ -77,8 +61,8 @@
  *  @return Identifier for this request
  */
 - (NSUInteger)pronunciationsForWord:(NSString *)word
-                         completion:(void (^)(NSArray *pronunciations,
-                         NSError *error))completion;
+        completion:(void (^)(NSArray *pronunciations,
+                             NSError *error))completion;
 
 /**
  *  Retrieves a random word
@@ -109,7 +93,7 @@
  *  @return Identifier for this request
  */
 - (NSUInteger)wordOfTheDayForDate:(NSDate *)date
-                       completion:(void (^)(HNKWordOfTheDay *wordOfTheDay,
-                         NSError *error))completion;
+        completion:(void (^)(HNKWordOfTheDay *wordOfTheDay,
+                             NSError *error))completion;
 
 @end

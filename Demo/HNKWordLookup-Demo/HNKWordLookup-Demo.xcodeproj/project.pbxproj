@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCD8F8D31ABFB3B800E2E7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F8D21ABFB3B800E2E7E8 /* main.m */; };
+		DCD8F8D61ABFB3B800E2E7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F8D51ABFB3B800E2E7E8 /* AppDelegate.m */; };
+		DCD8F8D91ABFB3B800E2E7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F8D81ABFB3B800E2E7E8 /* ViewController.m */; };
+		DCD8F8DC1ABFB3B800E2E7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F8DA1ABFB3B800E2E7E8 /* Main.storyboard */; };
+		DCD8F8DE1ABFB3B800E2E7E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F8DD1ABFB3B800E2E7E8 /* Images.xcassets */; };
+		DCD8F8E11ABFB3B800E2E7E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F8DF1ABFB3B800E2E7E8 /* LaunchScreen.xib */; };
+		DCD8F8ED1ABFB3B800E2E7E8 /* HNKWordLookup_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F8EC1ABFB3B800E2E7E8 /* HNKWordLookup_DemoTests.m */; };
+		DF09AEF2FD1BEABEDA1DFDF6 /* libPods-HNKWordLookup-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B327487A8081A5BDA293E8DB /* libPods-HNKWordLookup-Demo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCD8F8E71ABFB3B800E2E7E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCD8F8C51ABFB3B800E2E7E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCD8F8CC1ABFB3B800E2E7E8;
+			remoteInfo = "HNKWordLookup-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04032A942617320A23A0B134 /* Pods-HNKWordLookup-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		49CD0A289FC8C721E262B718 /* Pods-HNKWordLookup-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		B327487A8081A5BDA293E8DB /* libPods-HNKWordLookup-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HNKWordLookup-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD8F8CD1ABFB3B800E2E7E8 /* HNKWordLookup-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HNKWordLookup-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD8F8D11ABFB3B800E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD8F8D21ABFB3B800E2E7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCD8F8D41ABFB3B800E2E7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCD8F8D51ABFB3B800E2E7E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCD8F8D71ABFB3B800E2E7E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCD8F8D81ABFB3B800E2E7E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCD8F8DB1ABFB3B800E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCD8F8DD1ABFB3B800E2E7E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCD8F8E01ABFB3B800E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCD8F8E61ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HNKWordLookup-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD8F8EB1ABFB3B800E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD8F8EC1ABFB3B800E2E7E8 /* HNKWordLookup_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNKWordLookup_DemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCD8F8CA1ABFB3B800E2E7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF09AEF2FD1BEABEDA1DFDF6 /* libPods-HNKWordLookup-Demo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD8F8E31ABFB3B800E2E7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EEBA3DE0EB5A7BD4FCFBA4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49CD0A289FC8C721E262B718 /* Pods-HNKWordLookup-Demo.debug.xcconfig */,
+				04032A942617320A23A0B134 /* Pods-HNKWordLookup-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77E747DC611B922387107FC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B327487A8081A5BDA293E8DB /* libPods-HNKWordLookup-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCD8F8C41ABFB3B800E2E7E8 = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8CF1ABFB3B800E2E7E8 /* HNKWordLookup-Demo */,
+				DCD8F8E91ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests */,
+				DCD8F8CE1ABFB3B800E2E7E8 /* Products */,
+				2EEBA3DE0EB5A7BD4FCFBA4F /* Pods */,
+				77E747DC611B922387107FC8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DCD8F8CE1ABFB3B800E2E7E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8CD1ABFB3B800E2E7E8 /* HNKWordLookup-Demo.app */,
+				DCD8F8E61ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCD8F8CF1ABFB3B800E2E7E8 /* HNKWordLookup-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8D41ABFB3B800E2E7E8 /* AppDelegate.h */,
+				DCD8F8D51ABFB3B800E2E7E8 /* AppDelegate.m */,
+				DCD8F8D71ABFB3B800E2E7E8 /* ViewController.h */,
+				DCD8F8D81ABFB3B800E2E7E8 /* ViewController.m */,
+				DCD8F8DA1ABFB3B800E2E7E8 /* Main.storyboard */,
+				DCD8F8DD1ABFB3B800E2E7E8 /* Images.xcassets */,
+				DCD8F8DF1ABFB3B800E2E7E8 /* LaunchScreen.xib */,
+				DCD8F8D01ABFB3B800E2E7E8 /* Supporting Files */,
+			);
+			path = "HNKWordLookup-Demo";
+			sourceTree = "<group>";
+		};
+		DCD8F8D01ABFB3B800E2E7E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8D11ABFB3B800E2E7E8 /* Info.plist */,
+				DCD8F8D21ABFB3B800E2E7E8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCD8F8E91ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8EC1ABFB3B800E2E7E8 /* HNKWordLookup_DemoTests.m */,
+				DCD8F8EA1ABFB3B800E2E7E8 /* Supporting Files */,
+			);
+			path = "HNKWordLookup-DemoTests";
+			sourceTree = "<group>";
+		};
+		DCD8F8EA1ABFB3B800E2E7E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8F8EB1ABFB3B800E2E7E8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCD8F8CC1ABFB3B800E2E7E8 /* HNKWordLookup-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD8F8F01ABFB3B800E2E7E8 /* Build configuration list for PBXNativeTarget "HNKWordLookup-Demo" */;
+			buildPhases = (
+				DB28DEAEDD0CB1B9EC1137EC /* Check Pods Manifest.lock */,
+				DCD8F8C91ABFB3B800E2E7E8 /* Sources */,
+				DCD8F8CA1ABFB3B800E2E7E8 /* Frameworks */,
+				DCD8F8CB1ABFB3B800E2E7E8 /* Resources */,
+				A3F576AD6FFDAFB6C8A3ECF6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HNKWordLookup-Demo";
+			productName = "HNKWordLookup-Demo";
+			productReference = DCD8F8CD1ABFB3B800E2E7E8 /* HNKWordLookup-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCD8F8E51ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD8F8F31ABFB3B800E2E7E8 /* Build configuration list for PBXNativeTarget "HNKWordLookup-DemoTests" */;
+			buildPhases = (
+				DCD8F8E21ABFB3B800E2E7E8 /* Sources */,
+				DCD8F8E31ABFB3B800E2E7E8 /* Frameworks */,
+				DCD8F8E41ABFB3B800E2E7E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCD8F8E81ABFB3B800E2E7E8 /* PBXTargetDependency */,
+			);
+			name = "HNKWordLookup-DemoTests";
+			productName = "HNKWordLookup-DemoTests";
+			productReference = DCD8F8E61ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCD8F8C51ABFB3B800E2E7E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HNK;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Harlan Kellaway";
+				TargetAttributes = {
+					DCD8F8CC1ABFB3B800E2E7E8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					DCD8F8E51ABFB3B800E2E7E8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = DCD8F8CC1ABFB3B800E2E7E8;
+					};
+				};
+			};
+			buildConfigurationList = DCD8F8C81ABFB3B800E2E7E8 /* Build configuration list for PBXProject "HNKWordLookup-Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCD8F8C41ABFB3B800E2E7E8;
+			productRefGroup = DCD8F8CE1ABFB3B800E2E7E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCD8F8CC1ABFB3B800E2E7E8 /* HNKWordLookup-Demo */,
+				DCD8F8E51ABFB3B800E2E7E8 /* HNKWordLookup-DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCD8F8CB1ABFB3B800E2E7E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD8F8DC1ABFB3B800E2E7E8 /* Main.storyboard in Resources */,
+				DCD8F8E11ABFB3B800E2E7E8 /* LaunchScreen.xib in Resources */,
+				DCD8F8DE1ABFB3B800E2E7E8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD8F8E41ABFB3B800E2E7E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3F576AD6FFDAFB6C8A3ECF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB28DEAEDD0CB1B9EC1137EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCD8F8C91ABFB3B800E2E7E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD8F8D91ABFB3B800E2E7E8 /* ViewController.m in Sources */,
+				DCD8F8D61ABFB3B800E2E7E8 /* AppDelegate.m in Sources */,
+				DCD8F8D31ABFB3B800E2E7E8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD8F8E21ABFB3B800E2E7E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD8F8ED1ABFB3B800E2E7E8 /* HNKWordLookup_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCD8F8E81ABFB3B800E2E7E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCD8F8CC1ABFB3B800E2E7E8 /* HNKWordLookup-Demo */;
+			targetProxy = DCD8F8E71ABFB3B800E2E7E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCD8F8DA1ABFB3B800E2E7E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD8F8DB1ABFB3B800E2E7E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCD8F8DF1ABFB3B800E2E7E8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD8F8E01ABFB3B800E2E7E8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCD8F8EE1ABFB3B800E2E7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCD8F8EF1ABFB3B800E2E7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCD8F8F11ABFB3B800E2E7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49CD0A289FC8C721E262B718 /* Pods-HNKWordLookup-Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "HNKWordLookup-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCD8F8F21ABFB3B800E2E7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04032A942617320A23A0B134 /* Pods-HNKWordLookup-Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "HNKWordLookup-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCD8F8F41ABFB3B800E2E7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HNKWordLookup-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HNKWordLookup-Demo.app/HNKWordLookup-Demo";
+			};
+			name = Debug;
+		};
+		DCD8F8F51ABFB3B800E2E7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HNKWordLookup-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HNKWordLookup-Demo.app/HNKWordLookup-Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCD8F8C81ABFB3B800E2E7E8 /* Build configuration list for PBXProject "HNKWordLookup-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD8F8EE1ABFB3B800E2E7E8 /* Debug */,
+				DCD8F8EF1ABFB3B800E2E7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD8F8F01ABFB3B800E2E7E8 /* Build configuration list for PBXNativeTarget "HNKWordLookup-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD8F8F11ABFB3B800E2E7E8 /* Debug */,
+				DCD8F8F21ABFB3B800E2E7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD8F8F31ABFB3B800E2E7E8 /* Build configuration list for PBXNativeTarget "HNKWordLookup-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD8F8F41ABFB3B800E2E7E8 /* Debug */,
+				DCD8F8F51ABFB3B800E2E7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCD8F8C51ABFB3B800E2E7E8 /* Project object */;
+}
