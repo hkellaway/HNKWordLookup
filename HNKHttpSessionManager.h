@@ -64,7 +64,7 @@
                                                                              NSError *error) )completion;
 
 /**
- *  Retrieves Word of the Day for the given date
+ *  Retrieves Word of the Day object notation
  *
  *  @param date         Date for which to retrieve the Word of the Day
  *  @param apiKey       API key used in request
