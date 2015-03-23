@@ -1,5 +1,5 @@
 //
-//  HNKDataSource.m
+//  HNKLookup.m
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordLookup.h"
+#import "HNKLookup.h"
 #import "HNKHttpSessionManager.h"
 #import "HNKWordDefinition.h"
 #import "HNKWordOfTheDay.h"
@@ -32,17 +32,17 @@
 
 static NSString *const kBaseUrl = @"http://api.wordnik.com:80/v4";
 
-@interface HNKWordLookup ()
+@interface HNKLookup ()
 
 @property (nonatomic, copy) NSString *apiKey;
 
 @end
 
-@implementation HNKWordLookup
+@implementation HNKLookup
 
 #pragma mark - Initialization
 
-static HNKWordLookup * sharedInstance = nil;
+static HNKLookup * sharedInstance = nil;
 
 + (instancetype)sharedInstanceWithAPIKey:(NSString *)apiKey {
 	static dispatch_once_t onceToken;
@@ -154,7 +154,7 @@ static HNKWordLookup * sharedInstance = nil;
 }
 
 - (NSUInteger)wordOfTheDayForDate:(NSDate *)date completion:(void (^)(HNKWordOfTheDay *, NSError *))completion {
-	NSAssert(date <= [NSDate date], @"Provided date should not be in the future.");
+//	NSAssert(date <= [NSDate date], @"Provided date should not be in the future.");
 
 	return [HNKHttpSessionManager wordOfTheDayForDate:date apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                        id responseObject,
