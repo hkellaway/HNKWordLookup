@@ -1,3 +1,4 @@
 language: objective-c
-xcode_project: Example/HNKWordLookup.xcworkspace
-xcode_scheme: HNKWordLookupTests
+xcode_workspace: Demo/HNKWordLookup-Demo.xcworkspace
+xcode_scheme: HNKWordLookup-DemoTests
+xcode_sdk: iphonesimulator
