@@ -1,1 +1,0 @@
-../../../HNKWordLookup/Pod/Classes/HNKHttpSessionManager.h

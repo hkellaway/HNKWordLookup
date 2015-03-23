@@ -1,0 +1,1 @@
+../../../HNKWordLookup/Pod/Classes/Models/HNKWordOfTheDay.h

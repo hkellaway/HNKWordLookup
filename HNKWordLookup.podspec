@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
-  s.version      = "0.2.0"
+  s.version      = "1.0"
   s.summary      = "Provides dictionary information about words."
   s.description  = <<-DESC
 Provides dictionary information about words, such as definitions, pronunciations, random words, and word of the day.
@@ -15,7 +15,18 @@ DESC
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source_files  = "Pod/Classes"
+  s.source_files  = "Pod/Classes/HNKWordLookup.h"
+
+  s.subspec 'Models' do |ss|
+    ss.source_files = 'Pod/Classes/Models/*.{h,m}'
+
+    ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+  end
+
+  s.subspec 'Utility' do |ss|
+    ss.source_files = 'Pod/Classes/Utility/*.{h,m}'
+  end
+
   # s.resources = 'Pod/Assets/*.png'  
   
   # s.public_header_files = "Classes/**/*.h"

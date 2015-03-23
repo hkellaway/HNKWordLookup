@@ -1,3 +1,7 @@
 language: objective-c
-xcode_project: Example/HNKWordLookup.xcworkspace
-xcode_scheme: HNKWordLookupTests
+install:
+  - brew remove --force xctool
+  - brew install xctool --HEAD
+
+script:
+  - xctool test -workspace Demo/HNKWordLookup-Demo.xcworkspace -scheme HNKWordLookup-Demo -sdk iphonesimulator8.1

@@ -1,5 +1,5 @@
 //
-//  HNKWordOfTheDay.m
+//  NSDate+HNKAdditions.h
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -22,30 +22,37 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordOfTheDay.h"
+#import <Foundation/Foundation.h>
 
-#import "NSDate+HNKAdditions.h"
+@interface NSDate (HNKAdditions)
 
-@implementation HNKWordOfTheDay
+/**
+ *  Returns an Date object given a string representation
+ *
+ *  @param dateString String representing a date
+ *
+ *  @return Date object
+ */
++ (NSDate *)hnk_dateFromString:(NSString *)dateString;
 
-#pragma mark - Protocol conformance
+/**
+ *  Returns a string representation of a Date object
+ *
+ *  @param date Date object
+ *
+ *  @return String representation of a date
+ */
++ (NSString *)hnk_stringFromDate:(NSDate *)date;
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-			   @"word"          : @"word",
-			   @"datePublished" : @"publishDate"
-	};
-}
-
-#pragma mark - Helpers
-
-+ (NSValueTransformer *)datePublishedJSONTransformer {
-	return [MTLValueTransformer reversibleTransformerWithForwardBlock: ^(NSString *str) {
-	    NSDate *date = [NSDate hnk_dateFromString:str];
-	    return date;
-	} reverseBlock: ^(NSDate *date) {
-	    return [NSDate hnk_stringFromDate:date];
-	}];
-}
+/**
+ *  Returns a string in the YYYY-MM-DD format given year, month, and date numbers
+ *
+ *  @param year  Year
+ *  @param month Month
+ *  @param day   Day
+ *
+ *  @return String in YYYY-MM-DD format
+ */
++ (NSString *)hnk_stringFromDateWithYear:(int)year month:(int)month day:(int)day;
 
 @end

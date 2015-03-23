@@ -1,5 +1,5 @@
 //
-//  HNKWordOfTheDay.m
+//  HNKWordOfTheDay.h
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -22,30 +22,13 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordOfTheDay.h"
+#import <Mantle/Mantle.h>
 
-#import "NSDate+HNKAdditions.h"
+@class HNKWordDefinition;
 
-@implementation HNKWordOfTheDay
+@interface HNKWordOfTheDay : MTLModel <MTLJSONSerializing>
 
-#pragma mark - Protocol conformance
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-			   @"word"          : @"word",
-			   @"datePublished" : @"publishDate"
-	};
-}
-
-#pragma mark - Helpers
-
-+ (NSValueTransformer *)datePublishedJSONTransformer {
-	return [MTLValueTransformer reversibleTransformerWithForwardBlock: ^(NSString *str) {
-	    NSDate *date = [NSDate hnk_dateFromString:str];
-	    return date;
-	} reverseBlock: ^(NSDate *date) {
-	    return [NSDate hnk_stringFromDate:date];
-	}];
-}
+@property (nonatomic, strong) NSString *word;
+@property (nonatomic, strong) NSDate *datePublished;
 
 @end

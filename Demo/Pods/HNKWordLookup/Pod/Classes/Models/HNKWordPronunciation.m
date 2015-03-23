@@ -1,5 +1,5 @@
 //
-//  HNKWordOfTheDay.m
+//  HNKWordPronunciation.m
 //
 // Copyright (c) 2015 Harlan Kellaway
 //
@@ -22,30 +22,28 @@
 // THE SOFTWARE.
 //
 
-#import "HNKWordOfTheDay.h"
+#import "HNKWordPronunciation.h"
 
-#import "NSDate+HNKAdditions.h"
-
-@implementation HNKWordOfTheDay
+@implementation HNKWordPronunciation
 
 #pragma mark - Protocol conformance
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
-			   @"word"          : @"word",
-			   @"datePublished" : @"publishDate"
+			   @"pronunciationText"   : @"raw",
+			   @"format"              : @"rawType"
 	};
 }
 
-#pragma mark - Helpers
++ (NSValueTransformer *)formatJSONTransformer {
+	NSDictionary *formatsDictionary = @{
+		@"ahd-legacy"        : @(HNKWordPronunciationFormatAHD),
+		@"arpabet"           : @(HNKWordPronunciationFormatArpabet),
+		@"gcide-diacritical" : @(HNKWordPronunciationFormatGcideDiacritical),
+		@"ipa"               : @(HNKWordPronunciationFormatIPA)
+	};
 
-+ (NSValueTransformer *)datePublishedJSONTransformer {
-	return [MTLValueTransformer reversibleTransformerWithForwardBlock: ^(NSString *str) {
-	    NSDate *date = [NSDate hnk_dateFromString:str];
-	    return date;
-	} reverseBlock: ^(NSDate *date) {
-	    return [NSDate hnk_stringFromDate:date];
-	}];
+	return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:formatsDictionary];
 }
 
 @end
