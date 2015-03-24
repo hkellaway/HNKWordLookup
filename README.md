@@ -1,5 +1,4 @@
 # HNKWordLookup
-=======================================
 
 http://cocoapods.org/pods/HNKWordLookup
 
@@ -34,7 +33,7 @@ pod "HNKWordLookup", "~> 1.0"
 
 ### API Key
 
-HNKWordLookup uses the [Wordnik](http://developer.wordnik.com/docs.html) API to lookup information. You will need a Wornik API key in order to use HNKWordLookup.
+HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to lookup information. You will need a Wornik API key in order to use HNKWordLookup.
 
 * Create a [Wordnik](https://www.wordnik.com/signup) account
 * Once activated, find your API key on your [Settings](https://www.wordnik.com/users/edit) page
@@ -70,7 +69,7 @@ Note: `HNKWordLookup` will not work without first being setup with an API key.
 #### Looking up `definitions`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] definitionsForWord:@"center" completion:^(NSArray *definitions, NSError *error) {
+[[HNKLookup sharedInstance] definitionsForWord:@"center" completion:^(NSArray *definitions, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
@@ -84,7 +83,7 @@ Note: `HNKWordLookup` will not work without first being setup with an API key.
 #### Looking up `definitions` with specific `partsOfSpeech`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] definitionsForWord:@"center" 
+[[HNKLookup sharedInstance] definitionsForWord:@"center" 
                                  withPartsOfSpeech:HNKWordDefinitionPartOfSpeechNoun | HNKWordDefinitionPartOfSpeechVerbTransitive
                                         completion:^(NSArray *definitions, NSError *error) {
     if (error) {
@@ -102,7 +101,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 #### Looking up `pronunciations`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] pronunciationsForWord:@"orange" withCompletion:^(NSArray *pronunciations, NSError *error) {
+[[HNKLookup sharedInstance] pronunciationsForWord:@"orange" completion:^(NSArray *pronunciations, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
@@ -116,7 +115,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 #### Looking up a `randomWord`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
+[[HNKLookup sharedInstance] randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
@@ -128,7 +127,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 #### Looking up the `wordOfTheDay`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
+[[HNKLookup sharedInstance] wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
@@ -140,7 +139,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 #### Looking up the `wordOfTheDay` for a specific `date`
 
 ```objective-c
-[[HNKWordLookup sharedInstance] wordOfTheDayForDate:(NSDate *)date completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
+[[HNKLookup sharedInstance] wordOfTheDayForDate:[NSDate date] completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
