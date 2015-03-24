@@ -1,7 +1,5 @@
 # HNKWordLookup
 
-http://cocoapods.org/pods/HNKWordLookup
-
 [![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
 [![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)]()
@@ -15,7 +13,7 @@ HNKWordLookup is a Cocoapod that helps with standard English-language dictionary
 - If you **have a feature request**, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
 - If you **want to contribute**, [submit a pull request](https://github.com/hkellaway/HNKWordLookup/pulls).
 
-## How To Get Started
+## Getting Started
 
 - [Download HNKWordLookup](https://github.com/hkellaway/HNKWordLookup/archive/master.zip) and try out the included iOS example app
 - Check out the [documentation](http://cocoadocs.org/docsets/HNKWordLookup/) for a more comprehensive look at the classes available in HNKWordLookup
@@ -139,7 +137,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 #### Looking up the `wordOfTheDay` for a specific `date`
 
 ```objective-c
-[[HNKLookup sharedInstance] wordOfTheDayForDate:[NSDate date] completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
+[[HNKLookup sharedInstance] wordOfTheDayForDate:[NSDate dateWithTimeIntervalSince1970:1425196800000] completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
     if (error) {
         NSLog(@"ERROR: %@", error);
     } else {
