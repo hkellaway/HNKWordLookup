@@ -26,6 +26,12 @@
 
 @implementation HNKRandomWord
 
+#pragma mark - Override
+
+- (NSString *)description {
+	return self.word;
+}
+
 #pragma mark - Protocol conformance
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
