@@ -154,8 +154,6 @@ static HNKLookup * sharedInstance = nil;
 }
 
 - (NSUInteger)wordOfTheDayForDate:(NSDate *)date completion:(void (^)(HNKWordOfTheDay *, NSError *))completion {
-//	NSAssert(date <= [NSDate date], @"Provided date should not be in the future.");
-
 	return [HNKHttpSessionManager wordOfTheDayForDate:date apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                        id responseObject,
 	                                                                                        NSError *error) {

@@ -29,7 +29,7 @@
 #pragma mark - Override
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"Pronunciation: %@; Format: %@", self.pronunciationText, self.format];
+	return [NSString stringWithFormat:@"Pronunciation: %@", self.pronunciationText];
 }
 
 #pragma mark - Protocol conformance

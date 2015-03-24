@@ -1,16 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
   s.version      = "1.0.3"
-  s.summary      = "Provides dictionary information about words."
-  s.description  = <<-DESC
-Provides dictionary information about words, such as definitions, pronunciations, random words, and word of the day.
-DESC
-  s.homepage     = "https://github.com/hkellaway/HNKWordLookup"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.summary      = "Helps with standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day."
+  s.homepage     = "http://cocoapods.org/pods/HNKWordLookup"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Harlan Kellaway" => "hello@harlankellaway.com" }
+  s.author       = { "Harlan Kellaway" => "hello@harlankellaway.com" }
   s.source       = { :git => "https://github.com/hkellaway/HNKWordLookup.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITER_USERNAME>'
   
   s.platform     = :ios, "7.0"
   s.requires_arc = true

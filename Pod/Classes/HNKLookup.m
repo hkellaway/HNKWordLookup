@@ -77,7 +77,7 @@ static HNKLookup * sharedInstance = nil;
 
 #pragma mark - Lookups
 
-- (NSUInteger)definitionsForWord:(NSString *)word ompletion:(void (^)(NSArray *, NSError *))completion {
+- (NSUInteger)definitionsForWord:(NSString *)word completion:(void (^)(NSArray *, NSError *))completion {
 	return [HNKHttpSessionManager definitionsForWord:word apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                       id responseObject,
 	                                                                                       NSError *error) {
@@ -100,7 +100,7 @@ static HNKLookup * sharedInstance = nil;
 }
 
 - (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
-	return [self definitionsForWord:word withCompletion: ^(NSArray *definitions, NSError *error) {
+	return [self definitionsForWord:word completion: ^(NSArray *definitions, NSError *error) {
 	    if (error) {
 	        completion(nil, error);
 	        return;
