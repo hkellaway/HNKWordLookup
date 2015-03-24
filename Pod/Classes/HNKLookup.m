@@ -77,7 +77,7 @@ static HNKLookup * sharedInstance = nil;
 
 #pragma mark - Lookups
 
-- (NSUInteger)definitionsForWord:(NSString *)word withCompletion:(void (^)(NSArray *, NSError *))completion {
+- (NSUInteger)definitionsForWord:(NSString *)word ompletion:(void (^)(NSArray *, NSError *))completion {
 	return [HNKHttpSessionManager definitionsForWord:word apiKey:self.apiKey completion: ^(NSURLSessionDataTask *task,
 	                                                                                       id responseObject,
 	                                                                                       NSError *error) {

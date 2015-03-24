@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
-  s.version      = "1.0.1"
+  s.version      = "1.0.3"
   s.summary      = "Provides dictionary information about words."
   s.description  = <<-DESC
 Provides dictionary information about words, such as definitions, pronunciations, random words, and word of the day.
