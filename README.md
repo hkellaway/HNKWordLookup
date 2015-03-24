@@ -1,7 +1,7 @@
 # HNKWordLookup
+=======================================
 
 http://cocoapods.org/pods/HNKWordLookup
-=======================================
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
 [![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE)
@@ -10,16 +10,16 @@ http://cocoapods.org/pods/HNKWordLookup
 
 HNKWordLookup is a Cocoapod that helps with standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
 
+## Communication
+
+- If you **have found a bug**, _and can provide steps to reliably reproduce it_, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
+- If you **have a feature request**, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
+- If you **want to contribute**, [submit a pull request](https://github.com/hkellaway/HNKWordLookup/pulls).
+
 ## How To Get Started
 
 - [Download HNKWordLookup](https://github.com/hkellaway/HNKWordLookup/archive/master.zip) and try out the included iOS example app
 - Check out the [documentation](http://cocoadocs.org/docsets/HNKWordLookup/) for a more comprehensive look at the classes available in HNKWordLookup
-
-## Communication
-
-- If you **found a bug**, _and can provide steps to reliably reproduce it_, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
-- If you **have a feature request**, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
-- If you **want to contribute**, [submit a pull request](https://github.com/hkellaway/HNKWordLookup/pulls).
 
 ### Installation with CocoaPods
 
@@ -32,7 +32,7 @@ platform :ios, '7.0'
 pod "HNKWordLookup", "~> 1.0"
 ```
 
-## API Key
+### API Key
 
 HNKWordLookup uses the [Wordnik](http://developer.wordnik.com/docs.html) API to lookup information. You will need a Wornik API key in order to use HNKWordLookup.
 
@@ -48,17 +48,12 @@ HNKWordLookup uses the [Wordnik](http://developer.wordnik.com/docs.html) API to 
 - `HNKWordPronunciation`
 - `HNKWordOfTheDay`
 - `HNKRandomWord`
-- `HNKHttpSessionManager`
-
-### Utility
-
-- `NSDate+HNKAdditions`
 
 ## Usage
 
 ### Setup
 
-Requests cannot be made without first supplying `HNKWordLookup` with your Wordnik API Key (see [Getting Started](#getting-started)). Once your API key is obtained, you can set `HNKWordLookup` for use by calling `sharedInstanceWithAPIKey` (typically within the `AppDelegate`):
+Requests cannot be made without first supplying `HNKWordLookup` with your Wordnik API Key (see [Getting Started](#getting-started)). Once your API key is obtained, you can setup `HNKWordLookup` for use by calling `sharedInstanceWithAPIKey` (typically within the `AppDelegate`):
 
 ```objective-c
 [HNKWordLookup sharedInstanceWithAPIKey:@"YOUR_API_KEY"];
@@ -70,7 +65,7 @@ Note: `HNKWordLookup` will not work without first being setup with an API key.
 
 ### Lookups
 
-`HNKLookup` is responsible for handling any lookups of information. One [Setup](#setup) is complete, lookup requests can be made to `[HNKLookup sharedInstance]`.
+`HNKLookup` is responsible for handling any lookups of information. Once [Setup](#setup) is complete, lookup requests can be made to `[HNKLookup sharedInstance]`.
 
 #### Looking up `definitions`
 
@@ -130,7 +125,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 }];
 ```
 
-### Looking up the `wordOfTheDay`
+#### Looking up the `wordOfTheDay`
 
 ```objective-c
 [[HNKWordLookup sharedInstance] wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
@@ -142,7 +137,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 }];
 ```
 
-### Looking up the `wordOfTheDay` for a specific `date`
+#### Looking up the `wordOfTheDay` for a specific `date`
 
 ```objective-c
 [[HNKWordLookup sharedInstance] wordOfTheDayForDate:(NSDate *)date completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
@@ -156,7 +151,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 
 ## Credits
 
-HNKWordLookup was created by [Harlan Kellaway](https://github.com/hkellaway/).
+HNKWordLookup was created by [Harlan Kellaway](http://harlankellaway.com).
 
 ## License
 
