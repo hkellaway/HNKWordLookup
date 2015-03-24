@@ -1,3 +1,8 @@
 # HNKWordLookup
 
-https://raw.githubusercontent.com/CocoaPods/Specs/0e2fd3059891f351e35d320002b6a8bfd6f617b9/Specs/HNKWordLookup/0.2.0/HNKWordLookup.podspec.json
+[![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/p/AFNetworking.svg)]()
+[![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
+
+http://cocoapods.org/pods/HNKWordLookup
