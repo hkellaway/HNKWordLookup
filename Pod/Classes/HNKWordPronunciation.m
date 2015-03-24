@@ -26,6 +26,12 @@
 
 @implementation HNKWordPronunciation
 
+#pragma mark - Override
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"Pronunciation: %@", self.pronunciationText];
+}
+
 #pragma mark - Protocol conformance
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
