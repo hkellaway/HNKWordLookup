@@ -27,7 +27,7 @@
 @interface NSDate (HNKAdditions)
 
 /**
- *  Returns an Date object given a string representation
+ *  Returns a Date object given a string representation
  *
  *  @param dateString String representing a date
  *

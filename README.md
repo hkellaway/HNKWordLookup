@@ -38,9 +38,7 @@ HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to 
 * Create a [Wordnik](https://www.wordnik.com/signup) account
 * Once activated, find your API key on your [Settings](https://www.wordnik.com/users/edit) page
 
-## Architecture
-
-### Models
+## Classes
 
 - `HNKLookup`
 - `HNKWordDefinition`

@@ -43,8 +43,6 @@
 	};
 }
 
-#pragma mark - Helpers
-
 + (NSValueTransformer *)datePublishedJSONTransformer {
 	return [MTLValueTransformer reversibleTransformerWithForwardBlock: ^(NSString *str) {
 	    NSDate *date = [NSDate hnk_dateFromString:str];

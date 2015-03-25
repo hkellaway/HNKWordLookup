@@ -10,7 +10,8 @@
 
 #import <HNKWordLookup/HNKWordLookup.h>
 
-static NSString *const kHNKApiKey = @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
+#warning Replace YOUR_API_KEY with your API key
+static NSString *const kHNKApiKey = @"YOUR_API_KEY";
 
 @interface ViewController ()
 
@@ -23,7 +24,7 @@ static NSString *const kHNKApiKey = @"6c178ad0c2380bea5f47519d6924aade3522e60a23
 
 	[HNKLookup sharedInstanceWithAPIKey:kHNKApiKey];
 
-	[[HNKLookup sharedInstance] definitionsForWord:@"center" withCompletion: ^(NSArray *definitions, NSError *error) {
+	[[HNKLookup sharedInstance] definitionsForWord:@"center" completion: ^(NSArray *definitions, NSError *error) {
 	    if (error) {
 	        NSLog(@"ERROR: %@", error);
 		}
@@ -79,7 +80,7 @@ static NSString *const kHNKApiKey = @"6c178ad0c2380bea5f47519d6924aade3522e60a23
 	        NSLog(@"ERROR: %@", error);
 		}
 	    else {
-	        NSLog(@"WORD OF THE DAY: %@ %@", wordOfTheDay.word, wordOfTheDay.datePublished);
+	        NSLog(@"WORD OF THE DAY FOR DATE: %@", wordOfTheDay);
 		}
 	}];
 
