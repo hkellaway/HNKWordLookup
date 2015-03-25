@@ -20,16 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - HNKWordLookup (1.0.2):
+  - HNKWordLookup (1.0.3):
     - AFNetworking (~> 2.5)
-    - HNKWordLookup/Models (= 1.0.2)
-    - HNKWordLookup/Utility (= 1.0.2)
+    - HNKWordLookup/Models (= 1.0.3)
+    - HNKWordLookup/Utility (= 1.0.3)
     - Mantle (~> 1.5)
-  - HNKWordLookup/Models (1.0.2):
+  - HNKWordLookup/Models (1.0.3):
     - AFNetworking (~> 2.5)
     - HNKWordLookup/Utility
     - Mantle (~> 1.5)
-  - HNKWordLookup/Utility (1.0.2):
+  - HNKWordLookup/Utility (1.0.3):
     - AFNetworking (~> 2.5)
     - Mantle (~> 1.5)
   - Mantle (1.5.4):
@@ -37,11 +37,11 @@ PODS:
   - Mantle/extobjc (1.5.4)
 
 DEPENDENCIES:
-  - HNKWordLookup (= 1.0.2)
+  - HNKWordLookup (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  HNKWordLookup: 2f253f2e99eb3217314c055962a27e4bb6f58fa8
+  HNKWordLookup: 570ed8e1a57eab4176b7aa8a2a9d5e91cfbfd98e
   Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
 
 COCOAPODS: 0.36.0

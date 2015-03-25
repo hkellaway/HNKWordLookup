@@ -51,8 +51,8 @@
  *  @return Identifier for this request
  */
 - (NSUInteger)definitionsForWord:(NSString *)word
-                  withCompletion:(void (^)(NSArray *definitions,
-                             NSError *error))completion;
+                      completion:(void (^)(NSArray *definitions,
+                         NSError *error))completion;
 
 /**
  *  Retrieves an array of definitions with only the specified part of speech

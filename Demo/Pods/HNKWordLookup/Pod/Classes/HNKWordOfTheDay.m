@@ -28,6 +28,12 @@
 
 @implementation HNKWordOfTheDay
 
+#pragma mark - Override
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"Word of the Day: %@; Date Published: %@", self.word, [NSDate hnk_stringFromDate:self.datePublished]];
+}
+
 #pragma mark - Protocol conformance
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
