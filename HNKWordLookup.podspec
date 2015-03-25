@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.subspec 'Models' do |ss|
     ss.dependency 'HNKWordLookup/Utility'
 
-    ss.source_files = 'Pod/Classes/HNKHttpSessionManager.{h,m}', 'Pod/Classes/HNKLookup.{h,m}', 'Pod/Classes/HNKRandomWord.{h,m}', 'Pod/Classes/HNKWordDefinition.{h,m}', 'Pod/Classes/HNKWordOfTheDay.{h,m}', 'Pod/Classes/HNKWordPronunciation.{h,m}'
+    ss.source_files = 'Pod/Classes/HNKHttpSessionManager.{h,m}', 'Pod/Classes/HNKLookup.{h,m}', 'Pod/Classes/HNKWordDefinition.{h,m}', 'Pod/Classes/HNKWordOfTheDay.{h,m}', 'Pod/Classes/HNKWordPronunciation.{h,m}'
   end
 
   s.subspec 'Utility' do |ss|
