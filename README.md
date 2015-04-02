@@ -1,7 +1,7 @@
 # HNKWordLookup
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
-[![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://github.com/hkellaway/HNKWordLookup/blob/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)]()
 [![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
 
@@ -42,7 +42,6 @@ HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to 
 - `HNKWordDefinition`
 - `HNKWordPronunciation`
 - `HNKWordOfTheDay`
-- `HNKRandomWord`
 
 ## Usage
 
