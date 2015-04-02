@@ -107,7 +107,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 }];
 ```
 
-#### Looking up a `randomWord`
+#### Looking up a random word
 
 ```objective-c
 [[HNKLookup sharedInstance] randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
@@ -149,4 +149,4 @@ HNKWordLookup was created by [Harlan Kellaway](http://harlankellaway.com).
 
 ## License
 
-HNKWordLookup is available under the MIT license. See the [LICENSE](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE) file for more info.
+HNKWordLookup is available under the MIT license. See the [LICENSE](https://github.com/hkellaway/HNKWordLookup/blob/master/LICENSE) file for more info.
