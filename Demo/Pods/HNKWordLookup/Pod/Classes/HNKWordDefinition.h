@@ -24,7 +24,7 @@
 
 #import <Mantle/Mantle.h>
 
-typedef NS_ENUM (NSInteger, HNKWordDefinitionPartOfSpeech) {
+typedef NS_OPTIONS (NSInteger, HNKWordDefinitionPartOfSpeech) {
 	HNKWordDefinitionPartOfSpeechUnknown                = 0,
 	HNKWordDefinitionPartOfSpeechAbbreviation           = 1 << 0,
 	    HNKWordDefinitionPartOfSpeechAdjective              = 1 << 1,
