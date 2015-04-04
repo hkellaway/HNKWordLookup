@@ -99,14 +99,14 @@ static HNKLookup * sharedInstance = nil;
 	}];
 }
 
-- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
+- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partsOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
 	return [self definitionsForWord:word completion: ^(NSArray *definitions, NSError *error) {
 	    if (error) {
 	        completion(nil, error);
 	        return;
 		}
 
-	    completion([self definitions:definitions filteredByPartOfSpeech:partOfSpeech], nil);
+	    completion([self definitions:definitions filteredByPartOfSpeech:partsOfSpeech], nil);
 	}];
 }
 
