@@ -225,9 +225,12 @@ static HNKLookup * sharedInstance = nil;
 }
 
 - (BOOL)isDefinition:(HNKWordDefinition *)definition partOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech {
-	for (int p = HNKWordDefinitionPartOfSpeechAbbreviation; p <= HNKWordDefinitionPartOfSpeechVerbTransitive; p *= 2) {
-		if ([self isPartOfSpeech:p includedIn:partOfSpeech]) {
-			if (definition.partOfSpeech == p) {
+    HNKWordDefinitionPartOfSpeech firstPartOfSpeech = HNKWordDefinitionPartOfSpeechAbbreviation;
+    HNKWordDefinitionPartOfSpeech lastPartOfSpeech = HNKWordDefinitionPartOfSpeechVerbTransitive;
+    
+	for (int partOfSpeechToCheck = firstPartOfSpeech; partOfSpeechToCheck <= lastPartOfSpeech; partOfSpeechToCheck *= 2) {
+		if ([self isPartOfSpeech:partOfSpeechToCheck includedIn:partOfSpeech]) {
+			if (definition.partOfSpeech == partOfSpeechToCheck) {
 				return YES;
 			}
 		}
