@@ -86,12 +86,4 @@ static NSDictionary *HNKPartsOfSpeechDictionary;
 	return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:HNKPartsOfSpeechDictionary];
 }
 
-#pragma mark - Helpers
-
-- (NSString *)stringForPartOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech {
-	NSString *partOfSpeechString = [[HNKPartsOfSpeechDictionary allKeysForObject:@(partOfSpeech)] firstObject];
-
-	return (partOfSpeechString) ? partOfSpeechString : @"Unknown";
-}
-
 @end
