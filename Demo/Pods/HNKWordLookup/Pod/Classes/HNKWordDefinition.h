@@ -24,7 +24,16 @@
 
 #import <Mantle/Mantle.h>
 
-typedef NS_ENUM (NSInteger, HNKWordDefinitionPartOfSpeech) {
+/**
+ Parts of speech
+ 
+ @discussion `HNKWordDefinitionPartOfSpeech` is an enum, so its values support math operations.
+ 
+    The underlying values are bitmasked to facilitate being combined together with an `|` operator. See: https://developer.apple.com/library/ios/releasenotes/ObjectiveC/ModernizationObjC/AdoptingModernObjective-C/AdoptingModernObjective-C.html#//apple_ref/doc/uid/TP40014150-CH1-SW6
+ 
+    Note: Excluding the default value `HNKWordDefinitionPartOfSpeechUnknown`, the enum values are in alphabetical order by part of speech - e.g. Adjective comes before Adverb.
+ */
+typedef NS_OPTIONS (NSInteger, HNKWordDefinitionPartOfSpeech) {
 	HNKWordDefinitionPartOfSpeechUnknown                = 0,
 	HNKWordDefinitionPartOfSpeechAbbreviation           = 1 << 0,
 	    HNKWordDefinitionPartOfSpeechAdjective              = 1 << 1,

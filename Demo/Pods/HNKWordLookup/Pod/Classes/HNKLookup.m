@@ -99,14 +99,14 @@ static HNKLookup * sharedInstance = nil;
 	}];
 }
 
-- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
+- (NSUInteger)definitionsForWord:(NSString *)word withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partsOfSpeech completion:(void (^)(NSArray *, NSError *))completion {
 	return [self definitionsForWord:word completion: ^(NSArray *definitions, NSError *error) {
 	    if (error) {
 	        completion(nil, error);
 	        return;
 		}
 
-	    completion([self definitions:definitions filteredByPartOfSpeech:partOfSpeech], nil);
+	    completion([self definitions:definitions filteredByPartOfSpeech:partsOfSpeech], nil);
 	}];
 }
 
@@ -225,11 +225,13 @@ static HNKLookup * sharedInstance = nil;
 }
 
 - (BOOL)isDefinition:(HNKWordDefinition *)definition partOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech {
-	for (int p = HNKWordDefinitionPartOfSpeechAbbreviation; p <= HNKWordDefinitionPartOfSpeechVerbTransitive; p *= 2) {
-		if ([self isPartOfSpeech:p includedIn:partOfSpeech]) {
-			if (definition.partOfSpeech == p) {
+    HNKWordDefinitionPartOfSpeech firstPartOfSpeech = HNKWordDefinitionPartOfSpeechAbbreviation;
+    HNKWordDefinitionPartOfSpeech lastPartOfSpeech = HNKWordDefinitionPartOfSpeechVerbTransitive;
+    
+	for (HNKWordDefinitionPartOfSpeech partOfSpeechToCheck = firstPartOfSpeech; partOfSpeechToCheck <= lastPartOfSpeech; partOfSpeechToCheck *= 2) {
+		if((definition.partOfSpeech == partOfSpeechToCheck)
+           && [self isPartOfSpeech:partOfSpeechToCheck includedIn:partOfSpeech]) {
 				return YES;
-			}
 		}
 	}
 

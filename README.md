@@ -1,9 +1,7 @@
 # HNKWordLookup
 
-http://cocoapods.org/pods/HNKWordLookup
-
 [![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
-[![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://raw.githubusercontent.com/hkellaway/HNKWordLookup/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)]()
 [![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
 
@@ -15,7 +13,7 @@ HNKWordLookup is a Cocoapod that helps with standard English-language dictionary
 - If you **have a feature request**, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
 - If you **want to contribute**, [submit a pull request](https://github.com/hkellaway/HNKWordLookup/pulls).
 
-## How To Get Started
+## Getting Started
 
 - [Download HNKWordLookup](https://github.com/hkellaway/HNKWordLookup/archive/master.zip) and try out the included iOS example app
 - Check out the [documentation](http://cocoadocs.org/docsets/HNKWordLookup/) for a more comprehensive look at the classes available in HNKWordLookup
@@ -44,21 +42,18 @@ HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to 
 - `HNKWordDefinition`
 - `HNKWordPronunciation`
 - `HNKWordOfTheDay`
-- `HNKRandomWord`
 
 ## Usage
 
 ### Setup
 
-Requests cannot be made without first supplying `HNKWordLookup` with your Wordnik API Key (see [Getting Started](#getting-started)). Once your API key is obtained, you can setup `HNKWordLookup` for use by calling `sharedInstanceWithAPIKey` (typically within the `AppDelegate`):
+Requests cannot be made without first supplying `HNKLookup` with your Wordnik API Key (see [Getting Started](#getting-started)). Once your API key is obtained, you can setup `HNKLookup` for use by calling `sharedInstanceWithAPIKey` (typically within the `AppDelegate`):
 
 ```objective-c
-[HNKWordLookup sharedInstanceWithAPIKey:@"YOUR_API_KEY"];
+[HNKLookup sharedInstanceWithAPIKey:@"YOUR_API_KEY"];
 ```
 
 You should replace `YOUR_API_KEY` with your Wordnik API key.
-
-Note: `HNKWordLookup` will not work without first being setup with an API key.
 
 ### Lookups
 
@@ -80,6 +75,8 @@ Note: `HNKWordLookup` will not work without first being setup with an API key.
 
 #### Looking up `definitions` with specific `partsOfSpeech`
 
+Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPartOfSpeech` types separated by a `|` symbol.
+
 ```objective-c
 [[HNKLookup sharedInstance] definitionsForWord:@"center" 
                                  withPartsOfSpeech:HNKWordDefinitionPartOfSpeechNoun | HNKWordDefinitionPartOfSpeechVerbTransitive
@@ -93,8 +90,6 @@ Note: `HNKWordLookup` will not work without first being setup with an API key.
     }
 }];
 ```
-
-Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPartOfSpeech` types separated by a `|` symbol.
 
 #### Looking up `pronunciations`
 
@@ -110,7 +105,7 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 }];
 ```
 
-#### Looking up a `randomWord`
+#### Looking up a random word
 
 ```objective-c
 [[HNKLookup sharedInstance] randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
@@ -152,4 +147,4 @@ HNKWordLookup was created by [Harlan Kellaway](http://harlankellaway.com).
 
 ## License
 
-HNKWordLookup is available under the MIT license. See the [LICENSE](https://github.com/hkellaway/HNKWordLookup/blob/feature/readme/LICENSE) file for more info.
+HNKWordLookup is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/hkellaway/HNKWordLookup/master/LICENSE) file for more info.

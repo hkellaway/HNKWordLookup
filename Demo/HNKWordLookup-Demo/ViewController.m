@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import <HNKWordLookup/HNKWordLookup.h>
+#import "NSDate+HNKAdditions.h"
 
 #warning Replace YOUR_API_KEY with your API key
 static NSString *const kHNKApiKey = @"YOUR_API_KEY";

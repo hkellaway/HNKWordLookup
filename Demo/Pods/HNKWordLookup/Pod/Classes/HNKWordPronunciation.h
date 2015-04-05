@@ -33,7 +33,7 @@ typedef NS_ENUM (NSInteger, HNKWordPronunciationFormat) {
 
 @interface HNKWordPronunciation : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong) NSString *pronunciationText;
+@property (nonatomic, copy) NSString *pronunciationText;
 @property (nonatomic, assign) HNKWordPronunciationFormat format;
 
 @end

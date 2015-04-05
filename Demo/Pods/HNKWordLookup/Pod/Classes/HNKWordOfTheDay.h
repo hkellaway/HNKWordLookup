@@ -28,7 +28,7 @@
 
 @interface HNKWordOfTheDay : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong) NSString *word;
+@property (nonatomic, copy) NSString *word;
 @property (nonatomic, strong) NSDate *datePublished;
 
 @end

@@ -39,78 +39,111 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 
 #pragma mark - Initialization
 
-+ (void)setupSharedManager:(NSURL *)url {
-	[self sharedManagerWithURL:url];
-	[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
++ (void)setupSharedManager:(NSURL *)url
+{
+  [self sharedManagerWithURL:url];
+  [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 
-+ (instancetype)sharedManagerWithURL:(NSURL *)url {
-	static HNKHttpSessionManager *manager = nil;
-	static dispatch_once_t onceToken;
++ (instancetype)sharedManagerWithURL:(NSURL *)url
+{
+  static HNKHttpSessionManager *manager = nil;
+  static dispatch_once_t onceToken;
 
-	dispatch_once(&onceToken, ^{
-		NSAssert(url, @"A valid url should be provided");
+  dispatch_once(&onceToken,
+                ^{
+                  NSParameterAssert(url);
 
-		manager = [[self alloc] initWithBaseURL:url];
+                  manager = [[self alloc] initWithBaseURL:url];
 
-		AFJSONResponseSerializer *responseSerializer = [[AFJSONResponseSerializer alloc] init];
-		responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+                  AFJSONResponseSerializer *responseSerializer =
+                      [[AFJSONResponseSerializer alloc] init];
+                  responseSerializer.acceptableContentTypes =
+                      [NSSet setWithObject:@"application/json"];
 
-		manager.responseSerializer = responseSerializer;
-		manager.requestSerializer = [AFJSONRequestSerializer serializer];
-	});
+                  manager.responseSerializer = responseSerializer;
+                  manager.requestSerializer =
+                      [AFJSONRequestSerializer serializer];
+                });
 
-	return manager;
+  return manager;
 }
 
-+ (instancetype)sharedManager {
-	return [self sharedManagerWithURL:nil];
++ (instancetype)sharedManager
+{
+  return [self sharedManagerWithURL:nil];
 }
 
 #pragma mark - Class methods
 
 #pragma mark Requests
 
-+ (NSUInteger)definitionsForWord:(NSString *)word apiKey:(NSString *)apiKey completion:(void (^)(NSURLSessionDataTask *, id, NSError *))completion {
-	return [self startRequestWithPath:[NSString stringWithFormat:kHNKPathDefinitions, word]
-	                       parameters:@{ @"api_key" : apiKey }
-	                       completion:completion];
++ (NSUInteger)definitionsForWord:(NSString *)word
+                          apiKey:(NSString *)apiKey
+                      completion:(void (^)(NSURLSessionDataTask *, id,
+                                           NSError *))completion
+{
+  return [self
+      startRequestWithPath:[NSString stringWithFormat:kHNKPathDefinitions, word]
+                parameters:@{
+                  @"api_key" : apiKey
+                }
+                completion:completion];
 }
 
-+ (NSUInteger)pronunciationsForWord:(NSString *)word apiKey:(NSString *)apiKey completion:(void (^)(NSURLSessionDataTask *, id, NSError *))completion {
-	return [self startRequestWithPath:[NSString stringWithFormat:kHNKPathPronunciations, word]
-	                       parameters:@{ @"api_key" : apiKey }
-	                       completion:completion];
++ (NSUInteger)pronunciationsForWord:(NSString *)word
+                             apiKey:(NSString *)apiKey
+                         completion:(void (^)(NSURLSessionDataTask *, id,
+                                              NSError *))completion
+{
+  return [self
+      startRequestWithPath:[NSString
+                               stringWithFormat:kHNKPathPronunciations, word]
+                parameters:@{
+                  @"api_key" : apiKey
+                }
+                completion:completion];
 }
 
-+ (NSUInteger)randomWordWithApiKey:(NSString *)apiKey completion:(void (^)(NSURLSessionDataTask *, id, NSError *))completion {
-	return [self startRequestWithPath:kHNKPathRandomWord
-	                       parameters:@{
-	            @"hasDictionaryDef" : @"true",
-	            @"minCorpusCount" : @(0),
-	            @"maxCorpusCount" : @(-1),
-	            @"minDictionaryCount" : @(1),
-	            @"maxDictionaryCount" : @(-1),
-	            @"minLength" : @(3),
-	            @"maxLength" : @(-1),
-	            @"api_key" : apiKey
-			}
-	                       completion:completion];
++ (NSUInteger)randomWordWithApiKey:(NSString *)apiKey
+                        completion:(void (^)(NSURLSessionDataTask *, id,
+                                             NSError *))completion
+{
+  return [self startRequestWithPath:kHNKPathRandomWord
+                         parameters:@{
+                           @"hasDictionaryDef" : @"true",
+                           @"minCorpusCount" : @(0),
+                           @"maxCorpusCount" : @(-1),
+                           @"minDictionaryCount" : @(1),
+                           @"maxDictionaryCount" : @(-1),
+                           @"minLength" : @(3),
+                           @"maxLength" : @(-1),
+                           @"api_key" : apiKey
+                         }
+                         completion:completion];
 }
 
-+ (NSUInteger)wordOfTheDayForDate:(NSDate *)date apiKey:(NSString *)apiKey completion:(void (^)(NSURLSessionDataTask *, id, NSError *))completion {
-	int day = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:date] day];
-	int month = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:date] month];
-	int year = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:date] year];
++ (NSUInteger)wordOfTheDayForDate:(NSDate *)date
+                           apiKey:(NSString *)apiKey
+                       completion:(void (^)(NSURLSessionDataTask *, id,
+                                            NSError *))completion
+{
+  int day = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitDay
+                                                  fromDate:date] day];
+  int month = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitMonth
+                                                    fromDate:date] month];
+  int year = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitYear
+                                                   fromDate:date] year];
 
-	NSString *dateString = [NSDate hnk_stringFromDateWithYear:year month:month day:day];
+  NSString *dateString =
+      [NSDate hnk_stringFromDateWithYear:year month:month day:day];
 
-	return [self startRequestWithPath:kHNKPathWordOfTheDay
-	                       parameters:@{
-	            @"date" : dateString,
-	            @"api_key" : apiKey
-			}
-	                       completion:completion];
+  return [self startRequestWithPath:kHNKPathWordOfTheDay
+                         parameters:@{
+                           @"date" : dateString,
+                           @"api_key" : apiKey
+                         }
+                         completion:completion];
 }
 
 #pragma mark - Helper methods
@@ -118,25 +151,30 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 + (NSUInteger)startRequestWithPath:(NSString *)path
                         parameters:(id)parameter
                         completion:(void (^)(NSURLSessionDataTask *task,
-                         id responseObject,
-                         NSError *error))completion {
-	HNKHttpSessionManager *manager = [HNKHttpSessionManager sharedManager];
-	NSURLSessionDataTask *newTask = nil;
+                                             id responseObject,
+                                             NSError *error))completion
+{
+  HNKHttpSessionManager *manager = [HNKHttpSessionManager sharedManager];
+  NSURLSessionDataTask *newTask = nil;
 
-	void (^success)(NSURLSessionDataTask *, id);
-	success = ^(NSURLSessionDataTask *task, id responseObject) {
-		completion(task, responseObject, nil);
-	};
+  void (^success)(NSURLSessionDataTask *, id);
+  success = ^(NSURLSessionDataTask *task, id responseObject) {
+    completion(task, responseObject, nil);
+  };
 
-	void (^failure)(NSURLSessionDataTask *, NSError *);
-	failure = ^(NSURLSessionDataTask *task, NSError *error) {
-		completion(task, nil, error);
-	};
+  void (^failure)(NSURLSessionDataTask *, NSError *);
+  failure = ^(NSURLSessionDataTask *task, NSError *error) {
+    completion(task, nil, error);
+  };
 
-	NSString *fullPath = [[manager.baseURL absoluteString] stringByAppendingPathComponent:path];
-	newTask = [manager GET:fullPath parameters:parameter success:success failure:failure];
+  NSString *fullPath =
+      [[manager.baseURL absoluteString] stringByAppendingPathComponent:path];
+  newTask = [manager GET:fullPath
+              parameters:parameter
+                 success:success
+                 failure:failure];
 
-	return newTask.taskIdentifier;
+  return newTask.taskIdentifier;
 }
 
 @end

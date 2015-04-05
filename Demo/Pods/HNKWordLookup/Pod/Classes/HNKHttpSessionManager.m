@@ -49,7 +49,7 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 	static dispatch_once_t onceToken;
 
 	dispatch_once(&onceToken, ^{
-		NSAssert(url, @"A valid url should be provided");
+		NSParameterAssert(url);
 
 		manager = [[self alloc] initWithBaseURL:url];
 
