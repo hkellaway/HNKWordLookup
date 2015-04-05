@@ -26,7 +26,7 @@ HNKWordLookup is a Cocoapod that performs standard English-language dictionary q
 
 ```ruby
 platform :ios, '7.0'
-pod "HNKWordLookup", "~> 1.0"
+pod "HNKWordLookup", "~> 1.1"
 ```
 
 ### API Key
@@ -139,6 +139,22 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 		NSLog(@"%@", wordOfTheDay);
     }
 }];
+```
+
+## Delegate methods
+
+Optional delegate methods are available in the `HNKLookupDelegate` protocol.
+
+#### `(BOOL)shouldDisplayNetworkActivityIndicator`
+
+The return value of this method determines whether the activity indicator in the status bar is displayed while `HNKLookup` makes network requests. The default is `NO`.
+
+To have the activity indicator displayed, the class that implements the `HNKLookupDelegate` protocol should include the following method call:
+
+```objective-c
+- (BOOL)shouldDisplayNetworkActivityIndicator {
+  return YES;
+}
 ```
 
 ## Credits
