@@ -31,8 +31,8 @@
 /**
  *  Initializes the HNKHttpSessionManager singleton with a given URL
  *
- *  @param url  A URL to be used as the base URL for all requests
- *  @apiKey     API key to be used for all requests
+ *  @param url      A URL to be used as the base URL for all requests
+ *  @param apiKey   API key to be used for all requests
  */
 + (void)setupSharedManager:(NSURL *)url apiKey:(NSString *)apiKey;
 
@@ -73,11 +73,11 @@
                                               NSError *error))completion;
 
 /**
- *  Retrieves random word object notation
+ *  Retrieves a random word
  *
  *  @param completion A block to be executed when the request finishes
  *
- *  @return Identifier for the data task used in this request
+ *  @return Identifier for the data task used in the request
  */
 + (NSUInteger)randomWordWithCompletion:(void (^)(NSURLSessionDataTask *task,
                                                  id responseObject,

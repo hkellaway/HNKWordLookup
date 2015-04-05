@@ -52,6 +52,8 @@
 
 /**
  * Returns shared HNKLookup instance
+ *
+ * Should only be called after sharedInstanceWithAPIKey:
  */
 + (instancetype)sharedInstance;
 
