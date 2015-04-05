@@ -12,7 +12,7 @@
 #import "NSDate+HNKAdditions.h"
 
 #warning Replace YOUR_API_KEY with your API key
-static NSString *const kHNKApiKey = @"YOUR_API_KEY";
+static NSString *const kHNKDemoApiKey = @"YOUR_API_KEY";
 
 @interface ViewController ()
 
@@ -23,7 +23,7 @@ static NSString *const kHNKApiKey = @"YOUR_API_KEY";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	[HNKLookup sharedInstanceWithAPIKey:kHNKApiKey];
+	[HNKLookup sharedInstanceWithAPIKey:kHNKDemoApiKey];
 
 	[[HNKLookup sharedInstance] definitionsForWord:@"center" completion: ^(NSArray *definitions, NSError *error) {
 	    if (error) {

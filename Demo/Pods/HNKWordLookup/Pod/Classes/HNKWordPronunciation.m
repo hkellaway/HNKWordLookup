@@ -28,28 +28,30 @@
 
 #pragma mark - Override
 
-- (NSString *)description {
-	return [NSString stringWithFormat:@"Pronunciation: %@", self.pronunciationText];
+- (NSString *)description
+{
+  return
+      [NSString stringWithFormat:@"Pronunciation: %@", self.pronunciationText];
 }
 
 #pragma mark - Protocol conformance
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-			   @"pronunciationText"   : @"raw",
-			   @"format"              : @"rawType"
-	};
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+  return @{ @"pronunciationText" : @"raw", @"format" : @"rawType" };
 }
 
-+ (NSValueTransformer *)formatJSONTransformer {
-	NSDictionary *formatsDictionary = @{
-		@"ahd-legacy"        : @(HNKWordPronunciationFormatAHD),
-		@"arpabet"           : @(HNKWordPronunciationFormatArpabet),
-		@"gcide-diacritical" : @(HNKWordPronunciationFormatGcideDiacritical),
-		@"ipa"               : @(HNKWordPronunciationFormatIPA)
-	};
++ (NSValueTransformer *)formatJSONTransformer
+{
+  NSDictionary *formatsDictionary = @{
+    @"ahd-legacy" : @(HNKWordPronunciationFormatAHD),
+    @"arpabet" : @(HNKWordPronunciationFormatArpabet),
+    @"gcide-diacritical" : @(HNKWordPronunciationFormatGcideDiacritical),
+    @"ipa" : @(HNKWordPronunciationFormatIPA)
+  };
 
-	return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:formatsDictionary];
+  return [NSValueTransformer
+      mtl_valueMappingTransformerWithDictionary:formatsDictionary];
 }
 
 @end

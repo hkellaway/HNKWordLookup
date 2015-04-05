@@ -24,11 +24,11 @@
 
 #import <Mantle/Mantle.h>
 
-typedef NS_ENUM (NSInteger, HNKWordPronunciationFormat) {
-	HNKWordPronunciationFormatAHD,
-	HNKWordPronunciationFormatArpabet,
-	HNKWordPronunciationFormatGcideDiacritical,
-	HNKWordPronunciationFormatIPA
+typedef NS_ENUM(NSInteger, HNKWordPronunciationFormat) {
+  HNKWordPronunciationFormatAHD,
+  HNKWordPronunciationFormatArpabet,
+  HNKWordPronunciationFormatGcideDiacritical,
+  HNKWordPronunciationFormatIPA
 };
 
 @interface HNKWordPronunciation : MTLModel <MTLJSONSerializing>

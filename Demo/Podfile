@@ -3,7 +3,7 @@ platform :ios, '7.0'
 
 target 'HNKWordLookup-Demo' do
 
-pod 'HNKWordLookup', '~> 1.0'
+pod 'HNKWordLookup', '~> 1.0.5'
 
 end
 
