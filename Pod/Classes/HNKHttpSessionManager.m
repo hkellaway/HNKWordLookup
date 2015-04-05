@@ -23,7 +23,6 @@
 //
 
 #import "HNKHttpSessionManager.h"
-
 #import "NSDate+HNKAdditions.h"
 
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
@@ -88,7 +87,6 @@ static HNKHttpSessionManager *sharedManager = nil;
 #pragma mark Requests
 
 + (NSUInteger)definitionsForWord:(NSString *)word
-                          apiKey:(NSString *)apiKey
                       completion:(void (^)(NSURLSessionDataTask *, id,
                                            NSError *))completion
 {
@@ -99,7 +97,6 @@ static HNKHttpSessionManager *sharedManager = nil;
 }
 
 + (NSUInteger)pronunciationsForWord:(NSString *)word
-                             apiKey:(NSString *)apiKey
                          completion:(void (^)(NSURLSessionDataTask *, id,
                                               NSError *))completion
 {
@@ -110,9 +107,8 @@ static HNKHttpSessionManager *sharedManager = nil;
                 completion:completion];
 }
 
-+ (NSUInteger)randomWordWithApiKey:(NSString *)apiKey
-                        completion:(void (^)(NSURLSessionDataTask *, id,
-                                             NSError *))completion
++ (NSUInteger)randomWordWithCompletion:(void (^)(NSURLSessionDataTask *, id,
+                                                 NSError *))completion
 {
   return [self startRequestWithPath:kHNKPathRandomWord
                          parameters:@{
@@ -128,7 +124,6 @@ static HNKHttpSessionManager *sharedManager = nil;
 }
 
 + (NSUInteger)wordOfTheDayForDate:(NSDate *)date
-                           apiKey:(NSString *)apiKey
                        completion:(void (^)(NSURLSessionDataTask *, id,
                                             NSError *))completion
 {
