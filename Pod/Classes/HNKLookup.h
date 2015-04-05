@@ -52,7 +52,7 @@
  */
 - (NSUInteger)definitionsForWord:(NSString *)word
                       completion:(void (^)(NSArray *definitions,
-                         NSError *error))completion;
+                                           NSError *error))completion;
 
 /**
  *  Retrieves an array of definitions with only the specified part of speech
@@ -66,7 +66,7 @@
 - (NSUInteger)definitionsForWord:(NSString *)word
                withPartsOfSpeech:(HNKWordDefinitionPartOfSpeech)partOfSpeech
                       completion:(void (^)(NSArray *definitions,
-                         NSError *error))completion;
+                                           NSError *error))completion;
 
 /**
  *  Retrieves an array of pronunciations
@@ -78,7 +78,7 @@
  */
 - (NSUInteger)pronunciationsForWord:(NSString *)word
                          completion:(void (^)(NSArray *pronunciations,
-                         NSError *error))completion;
+                                              NSError *error))completion;
 
 /**
  *  Retrieves a random word
@@ -97,8 +97,8 @@
  *
  *  @return Identifier for this request
  */
-- (NSUInteger)wordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *wordOfTheDay,
-                                                   NSError *error))completion;
+- (NSUInteger)wordOfTheDayWithCompletion:
+        (void (^)(HNKWordOfTheDay *wordOfTheDay, NSError *error))completion;
 
 /**
  *  Retrieves the Word of the Day for a given date
@@ -110,6 +110,6 @@
  */
 - (NSUInteger)wordOfTheDayForDate:(NSDate *)date
                        completion:(void (^)(HNKWordOfTheDay *wordOfTheDay,
-                         NSError *error))completion;
+                                            NSError *error))completion;
 
 @end

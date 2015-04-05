@@ -24,34 +24,48 @@
 
 #import <Mantle/Mantle.h>
 
-typedef NS_ENUM (NSInteger, HNKWordDefinitionPartOfSpeech) {
-	HNKWordDefinitionPartOfSpeechUnknown                = 0,
-	HNKWordDefinitionPartOfSpeechAbbreviation           = 1 << 0,
-	    HNKWordDefinitionPartOfSpeechAdjective              = 1 << 1,
-	    HNKWordDefinitionPartOfSpeechAdverb                 = 1 << 2,
-	    HNKWordDefinitionPartOfSpeechAffix                  = 1 << 3,
-	    HNKWordDefinitionPartOfSpeechArticle                = 1 << 4,
-	    HNKWordDefinitionPartOfSpeechArticleDefinite        = 1 << 5,
-	    HNKWordDefinitionPartOfSpeechConjunction            = 1 << 6,
-	    HNKWordDefinitionPartOfSpeechIdiom                  = 1 << 7,
-	    HNKWordDefinitionPartOfSpeechImperative             = 1 << 8,
-	    HNKWordDefinitionPartOfSpeechInterjection           = 1 << 9,
-	    HNKWordDefinitionPartOfSpeechNameFamily             = 1 << 10,
-	    HNKWordDefinitionPartOfSpeechNameGiven              = 1 << 11,
-	    HNKWordDefinitionPartOfSpeechNoun                   = 1 << 12,
-	    HNKWordDefinitionPartOfSpeechNounPlural             = 1 << 13,
-	    HNKWordDefinitionPartOfSpeechNounProperPlural       = 1 << 14,
-	    HNKWordDefinitionPartOfSpeechNounProperPosessive    = 1 << 15,
-	    HNKWordDefinitionPartOfSpeechNounPosessive          = 1 << 16,
-	    HNKWordDefinitionPartOfSpeechParticiplePast         = 1 << 17,
-	    HNKWordDefinitionPartOfSpeechPrefixPhrasal          = 1 << 18,
-	    HNKWordDefinitionPartOfSpeechPreposition            = 1 << 19,
-	    HNKWordDefinitionPartOfSpeechPronoun                = 1 << 20,
-	    HNKWordDefinitionPartOfSpeechSuffix                 = 1 << 21,
-	    HNKWordDefinitionPartOfSpeechVerb                   = 1 << 22,
-	    HNKWordDefinitionPartOfSpeechVerbAuxiliary          = 1 << 23,
-	    HNKWordDefinitionPartOfSpeechVerbIntransitive       = 1 << 24,
-	    HNKWordDefinitionPartOfSpeechVerbTransitive         = 1 << 25
+/**
+ Parts of speech
+
+ @discussion `HNKWordDefinitionPartOfSpeech` is an enum, so its values support
+ math operations.
+
+    The underlying values are bitmasked to facilitate being combined together
+ with an `|` operator. See:
+ https://developer.apple.com/library/ios/releasenotes/ObjectiveC/ModernizationObjC/AdoptingModernObjective-C/AdoptingModernObjective-C.html#//apple_ref/doc/uid/TP40014150-CH1-SW6
+
+    Note: Excluding the default value `HNKWordDefinitionPartOfSpeechUnknown`,
+ the enum values are in alphabetical order by part of speech - e.g. Adjective
+ comes before Adverb.
+ */
+typedef NS_OPTIONS(NSInteger, HNKWordDefinitionPartOfSpeech) {
+  HNKWordDefinitionPartOfSpeechUnknown = 0,
+  HNKWordDefinitionPartOfSpeechAbbreviation = 1 << 0,
+  HNKWordDefinitionPartOfSpeechAdjective = 1 << 1,
+  HNKWordDefinitionPartOfSpeechAdverb = 1 << 2,
+  HNKWordDefinitionPartOfSpeechAffix = 1 << 3,
+  HNKWordDefinitionPartOfSpeechArticle = 1 << 4,
+  HNKWordDefinitionPartOfSpeechArticleDefinite = 1 << 5,
+  HNKWordDefinitionPartOfSpeechConjunction = 1 << 6,
+  HNKWordDefinitionPartOfSpeechIdiom = 1 << 7,
+  HNKWordDefinitionPartOfSpeechImperative = 1 << 8,
+  HNKWordDefinitionPartOfSpeechInterjection = 1 << 9,
+  HNKWordDefinitionPartOfSpeechNameFamily = 1 << 10,
+  HNKWordDefinitionPartOfSpeechNameGiven = 1 << 11,
+  HNKWordDefinitionPartOfSpeechNoun = 1 << 12,
+  HNKWordDefinitionPartOfSpeechNounPlural = 1 << 13,
+  HNKWordDefinitionPartOfSpeechNounProperPlural = 1 << 14,
+  HNKWordDefinitionPartOfSpeechNounProperPosessive = 1 << 15,
+  HNKWordDefinitionPartOfSpeechNounPosessive = 1 << 16,
+  HNKWordDefinitionPartOfSpeechParticiplePast = 1 << 17,
+  HNKWordDefinitionPartOfSpeechPrefixPhrasal = 1 << 18,
+  HNKWordDefinitionPartOfSpeechPreposition = 1 << 19,
+  HNKWordDefinitionPartOfSpeechPronoun = 1 << 20,
+  HNKWordDefinitionPartOfSpeechSuffix = 1 << 21,
+  HNKWordDefinitionPartOfSpeechVerb = 1 << 22,
+  HNKWordDefinitionPartOfSpeechVerbAuxiliary = 1 << 23,
+  HNKWordDefinitionPartOfSpeechVerbIntransitive = 1 << 24,
+  HNKWordDefinitionPartOfSpeechVerbTransitive = 1 << 25
 };
 
 @interface HNKWordDefinition : MTLModel <MTLJSONSerializing>

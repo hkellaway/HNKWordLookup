@@ -24,9 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "HNKHttpSessionManager.h"
 #import "HNKLookup.h"
 #import "HNKWordDefinition.h"
 #import "HNKWordOfTheDay.h"
 #import "HNKWordPronunciation.h"
-#import "NSDate+HNKAdditions.h"
