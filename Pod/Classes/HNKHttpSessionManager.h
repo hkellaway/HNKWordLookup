@@ -48,9 +48,9 @@
  */
 + (NSUInteger)definitionsForWord:(NSString *)word
                           apiKey:(NSString *)apiKey
-                      completion:(void (^) (NSURLSessionDataTask *task,
-                          id responseObject,
-                          NSError *error))completion;
+                      completion:(void (^)(NSURLSessionDataTask *task,
+                                           id responseObject,
+                                           NSError *error))completion;
 
 /**
  *  Retrieves pronunciation object notation
@@ -63,9 +63,9 @@
  */
 + (NSUInteger)pronunciationsForWord:(NSString *)word
                              apiKey:(NSString *)apiKey
-                         completion:(void (^) (NSURLSessionDataTask *task,
-                          id responseObject,
-                          NSError *error))completion;
+                         completion:(void (^)(NSURLSessionDataTask *task,
+                                              id responseObject,
+                                              NSError *error))completion;
 
 /**
  *  Retrieves random word object notation
@@ -75,9 +75,10 @@
  *
  *  @return Identifier for the data task used in this request
  */
-+ (NSUInteger)randomWordWithApiKey:(NSString *)apiKey completion:(void (^) (NSURLSessionDataTask *task,
-                                                                            id responseObject,
-                                                                            NSError *error))completion;
++ (NSUInteger)randomWordWithApiKey:(NSString *)apiKey
+                        completion:(void (^)(NSURLSessionDataTask *task,
+                                             id responseObject,
+                                             NSError *error))completion;
 
 /**
  *  Retrieves Word of the Day object notation
@@ -90,8 +91,8 @@
  */
 + (NSUInteger)wordOfTheDayForDate:(NSDate *)date
                            apiKey:(NSString *)apiKey
-                       completion:(void (^) (NSURLSessionDataTask *task,
-                          id responseObject,
-                          NSError *error))completion;
+                       completion:(void (^)(NSURLSessionDataTask *task,
+                                            id responseObject,
+                                            NSError *error))completion;
 
 @end

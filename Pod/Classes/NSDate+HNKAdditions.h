@@ -45,7 +45,8 @@
 + (NSString *)hnk_stringFromDate:(NSDate *)date;
 
 /**
- *  Returns a string in the YYYY-MM-DD format given year, month, and date numbers
+ *  Returns a string in the YYYY-MM-DD format given year, month, and date
+ *numbers
  *
  *  @param year  Year
  *  @param month Month
@@ -53,6 +54,8 @@
  *
  *  @return String in YYYY-MM-DD format
  */
-+ (NSString *)hnk_stringFromDateWithYear:(int)year month:(int)month day:(int)day;
++ (NSString *)hnk_stringFromDateWithYear:(int)year
+                                   month:(int)month
+                                     day:(int)day;
 
 @end
