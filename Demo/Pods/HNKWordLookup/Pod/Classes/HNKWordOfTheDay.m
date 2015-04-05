@@ -30,26 +30,31 @@
 
 #pragma mark - Override
 
-- (NSString *)description {
-	return [NSString stringWithFormat:@"Word of the Day: %@; Date Published: %@", self.word, [NSDate hnk_stringFromDate:self.datePublished]];
+- (NSString *)description
+{
+  return [NSString
+      stringWithFormat:@"Word of the Day: %@; Date Published: %@",
+                       self.word,
+                       [NSDate hnk_stringFromDate:self.datePublished]];
 }
 
 #pragma mark - Protocol conformance
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-			   @"word"          : @"word",
-			   @"datePublished" : @"publishDate"
-	};
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+  return @{ @"word" : @"word", @"datePublished" : @"publishDate" };
 }
 
-+ (NSValueTransformer *)datePublishedJSONTransformer {
-	return [MTLValueTransformer reversibleTransformerWithForwardBlock: ^(NSString *str) {
-	    NSDate *date = [NSDate hnk_dateFromString:str];
-	    return date;
-	} reverseBlock: ^(NSDate *date) {
-	    return [NSDate hnk_stringFromDate:date];
-	}];
++ (NSValueTransformer *)datePublishedJSONTransformer
+{
+  return [MTLValueTransformer
+      reversibleTransformerWithForwardBlock:^(NSString *str) {
+        NSDate *date = [NSDate hnk_dateFromString:str];
+        return date;
+      }
+      reverseBlock:^(NSDate *date) {
+        return [NSDate hnk_stringFromDate:date];
+      }];
 }
 
 @end

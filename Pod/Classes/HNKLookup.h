@@ -26,7 +26,22 @@
 
 @class HNKWordOfTheDay;
 
+@protocol HNKLookupDelegate <NSObject>
+
+@optional
+
+/**
+ *  Whether the system activity indicator is displayed during requests
+ *
+ *  Default value is NO
+ */
+- (BOOL)shouldDisplayNetworkActivityIndicator;
+
+@end
+
 @interface HNKLookup : NSObject
+
+@property (nonatomic, weak) id<HNKLookupDelegate> delegate;
 
 #pragma mark - Initialization
 
@@ -37,6 +52,8 @@
 
 /**
  * Returns shared HNKLookup instance
+ *
+ * Should only be called after sharedInstanceWithAPIKey:
  */
 + (instancetype)sharedInstance;
 
