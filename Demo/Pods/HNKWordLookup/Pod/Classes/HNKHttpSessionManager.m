@@ -42,7 +42,6 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 + (void)setupSharedManager:(NSURL *)url
 {
   [self sharedManagerWithURL:url];
-  [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 
 + (instancetype)sharedManagerWithURL:(NSURL *)url
@@ -75,6 +74,14 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 }
 
 #pragma mark - Class methods
+
+#pragma mark Activity Indicator
+
++ (void)displayActivityIndicator:(BOOL)shouldDisplayActivityIndicator
+{
+  [[AFNetworkActivityIndicatorManager sharedManager]
+      setEnabled:shouldDisplayActivityIndicator];
+}
 
 #pragma mark Requests
 

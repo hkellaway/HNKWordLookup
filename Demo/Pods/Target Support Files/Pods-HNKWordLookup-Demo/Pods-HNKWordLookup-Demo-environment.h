@@ -51,20 +51,20 @@
 // HNKWordLookup
 #define COCOAPODS_POD_AVAILABLE_HNKWordLookup
 #define COCOAPODS_VERSION_MAJOR_HNKWordLookup 1
-#define COCOAPODS_VERSION_MINOR_HNKWordLookup 0
-#define COCOAPODS_VERSION_PATCH_HNKWordLookup 5
+#define COCOAPODS_VERSION_MINOR_HNKWordLookup 1
+#define COCOAPODS_VERSION_PATCH_HNKWordLookup 0
 
 // HNKWordLookup/Models
 #define COCOAPODS_POD_AVAILABLE_HNKWordLookup_Models
 #define COCOAPODS_VERSION_MAJOR_HNKWordLookup_Models 1
-#define COCOAPODS_VERSION_MINOR_HNKWordLookup_Models 0
-#define COCOAPODS_VERSION_PATCH_HNKWordLookup_Models 5
+#define COCOAPODS_VERSION_MINOR_HNKWordLookup_Models 1
+#define COCOAPODS_VERSION_PATCH_HNKWordLookup_Models 0
 
 // HNKWordLookup/Utility
 #define COCOAPODS_POD_AVAILABLE_HNKWordLookup_Utility
 #define COCOAPODS_VERSION_MAJOR_HNKWordLookup_Utility 1
-#define COCOAPODS_VERSION_MINOR_HNKWordLookup_Utility 0
-#define COCOAPODS_VERSION_PATCH_HNKWordLookup_Utility 5
+#define COCOAPODS_VERSION_MINOR_HNKWordLookup_Utility 1
+#define COCOAPODS_VERSION_PATCH_HNKWordLookup_Utility 0
 
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle

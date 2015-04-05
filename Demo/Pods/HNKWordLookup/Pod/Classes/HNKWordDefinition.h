@@ -31,8 +31,7 @@
  math operations.
 
     The underlying values are bitmasked to facilitate being combined together
- with an `|` operator. See:
- https://developer.apple.com/library/ios/releasenotes/ObjectiveC/ModernizationObjC/AdoptingModernObjective-C/AdoptingModernObjective-C.html#//apple_ref/doc/uid/TP40014150-CH1-SW6
+ with an `|` operator. See: http://apple.co/ZP4eyl
 
     Note: Excluding the default value `HNKWordDefinitionPartOfSpeechUnknown`,
  the enum values are in alphabetical order by part of speech - e.g. Adjective

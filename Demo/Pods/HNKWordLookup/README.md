@@ -5,7 +5,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)]()
 [![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
 
-HNKWordLookup is a Cocoapod that helps with standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
+HNKWordLookup is a Cocoapod that performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
 
 ## Communication
 

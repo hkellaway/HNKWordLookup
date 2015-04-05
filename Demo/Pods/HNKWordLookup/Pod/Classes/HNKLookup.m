@@ -81,6 +81,23 @@ static HNKLookup *sharedInstance = nil;
   return self;
 }
 
+#pragma mark - Setters
+
+- (void)setDelegate:(id<HNKLookupDelegate>)delegate
+{
+  _delegate = delegate;
+
+  if (self.delegate &&
+      [self.delegate
+          respondsToSelector:@selector(
+                                 shouldDisplayNetworkActivityIndicator)]) {
+    BOOL shouldDisplayActivityIndicator =
+        [self.delegate shouldDisplayNetworkActivityIndicator];
+    [HNKHttpSessionManager
+        displayActivityIndicator:shouldDisplayActivityIndicator];
+  }
+}
+
 #pragma mark - Lookups
 
 - (NSUInteger)definitionsForWord:(NSString *)word
