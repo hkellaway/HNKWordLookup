@@ -30,7 +30,7 @@
 
 #pragma mark - Constants
 
-static NSString *const kHNKParameterNameApiKey = @"api_key";
+static NSString *const kHNKApiKeyParameterName = @"api_key";
 
 #pragma mark Paths
 
@@ -49,6 +49,8 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 
 #pragma mark - Initialization
 
+static HNKHttpSessionManager *sharedManager = nil;
+
 + (void)setupSharedManager:(NSURL *)url apiKey:(NSString *)apiKey
 {
   [self sharedManagerWithURL:url apiKey:apiKey];
@@ -56,32 +58,21 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
 
 + (instancetype)sharedManagerWithURL:(NSURL *)url apiKey:(NSString *)apiKey
 {
-  static HNKHttpSessionManager *manager = nil;
   static dispatch_once_t onceToken;
 
   dispatch_once(&onceToken,
                 ^{
                   NSParameterAssert(url);
+                  NSParameterAssert(apiKey);
 
-                  manager = [[self alloc] initWithBaseURL:url];
-                  manager.apiKey = apiKey;
+                  sharedManager = [[self alloc] initWithBaseURL:url];
 
-                  AFJSONResponseSerializer *responseSerializer =
-                      [[AFJSONResponseSerializer alloc] init];
-                  responseSerializer.acceptableContentTypes =
+                  sharedManager.apiKey = apiKey;
+                  sharedManager.responseSerializer.acceptableContentTypes =
                       [NSSet setWithObject:@"application/json"];
-
-                  manager.responseSerializer = responseSerializer;
-                  manager.requestSerializer =
-                      [AFJSONRequestSerializer serializer];
                 });
 
-  return manager;
-}
-
-+ (instancetype)sharedManager
-{
-  return [self sharedManagerWithURL:nil apiKey:nil];
+  return sharedManager;
 }
 
 #pragma mark - Class methods
@@ -166,7 +157,6 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
                                              id responseObject,
                                              NSError *error))completion
 {
-  HNKHttpSessionManager *manager = [HNKHttpSessionManager sharedManager];
   NSURLSessionDataTask *newTask = nil;
 
   void (^success)(NSURLSessionDataTask *, id);
@@ -179,14 +169,14 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
     completion(task, nil, error);
   };
 
-  NSString *fullPath =
-      [[manager.baseURL absoluteString] stringByAppendingPathComponent:path];
-  parameters = [self parameters:parameters withApiKey:manager.apiKey];
+  NSString *fullPath = [[sharedManager.baseURL absoluteString]
+      stringByAppendingPathComponent:path];
+  parameters = [self parameters:parameters withApiKey:sharedManager.apiKey];
 
-  newTask = [manager GET:fullPath
-              parameters:parameters
-                 success:success
-                 failure:failure];
+  newTask = [sharedManager GET:fullPath
+                    parameters:parameters
+                       success:success
+                       failure:failure];
 
   return newTask.taskIdentifier;
 }
@@ -195,10 +185,10 @@ static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
                   withApiKey:(NSString *)apiKey
 {
   if (parameters == nil) {
-    parameters = @{kHNKParameterNameApiKey : apiKey};
+    parameters = @{kHNKApiKeyParameterName : apiKey};
   } else {
     NSMutableDictionary *mutableParameters = [parameters mutableCopy];
-    [mutableParameters setValue:apiKey forKey:kHNKParameterNameApiKey];
+    [mutableParameters setValue:apiKey forKey:kHNKApiKeyParameterName];
     parameters = [mutableParameters copy];
   }
 
