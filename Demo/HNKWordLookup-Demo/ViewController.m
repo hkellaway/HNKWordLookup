@@ -83,8 +83,8 @@ static NSString *const kHNKDemoApiKey = @"YOUR_API_KEY";
     }
   }];
 
-  [lookup wordOfTheDayForDate:
-              [NSDate hnk_dateFromString:@"2015-03-01T00:00:00.000+0000"]
+  NSDate *date = [NSDate hnk_dateFromString:@"2015-03-01T00:00:00.000+0000"];
+  [lookup wordOfTheDayForDate:date
                    completion:^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
                      if (error) {
                        NSLog(@"ERROR: %@", error);

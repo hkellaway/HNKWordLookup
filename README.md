@@ -1,8 +1,8 @@
 # HNKWordLookup
 
-[![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)](http://cocoapods.org/pods/HNKWordLookup)
 [![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://raw.githubusercontent.com/hkellaway/HNKWordLookup/master/LICENSE)
-[![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)](http://cocoapods.org/pods/HNKWordLookup)
 [![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
 
 HNKWordLookup is a Cocoapod that performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
@@ -31,7 +31,7 @@ pod "HNKWordLookup", "~> 1.1"
 
 ### API Key
 
-HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to lookup information. You will need a Wornik API key in order to use HNKWordLookup.
+HNKWordLookup uses the [Wordnik API](http://developer.wordnik.com/docs.html) to lookup information. You will need a Wordnik API key in order to use HNKWordLookup.
 
 * Create a [Wordnik](https://www.wordnik.com/signup) account
 * Once activated, find your API key on your [Settings](https://www.wordnik.com/users/edit) page
@@ -141,11 +141,13 @@ Note: The `partsOfSpeech` argument can take any number of `HNKWordDefinitionPart
 }];
 ```
 
-## Delegate methods
+## Delegate Methods
 
-Optional delegate methods are available in the `HNKLookupDelegate` protocol.
+Delegate methods are available to classes that implement the `HNKLookupDelegate` protocol.
 
-#### `(BOOL)shouldDisplayNetworkActivityIndicator`
+#### Optional Delegate Methods
+
+##### `(BOOL)shouldDisplayNetworkActivityIndicator`
 
 The return value of this method determines whether the activity indicator in the status bar is displayed while `HNKLookup` makes network requests. The default is `NO`.
 

@@ -32,12 +32,6 @@
 
 static NSString *const kBaseUrl = @"http://api.wordnik.com:80/v4";
 
-@interface HNKLookup ()
-
-@property (nonatomic, copy) NSString *apiKey;
-
-@end
-
 @implementation HNKLookup
 
 #pragma mark - Initialization
@@ -72,10 +66,8 @@ static HNKLookup *sharedInstance = nil;
   self = [super init];
 
   if (self) {
-    self.apiKey = apiKey;
-
     NSURL *url = [NSURL URLWithString:kBaseUrl];
-    [HNKHttpSessionManager setupSharedManager:url];
+    [HNKHttpSessionManager setupSharedManager:url apiKey:apiKey];
   }
 
   return self;
@@ -105,7 +97,6 @@ static HNKLookup *sharedInstance = nil;
 {
   return [HNKHttpSessionManager
       definitionsForWord:word
-                  apiKey:self.apiKey
               completion:^(NSURLSessionDataTask *task,
                            id responseObject,
                            NSError *error) {
@@ -151,7 +142,6 @@ static HNKLookup *sharedInstance = nil;
 {
   return [HNKHttpSessionManager
       pronunciationsForWord:word
-                     apiKey:self.apiKey
                  completion:^(NSURLSessionDataTask *task,
                               id responseObject,
                               NSError *error) {
@@ -179,21 +169,20 @@ static HNKLookup *sharedInstance = nil;
                                                  NSError *))completion
 {
   return [HNKHttpSessionManager
-      randomWordWithApiKey:self.apiKey
-                completion:^(NSURLSessionDataTask *task,
-                             id responseObject,
-                             NSError *error) {
-                  if (error) {
-                    completion(nil, error);
-                    return;
-                  }
+      randomWordWithCompletion:^(NSURLSessionDataTask *task,
+                                 id responseObject,
+                                 NSError *error) {
+        if (error) {
+          completion(nil, error);
+          return;
+        }
 
-                  NSAssert([responseObject isKindOfClass:[NSDictionary class]],
-                           @"Random word object should be a dictionary");
+        NSAssert([responseObject isKindOfClass:[NSDictionary class]],
+                 @"Random word object should be a dictionary");
 
-                  NSString *randomWord = [responseObject valueForKey:@"word"];
-                  completion(randomWord, nil);
-                }];
+        NSString *randomWord = [responseObject valueForKey:@"word"];
+        completion(randomWord, nil);
+      }];
 }
 
 - (NSUInteger)wordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *,
@@ -208,7 +197,6 @@ static HNKLookup *sharedInstance = nil;
 {
   return [HNKHttpSessionManager
       wordOfTheDayForDate:date
-                   apiKey:self.apiKey
                completion:^(NSURLSessionDataTask *task,
                             id responseObject,
                             NSError *error) {
