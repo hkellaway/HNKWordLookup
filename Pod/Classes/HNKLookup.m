@@ -75,7 +75,7 @@ static HNKLookup *sharedInstance = nil;
     self.apiKey = apiKey;
 
     NSURL *url = [NSURL URLWithString:kBaseUrl];
-    [HNKHttpSessionManager setupSharedManager:url];
+    [HNKHttpSessionManager setupSharedManager:url apiKey:apiKey];
   }
 
   return self;

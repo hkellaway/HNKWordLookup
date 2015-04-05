@@ -29,11 +29,12 @@
 #pragma mark - Initialization
 
 /**
- *  Initializes the HNKHttpSessionManager singleton with a given URL.
+ *  Initializes the HNKHttpSessionManager singleton with a given URL
  *
- *  @param url A URL to be used as the base URL for all requests.
+ *  @param url      URL to be used as the base URL for all requests
+ *  @param apiKey   API key to be used in all requests
  */
-+ (void)setupSharedManager:(NSURL *)url;
++ (void)setupSharedManager:(NSURL *)url apiKey:(NSString *)apiKey;
 
 #pragma mark - Activity Indicator
 

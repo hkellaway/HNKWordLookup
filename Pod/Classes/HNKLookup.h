@@ -34,8 +34,6 @@
  *  Whether the system activity indicator is displayed during requests
  *
  *  Default value is NO
- *
- *  @return Whether the network activity indicator should be displayed
  */
 - (BOOL)shouldDisplayNetworkActivityIndicator;
 
