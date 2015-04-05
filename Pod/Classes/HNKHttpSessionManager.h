@@ -35,6 +35,14 @@
  */
 + (void)setupSharedManager:(NSURL *)url;
 
+#pragma mark - Activity Indicator
+
+/**
+ *  Updates whether the system activity indicator should be displayed during
+ *  requests
+ */
++ (void)displayActivityIndicator:(BOOL)shouldDisplayActivityIndicator;
+
 #pragma mark - Requests
 
 /**
