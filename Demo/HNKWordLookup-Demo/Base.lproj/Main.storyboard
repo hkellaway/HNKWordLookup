@@ -70,7 +70,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="definitionsButtonTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="JOp-gs-kRv"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="HNKSegueShowDefinition" id="v6s-kF-27L"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -168,7 +168,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="wordOfTheDayButtonTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="hYI-pz-hSz"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" id="MDL-yV-Tz9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -198,7 +198,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="randomWordTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="Fs2-N7-DFV"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" id="jvx-6U-eKz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -281,7 +281,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic5-ZG-MZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871.5" y="-403"/>
+            <point key="canvasLocation" x="826" y="-403"/>
+        </scene>
+        <!--Definition-->
+        <scene sceneID="11M-np-Pab">
+            <objects>
+                <viewController id="ubh-Ly-A2X" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YzS-0y-yon"/>
+                        <viewControllerLayoutGuide type="bottom" id="5oa-bD-dsm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xCu-8M-abU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Definition" id="m8F-UB-Jed"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zp-Rd-vic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="-403"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -310,6 +330,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="QvH-Px-ZQa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.45882352941176469" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,4 +350,7 @@
         <image name="icon-arrow-right.png" width="64" height="64"/>
         <image name="logo-wordnik.png" width="132" height="18"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MDL-yV-Tz9"/>
+    </inferredMetricsTieBreakers>
 </document>
