@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -19,42 +18,84 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEx-ZH-bcA" userLabel="Definitions View">
-                                <rect key="frame" x="16" y="0.0" width="382" height="168"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-LE-dOk" userLabel="Footer View">
+                                <rect key="frame" x="0.0" y="652" width="414" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ACd-59-iS1"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GM4-OU-Ezu" userLabel="Pronunciations View">
-                                <rect key="frame" x="16" y="168" width="382" height="168"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-gN-5gd" userLabel="Body View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57s-JP-ZtC" userLabel="Definitions View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtF-Gt-p9O" userLabel="Pronunciations View">
+                                        <rect key="frame" x="0.0" y="163" width="414" height="163"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-vi-XAD" userLabel="Word of the Day View">
+                                        <rect key="frame" x="0.0" y="326" width="414" height="163"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuS-V6-HoJ" userLabel="Random Word View">
+                                        <rect key="frame" x="0.0" y="489" width="414" height="163"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-bb-h59" userLabel="Word of the Day View">
-                                <rect key="frame" x="16" y="336" width="382" height="168"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-ee-NrG" userLabel="Random Word View">
-                                <rect key="frame" x="16" y="504" width="382" height="168"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="XtF-Gt-p9O" secondAttribute="bottom" id="28U-b2-gdm"/>
+                                    <constraint firstAttribute="trailing" secondItem="57s-JP-ZtC" secondAttribute="trailing" id="4Ji-nr-4ya"/>
+                                    <constraint firstAttribute="bottom" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="53h-hw-7oJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JuS-V6-HoJ" secondAttribute="trailing" id="6xi-73-ajY"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="7eE-jI-woT"/>
+                                    <constraint firstAttribute="trailing" secondItem="5OM-vi-XAD" secondAttribute="trailing" id="FWR-kN-e0Z"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="top" secondItem="AEn-gN-5gd" secondAttribute="top" id="Fu2-uN-jmL"/>
+                                    <constraint firstAttribute="trailing" secondItem="XtF-Gt-p9O" secondAttribute="trailing" id="GW2-6J-GKu"/>
+                                    <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="Jj7-pr-eWW"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="width" secondItem="AEn-gN-5gd" secondAttribute="width" id="Vaw-36-2tg"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="5OM-vi-XAD" secondAttribute="height" id="WdY-A2-j07"/>
+                                    <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="beA-XZ-0d5"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="JuS-V6-HoJ" secondAttribute="height" id="f1E-DU-4vM"/>
+                                    <constraint firstItem="XtF-Gt-p9O" firstAttribute="top" secondItem="57s-JP-ZtC" secondAttribute="bottom" id="lDk-fV-6sT"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="XtF-Gt-p9O" secondAttribute="height" id="nx2-qk-sfo"/>
+                                    <constraint firstItem="XtF-Gt-p9O" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="pMy-hV-m8h"/>
+                                    <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="AEn-gN-5gd" secondAttribute="height" multiplier="1:4" id="sWk-xp-krN"/>
+                                    <constraint firstItem="5OM-vi-XAD" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="sg3-tA-7Lr"/>
+                                    <constraint firstItem="JuS-V6-HoJ" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="wXh-QA-qFs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vaw-36-2tg"/>
+                                        <exclude reference="Jj7-pr-eWW"/>
+                                        <exclude reference="beA-XZ-0d5"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zym-bb-h59" firstAttribute="top" secondItem="GM4-OU-Ezu" secondAttribute="bottom" id="9TQ-p0-CkD"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="height" secondItem="Zym-bb-h59" secondAttribute="height" id="BMX-Pc-3S0"/>
-                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="height" secondItem="dEx-ZH-bcA" secondAttribute="height" id="BdH-Bq-o7a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dEx-ZH-bcA" secondAttribute="trailing" id="Vae-lO-zTr"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="trailing" secondItem="Zym-bb-h59" secondAttribute="trailing" id="X4g-wC-9FP"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="trailing" secondItem="mjt-ee-NrG" secondAttribute="trailing" id="XBH-hH-xNN"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="ufA-Wc-LDD" secondAttribute="leadingMargin" id="Zeg-OE-lmb"/>
-                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="top" secondItem="dEx-ZH-bcA" secondAttribute="bottom" id="hMt-wa-Jng"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="mjt-ee-NrG" secondAttribute="leading" id="jsb-AJ-sK5"/>
-                            <constraint firstAttribute="height" secondItem="dEx-ZH-bcA" secondAttribute="height" multiplier="4:1" id="mP8-UL-jYM"/>
-                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="leading" secondItem="dEx-ZH-bcA" secondAttribute="leading" id="mUA-x6-fRa"/>
-                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="trailing" secondItem="dEx-ZH-bcA" secondAttribute="trailing" id="mc3-il-Tpa"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="top" secondItem="SG5-xk-CjY" secondAttribute="bottom" id="tmO-c7-niQ"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="Zym-bb-h59" secondAttribute="leading" id="vJ9-tZ-van"/>
-                            <constraint firstItem="mjt-ee-NrG" firstAttribute="top" secondItem="Zym-bb-h59" secondAttribute="bottom" id="xby-7j-qeJ"/>
-                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="height" secondItem="mjt-ee-NrG" secondAttribute="height" id="zEY-K1-iOg"/>
+                            <constraint firstItem="rOF-LE-dOk" firstAttribute="top" secondItem="AEn-gN-5gd" secondAttribute="bottom" id="0Ng-Gb-R7i"/>
+                            <constraint firstAttribute="trailing" secondItem="rOF-LE-dOk" secondAttribute="trailing" id="XbR-s5-Vop"/>
+                            <constraint firstItem="AEn-gN-5gd" firstAttribute="leading" secondItem="rOF-LE-dOk" secondAttribute="leading" id="ZC2-zx-bzT"/>
+                            <constraint firstItem="rOF-LE-dOk" firstAttribute="leading" secondItem="ufA-Wc-LDD" secondAttribute="leading" id="a8e-On-dub"/>
+                            <constraint firstItem="AEn-gN-5gd" firstAttribute="trailing" secondItem="rOF-LE-dOk" secondAttribute="trailing" id="aOF-p6-kas"/>
+                            <constraint firstItem="AEn-gN-5gd" firstAttribute="leading" secondItem="rOF-LE-dOk" secondAttribute="leading" id="bEk-pI-36P"/>
+                            <constraint firstItem="rOF-LE-dOk" firstAttribute="top" secondItem="SG5-xk-CjY" secondAttribute="bottom" constant="642" id="fDI-Zg-ttT"/>
+                            <constraint firstItem="AEn-gN-5gd" firstAttribute="trailing" secondItem="rOF-LE-dOk" secondAttribute="trailing" id="q54-ZJ-blj"/>
+                            <constraint firstItem="AEn-gN-5gd" firstAttribute="top" secondItem="SG5-xk-CjY" secondAttribute="bottom" id="t64-e5-SBv"/>
+                            <constraint firstItem="rOF-LE-dOk" firstAttribute="bottom" secondItem="bnH-Wp-jxm" secondAttribute="top" id="tx0-Oz-ZIx"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aOF-p6-kas"/>
+                                <exclude reference="bEk-pI-36P"/>
+                                <exclude reference="fDI-Zg-ttT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="HNKWordLookup Demo" id="4kd-9K-wnz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
