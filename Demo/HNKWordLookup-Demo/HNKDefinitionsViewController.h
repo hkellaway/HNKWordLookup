@@ -10,6 +10,6 @@
 
 @interface HNKDefinitionsViewController : UIViewController
 
-@property (nonatomic, copy) NSString *wordToDefine;
+@property (nonatomic, copy) NSString *word;
 
 @end
