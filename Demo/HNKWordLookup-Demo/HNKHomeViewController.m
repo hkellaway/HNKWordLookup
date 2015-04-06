@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
+#import "HNKDefinitionsViewController.h"
 #import "HNKHomeViewController.h"
 
 #import <HNKWordLookup/HNKWordLookup.h>
@@ -39,9 +40,12 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 {
   if ([segue.identifier
           isEqualToString:kHNKSegueShowDefinitionsForWordOfTheDay]) {
+    HNKDefinitionsViewController *destinationController =
+        segue.destinationViewController;
+
     [self.lookup wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay,
                                               NSError *error) {
-      NSLog(@"Word of the Day: %@", wordOfTheDay.word);
+      destinationController.wordToDefine = wordOfTheDay.word;
     }];
   }
 }
