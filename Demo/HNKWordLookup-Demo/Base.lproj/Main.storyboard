@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -308,7 +309,7 @@
         <!--Definitions-->
         <scene sceneID="11M-np-Pab">
             <objects>
-                <viewController id="ubh-Ly-A2X" sceneMemberID="viewController">
+                <viewController id="ubh-Ly-A2X" customClass="HNKDefinitionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YzS-0y-yon"/>
                         <viewControllerLayoutGuide type="bottom" id="5oa-bD-dsm"/>
@@ -316,10 +317,26 @@
                     <view key="view" contentMode="scaleToFill" id="xCu-8M-abU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-Ct-wxg" userLabel="Word Label">
+                                <rect key="frame" x="16" y="16" width="382" height="70"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8da-Ct-wxg" firstAttribute="top" secondItem="xCu-8M-abU" secondAttribute="top" constant="16" id="dbh-sQ-JCe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8da-Ct-wxg" secondAttribute="trailing" id="dhm-uY-1fQ"/>
+                            <constraint firstItem="8da-Ct-wxg" firstAttribute="leading" secondItem="xCu-8M-abU" secondAttribute="leadingMargin" id="wxJ-kq-nmU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Definitions" id="m8F-UB-Jed"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="wordLabel" destination="8da-Ct-wxg" id="4xO-En-BKv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zp-Rd-vic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
