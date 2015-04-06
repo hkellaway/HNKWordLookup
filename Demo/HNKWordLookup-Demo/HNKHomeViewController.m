@@ -24,24 +24,9 @@
 
 #pragma mark - IB Actions
 
-- (IBAction)definitionsButtonTapped:(id)sender
-{
-  NSLog(@"Definitions Button Tapped");
-}
-
 - (IBAction)pronunciationsButtonTapped:(id)sender
 {
   NSLog(@"Pronunciations Button Tapped");
-}
-
-- (IBAction)wordOfTheDayButtonTapped:(id)sender
-{
-  NSLog(@"Word of the Day Button Tapped");
-}
-
-- (IBAction)randomWordTapped:(id)sender
-{
-  NSLog(@"Random Word Tapped");
 }
 
 @end
