@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -47,11 +48,77 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57s-JP-ZtC" userLabel="Definitions View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definitions for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-3X-15U" userLabel="Definitions Label">
+                                                <rect key="frame" x="0.0" y="45" width="414" height="19"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3AG-rF-Xi1" userLabel="Definitions Text Field">
+                                                <rect key="frame" x="64" y="72" width="286" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right.png" translatesAutoresizingMaskIntoConstraints="NO" id="yxi-aC-inw" userLabel="Definitions Go Button">
+                                                <rect key="frame" x="358" y="75" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="HFQ-Cm-93f"/>
+                                                    <constraint firstAttribute="width" secondItem="yxi-aC-inw" secondAttribute="height" multiplier="1:1" id="K2A-PT-Mg5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ZnU-3X-15U" firstAttribute="leading" secondItem="57s-JP-ZtC" secondAttribute="leading" id="Bcg-qb-anl"/>
+                                            <constraint firstItem="yxi-aC-inw" firstAttribute="leading" secondItem="3AG-rF-Xi1" secondAttribute="trailing" constant="8" id="MSI-cc-BCC"/>
+                                            <constraint firstItem="yxi-aC-inw" firstAttribute="centerY" secondItem="3AG-rF-Xi1" secondAttribute="centerY" id="NcW-U2-X1r"/>
+                                            <constraint firstAttribute="trailing" secondItem="3AG-rF-Xi1" secondAttribute="trailing" constant="64" id="PaM-5P-bhZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZnU-3X-15U" secondAttribute="trailing" id="ebP-sn-xQy"/>
+                                            <constraint firstItem="3AG-rF-Xi1" firstAttribute="top" secondItem="ZnU-3X-15U" secondAttribute="bottom" constant="8" id="wYr-r6-Bnk"/>
+                                            <constraint firstAttribute="centerY" secondItem="3AG-rF-Xi1" secondAttribute="centerY" id="ybL-PY-GB0"/>
+                                            <constraint firstItem="3AG-rF-Xi1" firstAttribute="leading" secondItem="57s-JP-ZtC" secondAttribute="leading" constant="64" id="zg0-i4-D0X"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtF-Gt-p9O" userLabel="Pronunciations View">
                                         <rect key="frame" x="0.0" y="165" width="414" height="165"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciations for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTg-cX-b4a" userLabel="Pronunciations Label">
+                                                <rect key="frame" x="0.0" y="45" width="414" height="19"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-UP-OW9" userLabel="Pronunciations Text Field">
+                                                <rect key="frame" x="64" y="72" width="286" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right.png" translatesAutoresizingMaskIntoConstraints="NO" id="48m-t1-GdC" userLabel="Pronunciations Go Button">
+                                                <rect key="frame" x="358" y="75" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="48m-t1-GdC" secondAttribute="height" multiplier="1:1" id="oJa-u6-rLL"/>
+                                                    <constraint firstAttribute="width" constant="15" id="x8a-aC-aZz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.066666666669999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="48m-t1-GdC" firstAttribute="leading" secondItem="lTm-UP-OW9" secondAttribute="trailing" constant="8" id="JdU-Sq-Z7Y"/>
+                                            <constraint firstItem="lTm-UP-OW9" firstAttribute="top" secondItem="aTg-cX-b4a" secondAttribute="bottom" constant="8" id="Neo-ne-tLT"/>
+                                            <constraint firstItem="lTm-UP-OW9" firstAttribute="centerY" secondItem="48m-t1-GdC" secondAttribute="centerY" id="Wve-ZL-sjP"/>
+                                            <constraint firstAttribute="trailing" secondItem="lTm-UP-OW9" secondAttribute="trailing" constant="32" id="cDI-ZL-5BP"/>
+                                            <constraint firstItem="lTm-UP-OW9" firstAttribute="leading" secondItem="XtF-Gt-p9O" secondAttribute="leading" constant="32" id="eM2-dA-vlu"/>
+                                            <constraint firstAttribute="centerY" secondItem="lTm-UP-OW9" secondAttribute="centerY" id="g9W-RY-bNS"/>
+                                            <constraint firstAttribute="centerY" secondItem="lTm-UP-OW9" secondAttribute="centerY" id="sfN-37-hDK"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="cDI-ZL-5BP"/>
+                                                <exclude reference="eM2-dA-vlu"/>
+                                                <exclude reference="g9W-RY-bNS"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-vi-XAD" userLabel="Word of the Day View">
                                         <rect key="frame" x="0.0" y="330" width="414" height="165"/>
@@ -59,7 +126,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuS-V6-HoJ" userLabel="Random Word View">
                                         <rect key="frame" x="0.0" y="492" width="414" height="165"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.066666666669999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -67,26 +134,32 @@
                                     <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="XtF-Gt-p9O" secondAttribute="bottom" id="28U-b2-gdm"/>
                                     <constraint firstAttribute="trailing" secondItem="57s-JP-ZtC" secondAttribute="trailing" id="4Ji-nr-4ya"/>
                                     <constraint firstAttribute="bottom" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="53h-hw-7oJ"/>
+                                    <constraint firstItem="ZnU-3X-15U" firstAttribute="leading" secondItem="aTg-cX-b4a" secondAttribute="leading" id="6Fh-hc-RlI"/>
                                     <constraint firstAttribute="trailing" secondItem="JuS-V6-HoJ" secondAttribute="trailing" id="6xi-73-ajY"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="7eE-jI-woT"/>
+                                    <constraint firstItem="3AG-rF-Xi1" firstAttribute="trailing" secondItem="lTm-UP-OW9" secondAttribute="trailing" id="9ZQ-e9-cRA"/>
                                     <constraint firstAttribute="trailing" secondItem="5OM-vi-XAD" secondAttribute="trailing" id="FWR-kN-e0Z"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="top" secondItem="AEn-gN-5gd" secondAttribute="top" id="Fu2-uN-jmL"/>
                                     <constraint firstAttribute="trailing" secondItem="XtF-Gt-p9O" secondAttribute="trailing" id="GW2-6J-GKu"/>
                                     <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="Jj7-pr-eWW"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="width" secondItem="AEn-gN-5gd" secondAttribute="width" id="Vaw-36-2tg"/>
+                                    <constraint firstItem="3AG-rF-Xi1" firstAttribute="centerX" secondItem="lTm-UP-OW9" secondAttribute="centerX" id="WN7-B3-E41"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="5OM-vi-XAD" secondAttribute="height" id="WdY-A2-j07"/>
                                     <constraint firstItem="5OM-vi-XAD" firstAttribute="top" secondItem="JuS-V6-HoJ" secondAttribute="bottom" id="beA-XZ-0d5"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="JuS-V6-HoJ" secondAttribute="height" id="f1E-DU-4vM"/>
+                                    <constraint firstItem="ZnU-3X-15U" firstAttribute="trailing" secondItem="aTg-cX-b4a" secondAttribute="trailing" id="kmn-Ai-8Dc"/>
                                     <constraint firstItem="XtF-Gt-p9O" firstAttribute="top" secondItem="57s-JP-ZtC" secondAttribute="bottom" id="lDk-fV-6sT"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="XtF-Gt-p9O" secondAttribute="height" id="nx2-qk-sfo"/>
                                     <constraint firstItem="XtF-Gt-p9O" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="pMy-hV-m8h"/>
                                     <constraint firstItem="57s-JP-ZtC" firstAttribute="height" secondItem="AEn-gN-5gd" secondAttribute="height" multiplier="1:4" id="sWk-xp-krN"/>
                                     <constraint firstItem="5OM-vi-XAD" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="sg3-tA-7Lr"/>
+                                    <constraint firstItem="3AG-rF-Xi1" firstAttribute="leading" secondItem="lTm-UP-OW9" secondAttribute="leading" id="wWW-IY-s1o"/>
                                     <constraint firstItem="JuS-V6-HoJ" firstAttribute="leading" secondItem="AEn-gN-5gd" secondAttribute="leading" id="wXh-QA-qFs"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Vaw-36-2tg"/>
+                                        <exclude reference="WN7-B3-E41"/>
                                         <exclude reference="Jj7-pr-eWW"/>
                                         <exclude reference="beA-XZ-0d5"/>
                                     </mask>
@@ -119,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic5-ZG-MZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="-403"/>
+            <point key="canvasLocation" x="871.5" y="-403"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -164,6 +237,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-arrow-right.png" width="64" height="64"/>
         <image name="logo-wordnik.png" width="132" height="18"/>
     </resources>
 </document>
