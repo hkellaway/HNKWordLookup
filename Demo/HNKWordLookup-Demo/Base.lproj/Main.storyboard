@@ -19,30 +19,6 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-LE-dOk" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="657" width="414" height="15"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-wordnik.png" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-dV-n6L" userLabel="Wordnik Logo Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="oMQ-dV-n6L" firstAttribute="top" secondItem="rOF-LE-dOk" secondAttribute="top" id="0kX-M8-NN9"/>
-                                    <constraint firstAttribute="height" constant="15" id="ACd-59-iS1"/>
-                                    <constraint firstItem="oMQ-dV-n6L" firstAttribute="leading" secondItem="rOF-LE-dOk" secondAttribute="leading" id="CeR-yE-IxQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="oMQ-dV-n6L" secondAttribute="trailing" id="TKG-mm-e8J"/>
-                                    <constraint firstAttribute="centerY" secondItem="oMQ-dV-n6L" secondAttribute="centerY" id="Z3p-tY-COj"/>
-                                    <constraint firstAttribute="bottom" secondItem="oMQ-dV-n6L" secondAttribute="bottom" id="cXX-8C-Gj3"/>
-                                    <constraint firstAttribute="centerX" secondItem="oMQ-dV-n6L" secondAttribute="centerX" id="zI6-39-h4H"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Z3p-tY-COj"/>
-                                        <exclude reference="zI6-39-h4H"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-gN-5gd" userLabel="Body View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="657"/>
                                 <subviews>
@@ -168,7 +144,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="ubh-Ly-A2X" kind="show" id="MDL-yV-Tz9"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="HNKSegueShowDefinitionsForWordOfTheDay" id="Nvn-WI-gKq"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -250,6 +226,30 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-LE-dOk" userLabel="Footer View">
+                                <rect key="frame" x="0.0" y="657" width="414" height="15"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-wordnik.png" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-dV-n6L" userLabel="Wordnik Logo Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oMQ-dV-n6L" firstAttribute="top" secondItem="rOF-LE-dOk" secondAttribute="top" id="0kX-M8-NN9"/>
+                                    <constraint firstAttribute="height" constant="15" id="ACd-59-iS1"/>
+                                    <constraint firstItem="oMQ-dV-n6L" firstAttribute="leading" secondItem="rOF-LE-dOk" secondAttribute="leading" id="CeR-yE-IxQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="oMQ-dV-n6L" secondAttribute="trailing" id="TKG-mm-e8J"/>
+                                    <constraint firstAttribute="centerY" secondItem="oMQ-dV-n6L" secondAttribute="centerY" id="Z3p-tY-COj"/>
+                                    <constraint firstAttribute="bottom" secondItem="oMQ-dV-n6L" secondAttribute="bottom" id="cXX-8C-Gj3"/>
+                                    <constraint firstAttribute="centerX" secondItem="oMQ-dV-n6L" secondAttribute="centerX" id="zI6-39-h4H"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Z3p-tY-COj"/>
+                                        <exclude reference="zI6-39-h4H"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1Z-Fl-c28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="459"/>
+            <point key="canvasLocation" x="826" y="507"/>
         </scene>
         <!--Definitions-->
         <scene sceneID="11M-np-Pab">
@@ -355,6 +355,6 @@
         <image name="logo-wordnik.png" width="132" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MDL-yV-Tz9"/>
+        <segue reference="Nvn-WI-gKq"/>
     </inferredMetricsTieBreakers>
 </document>
