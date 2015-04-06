@@ -22,11 +22,4 @@
   [super viewDidLoad];
 }
 
-#pragma mark - IB Actions
-
-- (IBAction)pronunciationsButtonTapped:(id)sender
-{
-  NSLog(@"Pronunciations Button Tapped");
-}
-
 @end
