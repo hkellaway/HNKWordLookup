@@ -13,7 +13,6 @@
 		DCBB531A1AD24AD900C4592C /* HNKDefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB53191AD24AD900C4592C /* HNKDefinitionsViewController.m */; };
 		DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9041ABFC53700E2E7E8 /* main.m */; };
 		DCD8F9081ABFC53700E2E7E8 /* HNKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9071ABFC53700E2E7E8 /* HNKAppDelegate.m */; };
-		DCD8F90B1ABFC53700E2E7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */; };
 		DCD8F90E1ABFC53700E2E7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */; };
 		DCD8F9101ABFC53700E2E7E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */; };
 		DCD8F9131ABFC53700E2E7E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F9111ABFC53700E2E7E8 /* LaunchScreen.xib */; };
@@ -43,8 +42,6 @@
 		DCD8F9041ABFC53700E2E7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCD8F9061ABFC53700E2E7E8 /* HNKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNKAppDelegate.h; sourceTree = "<group>"; };
 		DCD8F9071ABFC53700E2E7E8 /* HNKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNKAppDelegate.m; sourceTree = "<group>"; };
-		DCD8F9091ABFC53700E2E7E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DCD8F90D1ABFC53700E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DCD8F9121ABFC53700E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -130,8 +127,6 @@
 				DCBB53191AD24AD900C4592C /* HNKDefinitionsViewController.m */,
 				DCF3B4841AD2188600DF4A77 /* HNKHomeViewController.h */,
 				DCF3B4851AD2188600DF4A77 /* HNKHomeViewController.m */,
-				DCD8F9091ABFC53700E2E7E8 /* ViewController.h */,
-				DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */,
 				DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */,
 				DCBB53111AD223F000C4592C /* Resources */,
 				DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */,
@@ -305,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCD8F90B1ABFC53700E2E7E8 /* ViewController.m in Sources */,
 				DCD8F9081ABFC53700E2E7E8 /* HNKAppDelegate.m in Sources */,
 				DCBB531A1AD24AD900C4592C /* HNKDefinitionsViewController.m in Sources */,
 				DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */,

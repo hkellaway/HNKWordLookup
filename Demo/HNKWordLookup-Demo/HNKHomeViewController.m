@@ -12,13 +12,16 @@
 #import <HNKWordLookup/HNKWordLookup.h>
 
 #warning Replace YOUR_API_KEY with your API key
-static NSString *const kHNKApiKey = @"YOUR_API_KEY";
+static NSString *const kHNKApiKey =
+    @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
 static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     @"HNKSegueShowDefinitionsForWordOfTheDay";
 
 @interface HNKHomeViewController ()
 
 @property (nonatomic, strong) HNKLookup *lookup;
+@property (nonatomic, copy) HNKWordOfTheDay *wordOfTheDay;
+
 @property (weak, nonatomic) IBOutlet UITextField *definitionsTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pronunciationsTextField;
 
@@ -40,14 +43,60 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 {
   if ([segue.identifier
           isEqualToString:kHNKSegueShowDefinitionsForWordOfTheDay]) {
+
     HNKDefinitionsViewController *destinationController =
         segue.destinationViewController;
 
-    [self.lookup wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay,
-                                              NSError *error) {
-      destinationController.wordToDefine = wordOfTheDay.word;
-    }];
+    if ([self shouldFetchWordOfTheDay]) {
+      void (^fetchCompletion)(HNKWordOfTheDay *, NSError *);
+      fetchCompletion = ^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
+        [self cacheWordOfTheDay:wordOfTheDay];
+        destinationController.word = wordOfTheDay.word;
+      };
+
+      [self fetchWordOfTheDayWithCompletion:fetchCompletion];
+    } else {
+      destinationController.word = self.wordOfTheDay.word;
+    }
   }
+}
+
+#pragma mark - Helpers
+
+- (BOOL)shouldFetchWordOfTheDay
+{
+  NSDate *sourceDate = self.wordOfTheDay.datePublished;
+
+  NSTimeZone *sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+  NSTimeZone *destinationTimeZone = [NSTimeZone systemTimeZone];
+
+  NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:sourceDate];
+  NSInteger destinationGMTOffset =
+      [destinationTimeZone secondsFromGMTForDate:sourceDate];
+  NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
+
+  NSDate *destinationDate =
+      [[NSDate alloc] initWithTimeInterval:interval sinceDate:sourceDate];
+
+  NSLog(@"%@", destinationDate);
+
+  if ((self.wordOfTheDay == nil) ||
+      [self.wordOfTheDay datePublished] < [NSDate date]) {
+    return YES;
+  }
+
+  return NO;
+}
+
+- (void)fetchWordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *,
+                                                  NSError *))completion
+{
+  [self.lookup wordOfTheDayWithCompletion:completion];
+}
+
+- (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
+{
+  self.wordOfTheDay = wordOfTheDay;
 }
 
 @end

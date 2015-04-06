@@ -10,6 +10,8 @@
 
 @interface HNKDefinitionsViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+
 @end
 
 @implementation HNKDefinitionsViewController
@@ -17,6 +19,15 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+}
+
+#pragma mark - Setters
+
+- (void)setWord:(NSString *)word
+{
+  _word = word;
+
+  self.wordLabel.text = word;
 }
 
 @end
