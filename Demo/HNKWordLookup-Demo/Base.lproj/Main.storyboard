@@ -69,6 +69,9 @@
                                                 <state key="normal" title="Go" image="icon-arrow-right.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="definitionsButtonTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="JOp-gs-kRv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -117,6 +120,9 @@
                                                         <exclude reference="eLg-B1-GxX"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pronunciationsButtonTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="Brn-bG-Ik6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.066666666669999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,6 +167,9 @@
                                                         <exclude reference="P3a-Gr-YJF"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="wordOfTheDayButtonTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="hYI-pz-hSz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -188,6 +197,9 @@
                                                 <state key="normal" title="Go" image="icon-arrow-right.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="randomWordTapped:" destination="1qt-Yp-pwF" eventType="touchUpInside" id="Fs2-N7-DFV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.066666666669999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,6 +274,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="HNKWordLookup Demo" id="4kd-9K-wnz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="definitionsTextField" destination="3AG-rF-Xi1" id="lyv-Hc-YVk"/>
+                        <outlet property="pronunciationsTextField" destination="lTm-UP-OW9" id="F7p-3N-QHU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic5-ZG-MZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
