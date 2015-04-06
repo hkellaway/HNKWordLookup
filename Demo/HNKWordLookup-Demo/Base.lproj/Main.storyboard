@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HNKWordLookup Demo-->
@@ -14,15 +16,52 @@
                         <viewControllerLayoutGuide type="bottom" id="bnH-Wp-jxm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ufA-Wc-LDD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEx-ZH-bcA" userLabel="Definitions View">
+                                <rect key="frame" x="16" y="0.0" width="382" height="168"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GM4-OU-Ezu" userLabel="Pronunciations View">
+                                <rect key="frame" x="16" y="168" width="382" height="168"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-bb-h59" userLabel="Word of the Day View">
+                                <rect key="frame" x="16" y="336" width="382" height="168"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-ee-NrG" userLabel="Random Word View">
+                                <rect key="frame" x="16" y="504" width="382" height="168"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zym-bb-h59" firstAttribute="top" secondItem="GM4-OU-Ezu" secondAttribute="bottom" id="9TQ-p0-CkD"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="height" secondItem="Zym-bb-h59" secondAttribute="height" id="BMX-Pc-3S0"/>
+                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="height" secondItem="dEx-ZH-bcA" secondAttribute="height" id="BdH-Bq-o7a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEx-ZH-bcA" secondAttribute="trailing" id="Vae-lO-zTr"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="trailing" secondItem="Zym-bb-h59" secondAttribute="trailing" id="X4g-wC-9FP"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="trailing" secondItem="mjt-ee-NrG" secondAttribute="trailing" id="XBH-hH-xNN"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="ufA-Wc-LDD" secondAttribute="leadingMargin" id="Zeg-OE-lmb"/>
+                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="top" secondItem="dEx-ZH-bcA" secondAttribute="bottom" id="hMt-wa-Jng"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="mjt-ee-NrG" secondAttribute="leading" id="jsb-AJ-sK5"/>
+                            <constraint firstAttribute="height" secondItem="dEx-ZH-bcA" secondAttribute="height" multiplier="4:1" id="mP8-UL-jYM"/>
+                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="leading" secondItem="dEx-ZH-bcA" secondAttribute="leading" id="mUA-x6-fRa"/>
+                            <constraint firstItem="GM4-OU-Ezu" firstAttribute="trailing" secondItem="dEx-ZH-bcA" secondAttribute="trailing" id="mc3-il-Tpa"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="top" secondItem="SG5-xk-CjY" secondAttribute="bottom" id="tmO-c7-niQ"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="leading" secondItem="Zym-bb-h59" secondAttribute="leading" id="vJ9-tZ-van"/>
+                            <constraint firstItem="mjt-ee-NrG" firstAttribute="top" secondItem="Zym-bb-h59" secondAttribute="bottom" id="xby-7j-qeJ"/>
+                            <constraint firstItem="dEx-ZH-bcA" firstAttribute="height" secondItem="mjt-ee-NrG" secondAttribute="height" id="zEY-K1-iOg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HNKWordLookup Demo" id="4kd-9K-wnz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic5-ZG-MZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="-403"/>
+            <point key="canvasLocation" x="873" y="-403"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -40,12 +79,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="370" y="413"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3kj-nb-K46">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHo-PC-CMq" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="QvH-Px-ZQa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
