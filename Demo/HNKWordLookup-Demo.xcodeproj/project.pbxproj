@@ -15,6 +15,7 @@
 		DCD8F9101ABFC53700E2E7E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */; };
 		DCD8F9131ABFC53700E2E7E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F9111ABFC53700E2E7E8 /* LaunchScreen.xib */; };
 		DCD8F91F1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F91E1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m */; };
+		DCF3B4861AD2188600DF4A77 /* HNKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF3B4851AD2188600DF4A77 /* HNKHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		DCD8F9181ABFC53700E2E7E8 /* HNKWordLookup-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HNKWordLookup-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD8F91D1ABFC53700E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD8F91E1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNKWordLookup_DemoTests.m; sourceTree = "<group>"; };
+		DCF3B4841AD2188600DF4A77 /* HNKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNKHomeViewController.h; sourceTree = "<group>"; };
+		DCF3B4851AD2188600DF4A77 /* HNKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNKHomeViewController.m; sourceTree = "<group>"; };
 		FAECDC3BEAEFCAF6E48A61D2 /* Pods-HNKWordLookup-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +110,8 @@
 			children = (
 				DCD8F9061ABFC53700E2E7E8 /* HNKAppDelegate.h */,
 				DCD8F9071ABFC53700E2E7E8 /* HNKAppDelegate.m */,
+				DCF3B4841AD2188600DF4A77 /* HNKHomeViewController.h */,
+				DCF3B4851AD2188600DF4A77 /* HNKHomeViewController.m */,
 				DCD8F9091ABFC53700E2E7E8 /* ViewController.h */,
 				DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */,
 				DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */,
@@ -282,6 +287,7 @@
 				DCD8F90B1ABFC53700E2E7E8 /* ViewController.m in Sources */,
 				DCD8F9081ABFC53700E2E7E8 /* HNKAppDelegate.m in Sources */,
 				DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */,
+				DCF3B4861AD2188600DF4A77 /* HNKHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
