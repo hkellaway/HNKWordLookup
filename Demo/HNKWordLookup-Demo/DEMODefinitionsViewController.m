@@ -1,5 +1,5 @@
 //
-//  HNKDefinitionsViewController.m
+//  DEMODefinitionsViewController.m
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/5/15.
@@ -8,7 +8,7 @@
 
 #import "DEMODefinitionsViewController.h"
 
-static NSString *const kHNKDemoPlaceholderText = @"Loading...";
+static NSString *const kDemoPlaceholderText = @"Loading...";
 
 @interface DEMODefinitionsViewController ()
 
@@ -23,7 +23,7 @@ static NSString *const kHNKDemoPlaceholderText = @"Loading...";
   [super viewDidLoad];
 
   self.wordLabel.text =
-      self.word ? self.word : NSLocalizedString(kHNKDemoPlaceholderText, @"");
+      self.word ? self.word : NSLocalizedString(kDemoPlaceholderText, @"");
 }
 
 #pragma mark - Setters
