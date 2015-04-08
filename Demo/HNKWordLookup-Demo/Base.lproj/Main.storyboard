@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="ydP-bD-duM">
             <objects>
-                <viewController id="1qt-Yp-pwF" userLabel="Home" customClass="HNKDHomeViewController" sceneMemberID="viewController">
+                <viewController id="1qt-Yp-pwF" userLabel="Home" customClass="DEMOHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SG5-xk-CjY"/>
                         <viewControllerLayoutGuide type="bottom" id="bnH-Wp-jxm"/>
@@ -175,7 +175,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="HNKSegueShowDefinitionsForRandomWord" id="jvx-6U-eKz"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="SegueShowDefinitionsForRandomWord" id="jvx-6U-eKz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -289,7 +289,7 @@
         <!--Pronunciations-->
         <scene sceneID="VgW-T5-iuT">
             <objects>
-                <viewController id="rAm-S4-EMR" customClass="HNKDPronunciationsViewController" sceneMemberID="viewController">
+                <viewController id="rAm-S4-EMR" customClass="DEMOPronunciationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8G4-6c-0Al"/>
                         <viewControllerLayoutGuide type="bottom" id="o3Y-E1-oZU"/>
@@ -309,7 +309,7 @@
         <!--Definitions-->
         <scene sceneID="11M-np-Pab">
             <objects>
-                <viewController id="ubh-Ly-A2X" customClass="HNKDDefinitionsViewController" sceneMemberID="viewController">
+                <viewController id="ubh-Ly-A2X" customClass="DEMODefinitionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YzS-0y-yon"/>
                         <viewControllerLayoutGuide type="bottom" id="5oa-bD-dsm"/>

@@ -1,5 +1,5 @@
 //
-//  NSDate+HNKDAdditions.h
+//  NSDate+DEMOAdditions.h
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/7/15.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (HNKDAdditions)
+@interface NSDate (DEMOAdditions)
 
-- (BOOL)hnkd_isToday;
+- (BOOL)demo_isToday;
 
 @end
