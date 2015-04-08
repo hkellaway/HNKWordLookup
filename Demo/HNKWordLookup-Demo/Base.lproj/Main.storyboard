@@ -8,10 +8,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--HNKWordLookup Demo-->
+        <!--Home-->
         <scene sceneID="ydP-bD-duM">
             <objects>
-                <viewController id="1qt-Yp-pwF" customClass="HNKDHomeViewController" sceneMemberID="viewController">
+                <viewController id="1qt-Yp-pwF" userLabel="Home" customClass="HNKDHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SG5-xk-CjY"/>
                         <viewControllerLayoutGuide type="bottom" id="bnH-Wp-jxm"/>
@@ -289,7 +289,7 @@
         <!--Pronunciations-->
         <scene sceneID="VgW-T5-iuT">
             <objects>
-                <viewController id="rAm-S4-EMR" sceneMemberID="viewController">
+                <viewController id="rAm-S4-EMR" customClass="HNKDPronunciationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8G4-6c-0Al"/>
                         <viewControllerLayoutGuide type="bottom" id="o3Y-E1-oZU"/>

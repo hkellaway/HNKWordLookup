@@ -8,6 +8,7 @@
 
 #import "HNKDDefinitionsViewController.h"
 #import "HNKDHomeViewController.h"
+#import "HNKDPronunciationsViewController.h"
 #import "HNKDWordLookup.h"
 
 #import "NSDate+HNKDAdditions.h"
@@ -42,6 +43,15 @@ static NSString *const kHNKDemoSegueShowDefinitionsForWordOfTheDay =
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   id destinationController = segue.destinationViewController;
+
+  if ([destinationController
+          isKindOfClass:[HNKDPronunciationsViewController class]]) {
+
+    HNKDPronunciationsViewController *pronunciationsController =
+        (HNKDPronunciationsViewController *)destinationController;
+
+    pronunciationsController.word = self.pronunciationsTextField.text;
+  }
 
   if ([destinationController
           isKindOfClass:[HNKDDefinitionsViewController class]]) {
