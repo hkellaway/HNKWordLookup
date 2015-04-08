@@ -11,6 +11,7 @@
 		DCBB53131AD2240E00C4592C /* logo-wordnik.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53121AD2240E00C4592C /* logo-wordnik.png */; };
 		DCBB53171AD22FFC00C4592C /* icon-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */; };
 		DCBB531A1AD24AD900C4592C /* HNKDefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB53191AD24AD900C4592C /* HNKDefinitionsViewController.m */; };
+		DCBB531D1AD4E19500C4592C /* NSDate+HNKDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB531C1AD4E19500C4592C /* NSDate+HNKDAdditions.m */; };
 		DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9041ABFC53700E2E7E8 /* main.m */; };
 		DCD8F9081ABFC53700E2E7E8 /* HNKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9071ABFC53700E2E7E8 /* HNKAppDelegate.m */; };
 		DCD8F90E1ABFC53700E2E7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 		DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-right.png"; sourceTree = "<group>"; };
 		DCBB53181AD24AD900C4592C /* HNKDefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNKDefinitionsViewController.h; sourceTree = "<group>"; };
 		DCBB53191AD24AD900C4592C /* HNKDefinitionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNKDefinitionsViewController.m; sourceTree = "<group>"; };
+		DCBB531B1AD4E19500C4592C /* NSDate+HNKDAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HNKDAdditions.h"; sourceTree = "<group>"; };
+		DCBB531C1AD4E19500C4592C /* NSDate+HNKDAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HNKDAdditions.m"; sourceTree = "<group>"; };
 		DCD8F8FF1ABFC53700E2E7E8 /* HNKWordLookup-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HNKWordLookup-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD8F9031ABFC53700E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD8F9041ABFC53700E2E7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				DCBB53191AD24AD900C4592C /* HNKDefinitionsViewController.m */,
 				DCF3B4841AD2188600DF4A77 /* HNKHomeViewController.h */,
 				DCF3B4851AD2188600DF4A77 /* HNKHomeViewController.m */,
+				DCBB531B1AD4E19500C4592C /* NSDate+HNKDAdditions.h */,
+				DCBB531C1AD4E19500C4592C /* NSDate+HNKDAdditions.m */,
 				DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */,
 				DCBB53111AD223F000C4592C /* Resources */,
 				DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */,
@@ -300,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBB531D1AD4E19500C4592C /* NSDate+HNKDAdditions.m in Sources */,
 				DCD8F9081ABFC53700E2E7E8 /* HNKAppDelegate.m in Sources */,
 				DCBB531A1AD24AD900C4592C /* HNKDefinitionsViewController.m in Sources */,
 				DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */,
