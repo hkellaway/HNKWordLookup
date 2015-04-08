@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39AE1AF0873E93FB95D552E4 /* libPods-HNKWordLookup-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF9B8792BA6D2432D09C87B /* libPods-HNKWordLookup-Demo.a */; };
 		DC1BD3E51AD4FB1A00A25590 /* HNKDWordLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E41AD4FB1A00A25590 /* HNKDWordLookup.m */; };
+		DC1BD3E81AD505D000A25590 /* HNKDPronunciationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E71AD505D000A25590 /* HNKDPronunciationsViewController.m */; };
 		DCBB53131AD2240E00C4592C /* logo-wordnik.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53121AD2240E00C4592C /* logo-wordnik.png */; };
 		DCBB53171AD22FFC00C4592C /* icon-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */; };
 		DCBB531A1AD24AD900C4592C /* HNKDDefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB53191AD24AD900C4592C /* HNKDDefinitionsViewController.m */; };
@@ -37,6 +38,8 @@
 		318085C02712CF30461441C3 /* Pods-HNKWordLookup-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		DC1BD3E31AD4FB1A00A25590 /* HNKDWordLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNKDWordLookup.h; sourceTree = "<group>"; };
 		DC1BD3E41AD4FB1A00A25590 /* HNKDWordLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNKDWordLookup.m; sourceTree = "<group>"; };
+		DC1BD3E61AD505D000A25590 /* HNKDPronunciationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNKDPronunciationsViewController.h; sourceTree = "<group>"; };
+		DC1BD3E71AD505D000A25590 /* HNKDPronunciationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNKDPronunciationsViewController.m; sourceTree = "<group>"; };
 		DCBB53121AD2240E00C4592C /* logo-wordnik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-wordnik.png"; sourceTree = "<group>"; };
 		DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-right.png"; sourceTree = "<group>"; };
 		DCBB53181AD24AD900C4592C /* HNKDDefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNKDDefinitionsViewController.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				DCD8F9071ABFC53700E2E7E8 /* HNKDAppDelegate.m */,
 				DCBB53181AD24AD900C4592C /* HNKDDefinitionsViewController.h */,
 				DCBB53191AD24AD900C4592C /* HNKDDefinitionsViewController.m */,
+				DC1BD3E61AD505D000A25590 /* HNKDPronunciationsViewController.h */,
+				DC1BD3E71AD505D000A25590 /* HNKDPronunciationsViewController.m */,
 				DCF3B4841AD2188600DF4A77 /* HNKDHomeViewController.h */,
 				DCF3B4851AD2188600DF4A77 /* HNKDHomeViewController.m */,
 				DC1BD3E31AD4FB1A00A25590 /* HNKDWordLookup.h */,
@@ -312,6 +317,7 @@
 			files = (
 				DCBB531D1AD4E19500C4592C /* NSDate+HNKDAdditions.m in Sources */,
 				DCD8F9081ABFC53700E2E7E8 /* HNKDAppDelegate.m in Sources */,
+				DC1BD3E81AD505D000A25590 /* HNKDPronunciationsViewController.m in Sources */,
 				DCBB531A1AD24AD900C4592C /* HNKDDefinitionsViewController.m in Sources */,
 				DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */,
 				DC1BD3E51AD4FB1A00A25590 /* HNKDWordLookup.m in Sources */,

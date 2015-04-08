@@ -67,11 +67,12 @@ static NSString *const kDemoApiKey =
         completion(nil, error);
       }
 
+      [self cacheWordOfTheDay:wordOfTheDay];
       completion(wordOfTheDay.word, nil);
     }];
 
   } else {
-    completion(self.wordOfTheDay.word, nil);
+    completion([self cachedWordOfTheDay].word, nil);
   }
 }
 
@@ -95,6 +96,11 @@ static NSString *const kDemoApiKey =
 - (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
 {
   self.wordOfTheDay = wordOfTheDay;
+}
+
+- (HNKWordOfTheDay *)cachedWordOfTheDay
+{
+  return self.wordOfTheDay;
 }
 
 @end
