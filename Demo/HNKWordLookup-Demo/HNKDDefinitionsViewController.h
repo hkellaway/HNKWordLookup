@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HNKDefinitionsViewController : UIViewController
+@interface HNKDDefinitionsViewController : UIViewController
 
 @property (nonatomic, copy) NSString *word;
 

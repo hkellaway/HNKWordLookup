@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKAppDelegate.h"
+#import "HNKDAppDelegate.h"
 
-@interface HNKAppDelegate ()
+@interface HNKDAppDelegate ()
 
 @end
 
-@implementation HNKAppDelegate
+@implementation HNKDAppDelegate
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

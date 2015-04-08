@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HNKHomeViewController : UIViewController
+@interface HNKDHomeViewController : UIViewController
 
 @end

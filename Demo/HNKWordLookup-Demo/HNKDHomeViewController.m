@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKDefinitionsViewController.h"
-#import "HNKHomeViewController.h"
+#import "HNKDDefinitionsViewController.h"
+#import "HNKDHomeViewController.h"
 
 #import "NSDate+HNKDAdditions.h"
 
 #import <HNKWordLookup/HNKWordLookup.h>
 
 #warning Replace YOUR_API_KEY with your API key
-static NSString *const kHNKApiKey =
+static NSString *const kHNKDemoApiKey =
     @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
-static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
+static NSString *const kHNKDemoSegueShowDefinitionsForWordOfTheDay =
     @"HNKSegueShowDefinitionsForWordOfTheDay";
 
-@interface HNKHomeViewController () <HNKLookupDelegate>
+@interface HNKDHomeViewController () <HNKLookupDelegate>
 
 @property (nonatomic, strong) HNKLookup *lookup;
 @property (nonatomic, copy) HNKWordOfTheDay *wordOfTheDay;
@@ -29,13 +29,13 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 
 @end
 
-@implementation HNKHomeViewController
+@implementation HNKDHomeViewController
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
 
-  [HNKLookup sharedInstanceWithAPIKey:kHNKApiKey];
+  [HNKLookup sharedInstanceWithAPIKey:kHNKDemoApiKey];
 
   self.lookup = [HNKLookup sharedInstance];
   self.lookup.delegate = self;
@@ -55,9 +55,9 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([segue.identifier
-          isEqualToString:kHNKSegueShowDefinitionsForWordOfTheDay]) {
+          isEqualToString:kHNKDemoSegueShowDefinitionsForWordOfTheDay]) {
 
-    HNKDefinitionsViewController *destinationController =
+    HNKDDefinitionsViewController *destinationController =
         segue.destinationViewController;
 
     void (^fetchCompletion)(NSString *, NSError *) =
@@ -104,7 +104,7 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 - (BOOL)shouldFetchWordOfTheDay
 {
   return (self.wordOfTheDay == nil) ||
-         ![self.wordOfTheDay.datePublished isToday];
+         ![self.wordOfTheDay.datePublished hnkd_isToday];
 }
 
 - (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
