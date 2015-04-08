@@ -12,8 +12,7 @@
 #import <HNKWordLookup/HNKWordLookup.h>
 
 #warning Replace YOUR_API_KEY with your API key
-static NSString *const kHNKApiKey =
-    @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
+static NSString *const kHNKApiKey = @"YOUR_API_KEY";
 static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     @"HNKSegueShowDefinitionsForWordOfTheDay";
 
@@ -47,56 +46,13 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     HNKDefinitionsViewController *destinationController =
         segue.destinationViewController;
 
-    if ([self shouldFetchWordOfTheDay]) {
-      void (^fetchCompletion)(HNKWordOfTheDay *, NSError *);
-      fetchCompletion = ^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
-        [self cacheWordOfTheDay:wordOfTheDay];
-        destinationController.word = wordOfTheDay.word;
-      };
+    void (^fetchCompletion)(HNKWordOfTheDay *, NSError *);
+    fetchCompletion = ^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
+      destinationController.word = wordOfTheDay.word;
+    };
 
-      [self fetchWordOfTheDayWithCompletion:fetchCompletion];
-    } else {
-      destinationController.word = self.wordOfTheDay.word;
-    }
+    [self.lookup wordOfTheDayWithCompletion:fetchCompletion];
   }
-}
-
-#pragma mark - Helpers
-
-- (BOOL)shouldFetchWordOfTheDay
-{
-  NSDate *sourceDate = self.wordOfTheDay.datePublished;
-
-  NSTimeZone *sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-  NSTimeZone *destinationTimeZone = [NSTimeZone systemTimeZone];
-
-  NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:sourceDate];
-  NSInteger destinationGMTOffset =
-      [destinationTimeZone secondsFromGMTForDate:sourceDate];
-  NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
-
-  NSDate *destinationDate =
-      [[NSDate alloc] initWithTimeInterval:interval sinceDate:sourceDate];
-
-  NSLog(@"%@", destinationDate);
-
-  if ((self.wordOfTheDay == nil) ||
-      [self.wordOfTheDay datePublished] < [NSDate date]) {
-    return YES;
-  }
-
-  return NO;
-}
-
-- (void)fetchWordOfTheDayWithCompletion:(void (^)(HNKWordOfTheDay *,
-                                                  NSError *))completion
-{
-  [self.lookup wordOfTheDayWithCompletion:completion];
-}
-
-- (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
-{
-  self.wordOfTheDay = wordOfTheDay;
 }
 
 @end
