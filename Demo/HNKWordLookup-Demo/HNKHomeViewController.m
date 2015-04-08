@@ -12,7 +12,8 @@
 #import <HNKWordLookup/HNKWordLookup.h>
 
 #warning Replace YOUR_API_KEY with your API key
-static NSString *const kHNKApiKey = @"YOUR_API_KEY";
+static NSString *const kHNKApiKey =
+    @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
 static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     @"HNKSegueShowDefinitionsForWordOfTheDay";
 
@@ -46,13 +47,51 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     HNKDefinitionsViewController *destinationController =
         segue.destinationViewController;
 
-    void (^fetchCompletion)(HNKWordOfTheDay *, NSError *);
-    fetchCompletion = ^(HNKWordOfTheDay *wordOfTheDay, NSError *error) {
-      destinationController.word = wordOfTheDay.word;
-    };
+    void (^fetchCompletion)(NSString *, NSError *) =
+        ^(NSString *wordOfTheDay, NSError *error) {
 
-    [self.lookup wordOfTheDayWithCompletion:fetchCompletion];
+          if (error) {
+            NSLog(@"Error: %@", error);
+          }
+
+          destinationController.word = wordOfTheDay;
+
+        };
+
+    [self fetchWordOfTheDayWithCompletion:fetchCompletion];
   }
+}
+
+#pragma mark - Helpers
+
+- (void)fetchWordOfTheDayWithCompletion:(void (^)(NSString *,
+                                                  NSError *))completion
+{
+  if ([self shouldFetchWordOfTheDay]) {
+    [self.lookup wordOfTheDayWithCompletion:^(HNKWordOfTheDay *wordOfTheDay,
+                                              NSError *error) {
+      if (error) {
+        completion(nil, error);
+      }
+
+      [self cacheWordOfTheDay:wordOfTheDay];
+      completion(wordOfTheDay.word, nil);
+
+    }];
+  } else {
+    completion(self.wordOfTheDay.word, nil);
+  }
+}
+
+- (BOOL)shouldFetchWordOfTheDay
+{
+  return (self.wordOfTheDay == nil) ||
+         self.wordOfTheDay.datePublished < [NSDate date];
+}
+
+- (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
+{
+  self.wordOfTheDay = wordOfTheDay;
 }
 
 @end
