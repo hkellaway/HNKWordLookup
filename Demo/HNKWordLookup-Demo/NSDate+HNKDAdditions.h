@@ -10,6 +10,6 @@
 
 @interface NSDate (HNKDAdditions)
 
-- (BOOL)isToday;
+- (BOOL)hnkd_isToday;
 
 @end

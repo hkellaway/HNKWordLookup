@@ -12,7 +12,7 @@
 
 #pragma mark - Instance methods
 
-- (BOOL)isToday
+- (BOOL)hnkd_isToday
 {
   NSDate *currentCalendarToday =
       [self currentCalendarVersionOfDate:[NSDate date]];
