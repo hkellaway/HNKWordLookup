@@ -1,5 +1,5 @@
 //
-//  HNKHomeViewController.h
+//  DEMOHomeViewController.h
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/5/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HNKDHomeViewController : UIViewController
+@interface DEMOHomeViewController : UIViewController
 
 @end

@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  DEMOAppDelegate.m
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 3/22/15.
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKDAppDelegate.h"
+#import "DEMOAppDelegate.h"
 
-@interface HNKDAppDelegate ()
+@interface DEMOAppDelegate ()
 
 @end
 
-@implementation HNKDAppDelegate
+@implementation DEMOAppDelegate
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

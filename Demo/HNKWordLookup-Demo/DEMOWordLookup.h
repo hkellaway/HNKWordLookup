@@ -1,5 +1,5 @@
 //
-//  HNKDWordLookup.h
+//  DEMOWordLookup.h
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/7/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HNKDWordLookup : NSObject
+@interface DEMOWordLookup : NSObject
 
 - (void)fetchRandomWordWithCompletion:(void (^)(NSString *,
                                                 NSError *))completion;
