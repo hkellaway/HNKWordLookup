@@ -16,8 +16,12 @@
 #warning Replace YOUR_API_KEY with your API key
 static NSString *const kHNKDemoApiKey =
     @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
+static NSString *const kHNKDemoHNKSegueShowDefinitionsForWord =
+    @"HNKSegueShowDefinitionsForWord";
+static NSString *const kHNKDemoHNKSegueShowDefinitionsForRandomWord =
+    @"HNKSegueShowDefinitionsForRandomWord";
 static NSString *const kHNKDemoSegueShowDefinitionsForWordOfTheDay =
-    @"HNKSegueShowDefinitionsForWordOfTheDay";
+    @"SegueShowDefinitionsForWordOfTheDay";
 
 @interface HNKDHomeViewController () <HNKLookupDelegate>
 
@@ -54,24 +58,39 @@ static NSString *const kHNKDemoSegueShowDefinitionsForWordOfTheDay =
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  if ([segue.identifier
-          isEqualToString:kHNKDemoSegueShowDefinitionsForWordOfTheDay]) {
+  id destinationController = segue.destinationViewController;
 
-    HNKDDefinitionsViewController *destinationController =
-        segue.destinationViewController;
+  if ([destinationController
+          isKindOfClass:[HNKDDefinitionsViewController class]]) {
+
+    HNKDDefinitionsViewController *definitionsController =
+        (HNKDDefinitionsViewController *)destinationController;
 
     void (^fetchCompletion)(NSString *, NSError *) =
-        ^(NSString *wordOfTheDay, NSError *error) {
+        ^(NSString *word, NSError *error) {
 
           if (error) {
             [self handleError:error];
           }
 
-          destinationController.word = wordOfTheDay;
+          definitionsController.word = word;
 
         };
 
-    [self fetchWordOfTheDayWithCompletion:fetchCompletion];
+    if ([segue.identifier
+            isEqualToString:kHNKDemoHNKSegueShowDefinitionsForWord]) {
+      fetchCompletion(self.definitionsTextField.text, nil);
+    }
+
+    if ([segue.identifier
+            isEqualToString:kHNKDemoHNKSegueShowDefinitionsForRandomWord]) {
+      [self fetchRandomWordWithCompletion:fetchCompletion];
+    }
+
+    if ([segue.identifier
+            isEqualToString:kHNKDemoSegueShowDefinitionsForWordOfTheDay]) {
+      [self fetchWordOfTheDayWithCompletion:fetchCompletion];
+    }
   }
 }
 
@@ -80,6 +99,19 @@ static NSString *const kHNKDemoSegueShowDefinitionsForWordOfTheDay =
 - (void)handleError:(NSError *)error
 {
   NSLog(@"HNKWordLookup-Demo Error: %@", error);
+}
+
+- (void)fetchRandomWordWithCompletion:(void (^)(NSString *,
+                                                NSError *))completion
+{
+  [self.lookup
+      randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
+        if (error) {
+          completion(nil, error);
+        }
+
+        completion(randomWord, error);
+      }];
 }
 
 - (void)fetchWordOfTheDayWithCompletion:(void (^)(NSString *,
