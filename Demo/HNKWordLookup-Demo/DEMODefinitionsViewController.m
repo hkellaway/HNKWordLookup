@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKDDefinitionsViewController.h"
+#import "DEMODefinitionsViewController.h"
 
 static NSString *const kHNKDemoPlaceholderText = @"Loading...";
 
-@interface HNKDDefinitionsViewController ()
+@interface DEMODefinitionsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 
 @end
 
-@implementation HNKDDefinitionsViewController
+@implementation DEMODefinitionsViewController
 
 - (void)viewDidLoad
 {

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DEMOAppDelegate.h
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 3/22/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HNKDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface DEMOAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

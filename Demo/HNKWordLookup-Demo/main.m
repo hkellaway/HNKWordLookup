@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HNKDAppDelegate.h"
+#import "DEMOAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
   @autoreleasepool
   {
     return UIApplicationMain(
-        argc, argv, nil, NSStringFromClass([HNKDAppDelegate class]));
+        argc, argv, nil, NSStringFromClass([DEMOAppDelegate class]));
   }
 }

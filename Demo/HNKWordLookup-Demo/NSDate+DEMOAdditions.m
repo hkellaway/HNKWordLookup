@@ -1,18 +1,18 @@
 //
-//  NSDate+HNKDAdditions.m
+//  NSDate+DEMOAdditions.m
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/7/15.
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "NSDate+HNKDAdditions.h"
+#import "NSDate+DEMOAdditions.h"
 
-@implementation NSDate (HNKDAdditions)
+@implementation NSDate (DEMOAdditions)
 
 #pragma mark - Instance methods
 
-- (BOOL)hnkd_isToday
+- (BOOL)demo_isToday
 {
   NSDate *currentCalendarToday =
       [self currentCalendarVersionOfDate:[NSDate date]];

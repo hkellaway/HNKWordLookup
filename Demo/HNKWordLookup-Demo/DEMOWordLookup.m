@@ -1,29 +1,29 @@
 //
-//  HNKDWordLookup.m
+//  DEMOWordLookup.m
 //  HNKWordLookup-Demo
 //
 //  Created by Harlan Kellaway on 4/7/15.
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKDWordLookup.h"
+#import "DEMOWordLookup.h"
 
 #import <HNKWordLookup/HNKWordLookup.h>
 
-#import "NSDate+HNKDAdditions.h"
+#import "NSDate+DEMOAdditions.h"
 
 #warning Replace YOUR_API_KEY with your API key
 static NSString *const kDemoApiKey =
     @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
 
-@interface HNKDWordLookup () <HNKLookupDelegate>
+@interface DEMOWordLookup () <HNKLookupDelegate>
 
 @property (nonatomic, strong) HNKLookup *lookup;
 @property (nonatomic, strong) HNKWordOfTheDay *wordOfTheDay;
 
 @end
 
-@implementation HNKDWordLookup
+@implementation DEMOWordLookup
 
 #pragma mark - Initialization
 
@@ -90,7 +90,7 @@ static NSString *const kDemoApiKey =
 - (BOOL)shouldFetchWordOfTheDay
 {
   return (self.wordOfTheDay == nil) ||
-         ![self.wordOfTheDay.datePublished hnkd_isToday];
+         ![self.wordOfTheDay.datePublished demo_isToday];
 }
 
 - (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
