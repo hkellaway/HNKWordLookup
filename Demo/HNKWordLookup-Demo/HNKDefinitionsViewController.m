@@ -8,6 +8,8 @@
 
 #import "HNKDefinitionsViewController.h"
 
+static NSString *const kHNKDemoPlaceholderText = @"Loading...";
+
 @interface HNKDefinitionsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
@@ -19,6 +21,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+
+  self.wordLabel.text =
+      self.word ? self.word : NSLocalizedString(kHNKDemoPlaceholderText, @"");
 }
 
 #pragma mark - Setters
