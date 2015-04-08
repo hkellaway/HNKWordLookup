@@ -17,7 +17,7 @@ static NSString *const kHNKApiKey =
 static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
     @"HNKSegueShowDefinitionsForWordOfTheDay";
 
-@interface HNKHomeViewController ()
+@interface HNKHomeViewController () <HNKLookupDelegate>
 
 @property (nonatomic, strong) HNKLookup *lookup;
 @property (nonatomic, copy) HNKWordOfTheDay *wordOfTheDay;
@@ -34,7 +34,18 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
   [super viewDidLoad];
 
   [HNKLookup sharedInstanceWithAPIKey:kHNKApiKey];
+
   self.lookup = [HNKLookup sharedInstance];
+  self.lookup.delegate = self;
+}
+
+#pragma mark - Protocol conformance
+
+#pragma mark <HNKLookupDelegate>
+
+- (BOOL)shouldDisplayNetworkActivityIndicator
+{
+  return YES;
 }
 
 #pragma mark - Navigation
@@ -51,7 +62,7 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
         ^(NSString *wordOfTheDay, NSError *error) {
 
           if (error) {
-            NSLog(@"Error: %@", error);
+            [self handleError:error];
           }
 
           destinationController.word = wordOfTheDay;
@@ -63,6 +74,11 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 }
 
 #pragma mark - Helpers
+
+- (void)handleError:(NSError *)error
+{
+  NSLog(@"HNKWordLookup-Demo Error: %@", error);
+}
 
 - (void)fetchWordOfTheDayWithCompletion:(void (^)(NSString *,
                                                   NSError *))completion
