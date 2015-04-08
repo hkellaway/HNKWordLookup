@@ -9,6 +9,8 @@
 #import "HNKDefinitionsViewController.h"
 #import "HNKHomeViewController.h"
 
+#import "NSDate+HNKDAdditions.h"
+
 #import <HNKWordLookup/HNKWordLookup.h>
 
 #warning Replace YOUR_API_KEY with your API key
@@ -102,7 +104,7 @@ static NSString *const kHNKSegueShowDefinitionsForWordOfTheDay =
 - (BOOL)shouldFetchWordOfTheDay
 {
   return (self.wordOfTheDay == nil) ||
-         self.wordOfTheDay.datePublished < [NSDate date];
+         ![self.wordOfTheDay.datePublished isToday];
 }
 
 - (void)cacheWordOfTheDay:(HNKWordOfTheDay *)wordOfTheDay
