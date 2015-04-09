@@ -62,6 +62,7 @@ static NSString *const kDemoSegueShowDefinitionsForWordOfTheDay =
 
           if (error) {
             [self handleError:error];
+            return;
           }
 
           definitionsController.word = word;
