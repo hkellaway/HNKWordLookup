@@ -7,6 +7,7 @@
 //
 
 #import "NSDate+DEMOAdditions.h"
+#import "NSDate+HNKAdditions.h"
 
 @implementation NSDate (DEMOAdditions)
 
@@ -14,28 +15,11 @@
 
 - (BOOL)demo_isToday
 {
-  NSDate *currentCalendarToday =
-      [self currentCalendarVersionOfDate:[NSDate date]];
-  NSDate *currentCalendarSelf = [self currentCalendarVersionOfDate:self];
+  NSDate *normalizedToday =
+      [[NSDate date] hnk_setToMidnightWithServerDateFormat];
+  NSDate *normalizedSelf = [self hnk_setToMidnightWithServerDateFormat];
 
-  if ([currentCalendarToday isEqualToDate:currentCalendarSelf]) {
-    return YES;
-  }
-
-  return NO;
-}
-
-#pragma mark - Helpers
-
-- (NSDate *)currentCalendarVersionOfDate:(NSDate *)date
-{
-  NSCalendar *calendar = [NSCalendar currentCalendar];
-  NSDateComponents *components =
-      [calendar components:(NSEraCalendarUnit | NSYearCalendarUnit |
-                            NSMonthCalendarUnit | NSDayCalendarUnit)
-                  fromDate:date];
-
-  return [calendar dateFromComponents:components];
+  return ([normalizedSelf isEqualToDate:normalizedToday]);
 }
 
 @end

@@ -26,6 +26,8 @@
 
 @interface NSDate (HNKAdditions)
 
+#pragma mark - Class methods
+
 /**
  *  Returns a Date object given a string representation
  *
@@ -46,7 +48,7 @@
 
 /**
  *  Returns a string in the YYYY-MM-DD format given year, month, and date
- *numbers
+ *  numbers
  *
  *  @param year  Year
  *  @param month Month
@@ -57,5 +59,14 @@
 + (NSString *)hnk_stringFromDateWithYear:(int)year
                                    month:(int)month
                                      day:(int)day;
+
+#pragma mark - Instance methods
+
+/**
+ *  Returns the date with time shifted to midnight using the same date format as
+ *  dates returned from the server
+ *
+ */
+- (NSDate *)hnk_setToMidnightWithServerDateFormat;
 
 @end
