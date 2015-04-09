@@ -77,7 +77,6 @@ static NSString *const kDemoApiKey =
 }
 
 #pragma mark - Protocol conformance
-
 #pragma mark <HNKLookupDelegate>
 
 - (BOOL)shouldDisplayNetworkActivityIndicator
