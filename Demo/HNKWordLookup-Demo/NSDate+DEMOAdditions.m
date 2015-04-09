@@ -7,7 +7,6 @@
 //
 
 #import "NSDate+DEMOAdditions.h"
-#import "NSDate+HNKAdditions.h"
 
 @implementation NSDate (DEMOAdditions)
 
@@ -15,11 +14,24 @@
 
 - (BOOL)demo_isToday
 {
-  NSDate *normalizedToday =
-      [[NSDate date] hnk_setToMidnightWithServerDateFormat];
-  NSDate *normalizedSelf = [self hnk_setToMidnightWithServerDateFormat];
+  NSDate *normalizedToday = [[NSDate date] setToMidnight];
+  NSDate *normalizedSelf = [self setToMidnight];
 
   return ([normalizedSelf isEqualToDate:normalizedToday]);
+}
+
+#pragma mark - Helpers
+
+- (NSDate *)setToMidnight
+{
+  NSCalendar *gregorianCalendar =
+      [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  NSDateComponents *dateComponents =
+      [gregorianCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |
+                                     NSDayCalendarUnit | NSEraCalendarUnit)
+                           fromDate:self];
+
+  return [gregorianCalendar dateFromComponents:dateComponents];
 }
 
 @end
