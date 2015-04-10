@@ -30,10 +30,10 @@
  @discussion `HNKWordDefinitionPartOfSpeech` is an enum, so its values support
  math operations.
 
-    The underlying values are bitmasked to facilitate being combined together
+ The underlying values are bitmasked to facilitate being combined together
  with an `|` operator. See: http://apple.co/ZP4eyl
 
-    Note: Excluding the default value `HNKWordDefinitionPartOfSpeechUnknown`,
+ Note: Excluding the default value `HNKWordDefinitionPartOfSpeechUnknown`,
  the enum values are in alphabetical order by part of speech - e.g. Adjective
  comes before Adverb.
  */
@@ -64,7 +64,8 @@ typedef NS_OPTIONS(NSInteger, HNKWordDefinitionPartOfSpeech) {
   HNKWordDefinitionPartOfSpeechVerb = 1 << 22,
   HNKWordDefinitionPartOfSpeechVerbAuxiliary = 1 << 23,
   HNKWordDefinitionPartOfSpeechVerbIntransitive = 1 << 24,
-  HNKWordDefinitionPartOfSpeechVerbTransitive = 1 << 25
+  HNKWordDefinitionPartOfSpeechVerbPhrasal = 1 << 25,
+  HNKWordDefinitionPartOfSpeechVerbTransitive = 1 << 26
 };
 
 @interface HNKWordDefinition : MTLModel <MTLJSONSerializing>
