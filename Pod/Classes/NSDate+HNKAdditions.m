@@ -71,18 +71,4 @@ static NSString *const kHNKDateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
   }
 }
 
-#pragma mark - Instance methods
-
-- (NSDate *)hnk_setToMidnightWithServerDateFormat
-{
-  NSCalendar *gregorianCalendar =
-      [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-  NSDateComponents *dateComponents =
-      [gregorianCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |
-                                     NSDayCalendarUnit | NSEraCalendarUnit)
-                           fromDate:self];
-
-  return [gregorianCalendar dateFromComponents:dateComponents];
-}
-
 @end

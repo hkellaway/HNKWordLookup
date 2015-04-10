@@ -67,6 +67,18 @@ static NSString *const kDemoSegueShowDefinitionsForWordOfTheDay =
 
           definitionsController.word = word;
 
+          [self.wordLookup
+              fetchDefinitionsForWord:word
+                           completion:^(NSArray *definitions, NSError *error) {
+                             if (error) {
+                               [self handleError:error];
+                               return;
+                             }
+                             NSLog(@"%i", [definitions count]);
+
+                             definitionsController.definitions = definitions;
+                           }];
+
         };
 
     if ([segue.identifier isEqualToString:kDemoSegueShowDefinitionsForWord]) {

@@ -60,13 +60,4 @@
                                    month:(int)month
                                      day:(int)day;
 
-#pragma mark - Instance methods
-
-/**
- *  Returns the date with time shifted to midnight using the same date format as
- *  dates returned from the server
- *
- */
-- (NSDate *)hnk_setToMidnightWithServerDateFormat;
-
 @end
