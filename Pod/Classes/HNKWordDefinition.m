@@ -92,6 +92,7 @@ static NSDictionary *HNKPartsOfSpeechDictionary;
     @"verb" : @(HNKWordDefinitionPartOfSpeechVerb),
     @"auxiliary-verb" : @(HNKWordDefinitionPartOfSpeechVerbAuxiliary),
     @"verb-intransitive" : @(HNKWordDefinitionPartOfSpeechVerbIntransitive),
+    @"phrasal-verb" : @(HNKWordDefinitionPartOfSpeechVerbPhrasal),
     @"verb-transitive" : @(HNKWordDefinitionPartOfSpeechVerbTransitive)
   };
 
