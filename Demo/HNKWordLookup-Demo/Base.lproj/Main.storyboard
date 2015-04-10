@@ -47,7 +47,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="HNKSegueShowDefinitionsForWord" id="v6s-kF-27L"/>
+                                                    <segue destination="ubh-Ly-A2X" kind="show" identifier="SegueShowDefinitionsForWord" id="v6s-kF-27L"/>
                                                 </connections>
                                             </button>
                                         </subviews>
