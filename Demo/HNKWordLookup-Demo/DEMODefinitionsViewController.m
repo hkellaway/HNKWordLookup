@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
+#import "HNKWordDefinition.h"
+#import "DEMODefinitionsTableViewCell.h"
 #import "DEMODefinitionsViewController.h"
 
 static NSString *const kDemoPlaceholderText = @"Loading...";
@@ -59,15 +61,17 @@ static NSString *const kDemoCellReuseIdentifier = @"DemoCellReuseIdentifer";
 - (UITableViewCell *)tableView:tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell =
+  DEMODefinitionsTableViewCell *cell =
       [tableView dequeueReusableCellWithIdentifier:kDemoCellReuseIdentifier];
 
   if (!cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                  reuseIdentifier:kDemoCellReuseIdentifier];
+    cell = [[DEMODefinitionsTableViewCell alloc]
+          initWithStyle:UITableViewCellStyleDefault
+        reuseIdentifier:kDemoCellReuseIdentifier];
   }
 
-  cell.textLabel.text = @"definition";
+  HNKWordDefinition *definition = self.definitions[indexPath.row];
+  cell.definitionLabel.text = definition.definitionText;
 
   return cell;
 }
