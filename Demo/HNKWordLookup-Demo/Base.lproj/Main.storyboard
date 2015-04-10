@@ -324,17 +324,50 @@
                                 <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="veX-ju-H3g" userLabel="Definitions Table View">
+                                <rect key="frame" x="0.0" y="94" width="414" height="584"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HD-ER-LV2" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="94" width="414" height="584"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="nPG-pc-r83" userLabel="Activity Indicator">
+                                        <rect key="frame" x="197" y="282" width="20" height="20"/>
+                                        <color key="color" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="nPG-pc-r83" secondAttribute="centerY" id="6Xs-UC-eNt"/>
+                                    <constraint firstAttribute="centerX" secondItem="nPG-pc-r83" secondAttribute="centerX" id="8Fr-uh-0eU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5oa-bD-dsm" firstAttribute="top" secondItem="veX-ju-H3g" secondAttribute="bottom" constant="-6" id="Kd5-5x-fA8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="veX-ju-H3g" secondAttribute="trailing" constant="-16" id="RfL-EA-lDn"/>
+                            <constraint firstItem="veX-ju-H3g" firstAttribute="top" secondItem="8da-Ct-wxg" secondAttribute="bottom" constant="8" id="Svi-i4-LTu"/>
+                            <constraint firstAttribute="centerX" secondItem="veX-ju-H3g" secondAttribute="centerX" id="T2G-Tc-TmQ"/>
+                            <constraint firstItem="8HD-ER-LV2" firstAttribute="leading" secondItem="veX-ju-H3g" secondAttribute="leading" id="YBb-8o-Xl6"/>
                             <constraint firstItem="8da-Ct-wxg" firstAttribute="top" secondItem="xCu-8M-abU" secondAttribute="top" constant="16" id="dbh-sQ-JCe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8da-Ct-wxg" secondAttribute="trailing" id="dhm-uY-1fQ"/>
+                            <constraint firstItem="8HD-ER-LV2" firstAttribute="bottom" secondItem="veX-ju-H3g" secondAttribute="bottom" id="fMZ-hc-Lji"/>
+                            <constraint firstItem="veX-ju-H3g" firstAttribute="leading" secondItem="xCu-8M-abU" secondAttribute="leadingMargin" constant="-16" id="gkS-68-tLY"/>
+                            <constraint firstItem="8HD-ER-LV2" firstAttribute="trailing" secondItem="veX-ju-H3g" secondAttribute="trailing" id="pRa-Rz-o3g"/>
+                            <constraint firstItem="8HD-ER-LV2" firstAttribute="top" secondItem="veX-ju-H3g" secondAttribute="top" id="tRG-LE-uug"/>
                             <constraint firstItem="8da-Ct-wxg" firstAttribute="leading" secondItem="xCu-8M-abU" secondAttribute="leadingMargin" id="wxJ-kq-nmU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T2G-Tc-TmQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Definitions" id="m8F-UB-Jed"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="8HD-ER-LV2" id="NKp-20-w4c"/>
                         <outlet property="wordLabel" destination="8da-Ct-wxg" id="4xO-En-BKv"/>
                     </connections>
                 </viewController>

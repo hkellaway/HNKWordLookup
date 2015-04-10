@@ -157,7 +157,7 @@ static HNKHttpSessionManager *sharedManager = nil;
 
   return [self startRequestWithPath:kHNKPathWordOfTheDay
                          parameters:@{
-                           @"date" : dateString
+                           kHNKParameterNameDate : dateString
                          }
                          completion:completion];
 }

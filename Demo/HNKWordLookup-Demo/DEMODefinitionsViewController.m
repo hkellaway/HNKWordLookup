@@ -13,6 +13,7 @@ static NSString *const kDemoPlaceholderText = @"Loading...";
 @interface DEMODefinitionsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UIView *activityIndicator;
 
 @end
 
