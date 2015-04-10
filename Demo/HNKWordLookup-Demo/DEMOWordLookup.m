@@ -43,17 +43,16 @@ static NSString *const kDemoApiKey =
 
 #pragma mark - Lookups
 
+- (void)fetchDefinitionsForWord:(NSString *)word
+                     completion:(void (^)(NSArray *, NSError *))completion
+{
+  [self.lookup definitionsForWord:word completion:completion];
+}
+
 - (void)fetchRandomWordWithCompletion:(void (^)(NSString *,
                                                 NSError *))completion
 {
-  [self.lookup
-      randomWordWithCompletion:^(NSString *randomWord, NSError *error) {
-        if (error) {
-          completion(nil, error);
-        }
-
-        completion(randomWord, nil);
-      }];
+  [self.lookup randomWordWithCompletion:completion];
 }
 
 - (void)fetchWordOfTheDayWithCompletion:(void (^)(NSString *,

@@ -11,5 +11,6 @@
 @interface DEMODefinitionsViewController : UIViewController
 
 @property (nonatomic, copy) NSString *word;
+@property (nonatomic, strong) NSArray *definitions;
 
 @end
