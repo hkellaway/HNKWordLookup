@@ -74,7 +74,6 @@ static NSString *const kDemoSegueShowDefinitionsForWordOfTheDay =
                                [self handleError:error];
                                return;
                              }
-                             NSLog(@"%i", [definitions count]);
 
                              definitionsController.definitions = definitions;
                            }];

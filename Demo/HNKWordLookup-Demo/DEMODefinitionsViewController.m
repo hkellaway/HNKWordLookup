@@ -23,11 +23,17 @@ static NSString *const kDemoPlaceholderText = @"Loading...";
 {
   [super viewDidLoad];
 
-  self.wordLabel.text =
-      self.word ? self.word : NSLocalizedString(kDemoPlaceholderText, @"");
+  self.wordLabel.text = self.word ? self.word : kDemoPlaceholderText;
 }
 
 #pragma mark - Setters
+
+- (void)setDefinitions:(NSArray *)definitions
+{
+  _definitions = definitions;
+
+  self.activityIndicator.hidden = YES;
+}
 
 - (void)setWord:(NSString *)word
 {
