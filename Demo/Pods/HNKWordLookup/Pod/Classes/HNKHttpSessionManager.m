@@ -129,23 +129,19 @@ static HNKHttpSessionManager *sharedManager = nil;
                        completion:(void (^)(NSURLSessionDataTask *, id,
                                             NSError *))completion
 {
-  NSDate *normalizedDate = [date hnk_setToMidnightWithServerDateFormat];
-
   int day = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitDay
-                                                  fromDate:normalizedDate] day];
-  int month =
-      (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitMonth
-                                            fromDate:normalizedDate] month];
-  int year =
-      (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitYear
-                                            fromDate:normalizedDate] year];
+                                                  fromDate:date] day];
+  int month = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitMonth
+                                                    fromDate:date] month];
+  int year = (int)[[[NSCalendar currentCalendar] components:NSCalendarUnitYear
+                                                   fromDate:date] year];
 
   NSString *dateString =
       [NSDate hnk_stringFromDateWithYear:year month:month day:day];
 
   return [self startRequestWithPath:kHNKPathWordOfTheDay
                          parameters:@{
-                           @"date" : dateString
+                           kHNKParameterNameDate : dateString
                          }
                          completion:completion];
 }
