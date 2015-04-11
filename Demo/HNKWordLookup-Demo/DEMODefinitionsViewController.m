@@ -10,8 +10,9 @@
 #import "DEMODefinitionsTableViewCell.h"
 #import "DEMODefinitionsViewController.h"
 
-static NSString *const kDemoPlaceholderText = @"Loading...";
-static NSString *const kDemoCellReuseIdentifier = @"DemoCellReuseIdentifer";
+static NSString *const kDemoDefinitionsPlaceholderText = @"Loading...";
+static NSString *const kDemoCellReuseIdentifier =
+    @"DemoDefinitionsCellReuseIdentifer";
 
 @interface DEMODefinitionsViewController () <UITableViewDataSource,
                                              UITableViewDelegate>
@@ -28,7 +29,7 @@ static NSString *const kDemoCellReuseIdentifier = @"DemoCellReuseIdentifer";
 {
   [super viewDidLoad];
 
-  self.wordLabel.text = self.word ? self.word : kDemoPlaceholderText;
+  self.wordLabel.text = self.word ? self.word : kDemoDefinitionsPlaceholderText;
 }
 
 #pragma mark - Setters
