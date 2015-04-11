@@ -64,14 +64,9 @@ static NSString *const kDemoCellReuseIdentifier = @"DemoCellReuseIdentifer";
   DEMODefinitionsTableViewCell *cell =
       [tableView dequeueReusableCellWithIdentifier:kDemoCellReuseIdentifier];
 
-  if (!cell) {
-    cell = [[DEMODefinitionsTableViewCell alloc]
-          initWithStyle:UITableViewCellStyleDefault
-        reuseIdentifier:kDemoCellReuseIdentifier];
-  }
-
   HNKWordDefinition *definition = self.definitions[indexPath.row];
   cell.definitionLabel.text = definition.definitionText;
+  cell.attributionLabel.text = definition.attribution;
 
   return cell;
 }

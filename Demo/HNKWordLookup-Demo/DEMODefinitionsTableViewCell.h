@@ -11,5 +11,7 @@
 @interface DEMODefinitionsTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *definitionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *attributionLabel;
+
 
 @end
