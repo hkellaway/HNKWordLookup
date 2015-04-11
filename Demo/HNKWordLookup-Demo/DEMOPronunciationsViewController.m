@@ -18,6 +18,7 @@ static NSString *const kDemoPronunciationsCellReuseIdentifier =
                                                 UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UIView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *pronunciationsTableView;
 
 @end
@@ -42,7 +43,7 @@ static NSString *const kDemoPronunciationsCellReuseIdentifier =
 
   [self.pronunciationsTableView reloadData];
 
-  //  self.activityIndicator.hidden = YES;
+  self.activityIndicator.hidden = YES;
 }
 
 - (void)setWord:(NSString *)word

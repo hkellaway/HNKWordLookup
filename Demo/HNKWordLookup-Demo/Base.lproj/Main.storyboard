@@ -301,7 +301,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pX8-Kk-Ffk" userLabel="Word View">
                                 <rect key="frame" x="16" y="16" width="382" height="71"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="382" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-13-r6u" userLabel="Word Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-13-r6u" userLabel="Word Label">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
                                         <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -385,21 +385,40 @@
                                     <outlet property="delegate" destination="rAm-S4-EMR" id="ni6-bc-9dr"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-gX-xuj" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="95" width="414" height="577"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-tc-GuD" userLabel="Activity Indicator">
+                                        <rect key="frame" x="197" y="279" width="20" height="20"/>
+                                        <color key="color" red="0.8862745098" green="0.1176470588" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="ceR-tc-GuD" secondAttribute="centerY" constant="-0.5" id="SHh-n6-hh1"/>
+                                    <constraint firstAttribute="centerX" secondItem="ceR-tc-GuD" secondAttribute="centerX" id="lAE-Oe-vxb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZN1-gX-xuj" firstAttribute="leading" secondItem="BIY-KL-blF" secondAttribute="leadingMargin" constant="-16" id="0qQ-2E-6gt"/>
                             <constraint firstItem="tnq-8i-QPb" firstAttribute="top" secondItem="pX8-Kk-Ffk" secondAttribute="bottom" constant="8" symbolic="YES" id="5pA-u6-SSi"/>
                             <constraint firstItem="pX8-Kk-Ffk" firstAttribute="leading" secondItem="BIY-KL-blF" secondAttribute="leadingMargin" id="LlK-de-Va0"/>
                             <constraint firstItem="tnq-8i-QPb" firstAttribute="centerX" secondItem="pX8-Kk-Ffk" secondAttribute="centerX" id="RMW-id-C3M"/>
+                            <constraint firstItem="ZN1-gX-xuj" firstAttribute="top" secondItem="tnq-8i-QPb" secondAttribute="top" id="TaA-uS-lo1"/>
                             <constraint firstItem="pX8-Kk-Ffk" firstAttribute="top" secondItem="8G4-6c-0Al" secondAttribute="bottom" constant="16" id="VkY-YQ-kal"/>
                             <constraint firstItem="tnq-8i-QPb" firstAttribute="bottom" secondItem="o3Y-E1-oZU" secondAttribute="top" id="pfE-pG-H5r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZN1-gX-xuj" secondAttribute="trailing" constant="-16" id="t2c-AK-4Y4"/>
                             <constraint firstItem="tnq-8i-QPb" firstAttribute="leading" secondItem="BIY-KL-blF" secondAttribute="leading" id="vJq-qS-uUa"/>
+                            <constraint firstItem="o3Y-E1-oZU" firstAttribute="top" secondItem="ZN1-gX-xuj" secondAttribute="bottom" id="vVd-BR-CUf"/>
                             <constraint firstItem="pX8-Kk-Ffk" firstAttribute="trailing" secondItem="BIY-KL-blF" secondAttribute="trailingMargin" id="vVl-aU-eu9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pronunciations" id="rZb-Oy-T1o"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZN1-gX-xuj" id="zJz-h6-lGx"/>
                         <outlet property="pronunciationsTableView" destination="tnq-8i-QPb" id="yEN-W2-Tus"/>
                         <outlet property="wordLabel" destination="bbk-13-r6u" id="tL1-QK-9O8"/>
                     </connections>
@@ -423,7 +442,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-Yp-OvR" userLabel="Word View">
                                 <rect key="frame" x="16" y="16" width="382" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="382" translatesAutoresizingMaskIntoConstraints="NO" id="8da-Ct-wxg" userLabel="Word Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-Ct-wxg" userLabel="Word Label">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
                                         <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
