@@ -48,6 +48,23 @@ static NSString *const kDemoSegueShowDefinitionsForWordOfTheDay =
     DEMOPronunciationsViewController *pronunciationsController =
         (DEMOPronunciationsViewController *)destinationController;
 
+    NSString *word = self.pronunciationsTextField.text;
+    pronunciationsController.word = word;
+
+    [self.wordLookup
+        fetchPronunciationsForWord:word
+                        completion:^(NSArray *pronunciations, NSError *error) {
+
+                          if (error) {
+                            [self handleError:error];
+                            return;
+                          }
+
+                          pronunciationsController.pronunciations =
+                              pronunciations;
+
+                        }];
+
     pronunciationsController.word = self.pronunciationsTextField.text;
   }
 
