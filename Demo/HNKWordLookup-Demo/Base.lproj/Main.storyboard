@@ -348,11 +348,11 @@
                                     <constraint firstItem="wzj-NB-jwk" firstAttribute="leading" secondItem="MnM-Yp-OvR" secondAttribute="leading" constant="-16" id="h1x-5k-ZsU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="veX-ju-H3g" userLabel="Definitions Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="veX-ju-H3g" userLabel="Definitions Table View">
                                 <rect key="frame" x="0.0" y="94" width="414" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoCellReuseIdentifer" rowHeight="100" id="1aN-2B-Xmw" userLabel="Cell" customClass="DEMODefinitionsTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoCellReuseIdentifer" rowHeight="126" id="1aN-2B-Xmw" userLabel="Cell" customClass="DEMODefinitionsTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aN-2B-Xmw" id="9of-2v-jR4">
@@ -364,7 +364,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuA-TG-1h1" userLabel="Attribution Label">
-                                                    <rect key="frame" x="8" y="79" width="390" height="12"/>
+                                                    <rect key="frame" x="8" y="105" width="390" height="12"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -437,9 +437,6 @@
                             <constraint firstItem="MnM-Yp-OvR" firstAttribute="top" secondItem="YzS-0y-yon" secondAttribute="bottom" constant="16" id="yTp-uj-Vwv"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="8HD-ER-LV2"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="T2G-Tc-TmQ"/>
                                 <exclude reference="yFp-Y1-bip"/>
@@ -456,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zp-Rd-vic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="-401"/>
+            <point key="canvasLocation" x="1378" y="-403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3kj-nb-K46">
