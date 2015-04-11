@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -298,7 +297,52 @@
                     <view key="view" contentMode="scaleToFill" id="BIY-KL-blF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pX8-Kk-Ffk" userLabel="Word View">
+                                <rect key="frame" x="16" y="16" width="382" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordwordwordwordwordwordword" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="382" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-13-r6u" userLabel="Word Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX6-g6-Jm5" userLabel="Line">
+                                        <rect key="frame" x="-16" y="70" width="414" height="1"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="DSl-GM-EEs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bbk-13-r6u" firstAttribute="top" secondItem="pX8-Kk-Ffk" secondAttribute="top" id="1JE-7T-AFv"/>
+                                    <constraint firstItem="bX6-g6-Jm5" firstAttribute="top" secondItem="bbk-13-r6u" secondAttribute="bottom" id="4oI-yg-PLV"/>
+                                    <constraint firstItem="bX6-g6-Jm5" firstAttribute="leading" secondItem="bbk-13-r6u" secondAttribute="leading" constant="-16" id="5KV-2d-Rnn"/>
+                                    <constraint firstAttribute="trailing" secondItem="bbk-13-r6u" secondAttribute="trailing" id="NiQ-zr-U6c"/>
+                                    <constraint firstItem="bbk-13-r6u" firstAttribute="leading" secondItem="pX8-Kk-Ffk" secondAttribute="leading" id="Z6K-h0-a9q"/>
+                                    <constraint firstAttribute="trailing" secondItem="bX6-g6-Jm5" secondAttribute="trailing" constant="-16" id="f0U-lR-vhw"/>
+                                    <constraint firstAttribute="bottom" secondItem="bX6-g6-Jm5" secondAttribute="bottom" id="f4A-RR-BWo"/>
+                                    <constraint firstItem="bX6-g6-Jm5" firstAttribute="leading" secondItem="pX8-Kk-Ffk" secondAttribute="leading" constant="-16" id="gXe-5M-XOQ"/>
+                                    <constraint firstItem="bX6-g6-Jm5" firstAttribute="trailing" secondItem="bbk-13-r6u" secondAttribute="trailing" constant="16" id="mN4-Tm-WOg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-8i-QPb">
+                                <rect key="frame" x="0.0" y="95" width="414" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tnq-8i-QPb" firstAttribute="top" secondItem="pX8-Kk-Ffk" secondAttribute="bottom" constant="8" symbolic="YES" id="5pA-u6-SSi"/>
+                            <constraint firstItem="pX8-Kk-Ffk" firstAttribute="leading" secondItem="BIY-KL-blF" secondAttribute="leadingMargin" id="LlK-de-Va0"/>
+                            <constraint firstItem="tnq-8i-QPb" firstAttribute="centerX" secondItem="pX8-Kk-Ffk" secondAttribute="centerX" id="RMW-id-C3M"/>
+                            <constraint firstItem="pX8-Kk-Ffk" firstAttribute="top" secondItem="8G4-6c-0Al" secondAttribute="bottom" constant="16" id="VkY-YQ-kal"/>
+                            <constraint firstItem="tnq-8i-QPb" firstAttribute="bottom" secondItem="o3Y-E1-oZU" secondAttribute="top" id="pfE-pG-H5r"/>
+                            <constraint firstItem="tnq-8i-QPb" firstAttribute="leading" secondItem="BIY-KL-blF" secondAttribute="leading" id="vJq-qS-uUa"/>
+                            <constraint firstItem="pX8-Kk-Ffk" firstAttribute="trailing" secondItem="BIY-KL-blF" secondAttribute="trailingMargin" id="vVl-aU-eu9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pronunciations" id="rZb-Oy-T1o"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
