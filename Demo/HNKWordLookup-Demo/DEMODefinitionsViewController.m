@@ -6,9 +6,10 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import <HNKWordLookup/HNKWordDefinition.h>
 #import "DEMODefinitionsTableViewCell.h"
 #import "DEMODefinitionsViewController.h"
+
+#import <HNKWordLookup/HNKWordDefinition.h>
 
 static NSString *const kDemoDefinitionsPlaceholderText = @"Loading...";
 static NSString *const kDemoDefinitionsCellReuseIdentifier =
