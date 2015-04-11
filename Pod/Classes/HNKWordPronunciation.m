@@ -24,14 +24,27 @@
 
 #import "HNKWordPronunciation.h"
 
+static NSDictionary *HNKWordPronunciationsFormatDictionary;
+
 @implementation HNKWordPronunciation
+
+#pragma mark - Getters
+
+- (NSString *)formatString
+{
+  NSString *formatString = [[HNKWordPronunciationsFormatDictionary
+      allKeysForObject:@(self.format)] firstObject];
+
+  return (formatString) ? formatString : @"Unknown";
+}
 
 #pragma mark - Override
 
 - (NSString *)description
 {
-  return
-      [NSString stringWithFormat:@"Pronunciation: %@", self.pronunciationText];
+  return [NSString stringWithFormat:@"Pronunciation: %@; Format: %@",
+                                    self.pronunciationText,
+                                    self.formatString];
 }
 
 #pragma mark - Protocol conformance
@@ -43,15 +56,15 @@
 
 + (NSValueTransformer *)formatJSONTransformer
 {
-  NSDictionary *formatsDictionary = @{
+  HNKWordPronunciationsFormatDictionary = @{
     @"ahd-legacy" : @(HNKWordPronunciationFormatAHD),
     @"arpabet" : @(HNKWordPronunciationFormatArpabet),
     @"gcide-diacritical" : @(HNKWordPronunciationFormatGcideDiacritical),
     @"ipa" : @(HNKWordPronunciationFormatIPA)
   };
 
-  return [NSValueTransformer
-      mtl_valueMappingTransformerWithDictionary:formatsDictionary];
+  return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:
+                                 HNKWordPronunciationsFormatDictionary];
 }
 
 @end
