@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Harlan Kellaway. All rights reserved.
 //
 
-#import "HNKWordDefinition.h"
+#import <HNKWordLookup/HNKWordDefinition.h>
 #import "DEMODefinitionsTableViewCell.h"
 #import "DEMODefinitionsViewController.h"
 
 static NSString *const kDemoDefinitionsPlaceholderText = @"Loading...";
-static NSString *const kDemoCellReuseIdentifier =
+static NSString *const kDemoDefinitionsCellReuseIdentifier =
     @"DemoDefinitionsCellReuseIdentifer";
 
 @interface DEMODefinitionsViewController () <UITableViewDataSource,
@@ -62,8 +62,8 @@ static NSString *const kDemoCellReuseIdentifier =
 - (UITableViewCell *)tableView:tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  DEMODefinitionsTableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:kDemoCellReuseIdentifier];
+  DEMODefinitionsTableViewCell *cell = [tableView
+      dequeueReusableCellWithIdentifier:kDemoDefinitionsCellReuseIdentifier];
 
   HNKWordDefinition *definition = self.definitions[indexPath.row];
   cell.definitionLabel.text = definition.definitionText;

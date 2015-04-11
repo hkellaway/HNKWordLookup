@@ -10,4 +10,7 @@
 
 @interface DEMOPronunciationsTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *pronunciationsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *formatLabel;
+
 @end

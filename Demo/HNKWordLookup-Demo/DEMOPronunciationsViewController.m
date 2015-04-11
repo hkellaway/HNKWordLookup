@@ -8,6 +8,7 @@
 
 #import "DEMOPronunciationsTableViewCell.h"
 #import "DEMOPronunciationsViewController.h"
+#import <HNKWordLookup/HNKWordPronunciation.h>
 
 static NSString *const kDemoPronunciationsPlaceholderText = @"Loading...";
 static NSString *const kDemoPronunciationsCellReuseIdentifier =
@@ -48,7 +49,7 @@ static NSString *const kDemoPronunciationsCellReuseIdentifier =
 {
   _word = word;
 
-  self.wordLabel.text = @"placeholder";
+  self.wordLabel.text = word;
 }
 
 #pragma mark - Protocol conformance
@@ -66,9 +67,9 @@ static NSString *const kDemoPronunciationsCellReuseIdentifier =
   DEMOPronunciationsTableViewCell *cell = [tableView
       dequeueReusableCellWithIdentifier:kDemoPronunciationsCellReuseIdentifier];
 
-  //  HNKWordDefinition *definition = self.definitions[indexPath.row];
-  //  cell.definitionLabel.text = definition.definitionText;
-  //  cell.attributionLabel.text = definition.attribution;
+  HNKWordPronunciation *pronunciation = self.pronunciations[indexPath.row];
+  cell.pronunciationsLabel.text = pronunciation.pronunciationText;
+  //  cell.attributionLabel.text = pronunciation.formatString;
 
   return cell;
 }
