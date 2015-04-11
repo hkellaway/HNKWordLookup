@@ -36,4 +36,6 @@ typedef NS_ENUM(NSInteger, HNKWordPronunciationFormat) {
 @property (nonatomic, copy) NSString *pronunciationText;
 @property (nonatomic, assign) HNKWordPronunciationFormat format;
 
+- (NSString *)formatString;
+
 @end
