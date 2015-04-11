@@ -12,6 +12,7 @@
 		DC1BD3E81AD505D000A25590 /* DEMOPronunciationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */; };
 		DC1BD3EE1AD6236300A25590 /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3ED1AD6236300A25590 /* StyleSettings.plist */; };
 		DC1BD41A1AD794AB00A25590 /* DEMODefinitionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */; };
+		DC47708A1AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */; };
 		DCBB53131AD2240E00C4592C /* logo-wordnik.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53121AD2240E00C4592C /* logo-wordnik.png */; };
 		DCBB53171AD22FFC00C4592C /* icon-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */; };
 		DCBB531A1AD24AD900C4592C /* DEMODefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */; };
@@ -45,6 +46,8 @@
 		DC1BD3ED1AD6236300A25590 /* StyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
 		DC1BD4181AD794AB00A25590 /* DEMODefinitionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMODefinitionsTableViewCell.h; sourceTree = "<group>"; };
 		DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMODefinitionsTableViewCell.m; sourceTree = "<group>"; };
+		DC4770881AD8D212001C97EC /* DEMOPronunciationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPronunciationsTableViewCell.h; sourceTree = "<group>"; };
+		DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPronunciationsTableViewCell.m; sourceTree = "<group>"; };
 		DCBB53121AD2240E00C4592C /* logo-wordnik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-wordnik.png"; sourceTree = "<group>"; };
 		DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-right.png"; sourceTree = "<group>"; };
 		DCBB53181AD24AD900C4592C /* DEMODefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMODefinitionsViewController.h; sourceTree = "<group>"; };
@@ -137,14 +140,16 @@
 			children = (
 				DCD8F9061ABFC53700E2E7E8 /* DEMOAppDelegate.h */,
 				DCD8F9071ABFC53700E2E7E8 /* DEMOAppDelegate.m */,
-				DCBB53181AD24AD900C4592C /* DEMODefinitionsViewController.h */,
-				DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */,
 				DC1BD4181AD794AB00A25590 /* DEMODefinitionsTableViewCell.h */,
 				DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */,
-				DC1BD3E61AD505D000A25590 /* DEMOPronunciationsViewController.h */,
-				DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */,
+				DCBB53181AD24AD900C4592C /* DEMODefinitionsViewController.h */,
+				DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */,
 				DCF3B4841AD2188600DF4A77 /* DEMOHomeViewController.h */,
 				DCF3B4851AD2188600DF4A77 /* DEMOHomeViewController.m */,
+				DC4770881AD8D212001C97EC /* DEMOPronunciationsTableViewCell.h */,
+				DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */,
+				DC1BD3E61AD505D000A25590 /* DEMOPronunciationsViewController.h */,
+				DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */,
 				DC1BD3E31AD4FB1A00A25590 /* DEMOWordLookup.h */,
 				DC1BD3E41AD4FB1A00A25590 /* DEMOWordLookup.m */,
 				DCBB531B1AD4E19500C4592C /* NSDate+DEMOAdditions.h */,
@@ -339,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC47708A1AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m in Sources */,
 				DCBB531D1AD4E19500C4592C /* NSDate+DEMOAdditions.m in Sources */,
 				DCD8F9081ABFC53700E2E7E8 /* DEMOAppDelegate.m in Sources */,
 				DC1BD3E81AD505D000A25590 /* DEMOPronunciationsViewController.m in Sources */,

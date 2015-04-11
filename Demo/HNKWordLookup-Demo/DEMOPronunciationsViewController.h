@@ -11,5 +11,6 @@
 @interface DEMOPronunciationsViewController : UIViewController
 
 @property (nonatomic, copy) NSString *word;
+@property (nonatomic, strong) NSArray *pronunciations;
 
 @end

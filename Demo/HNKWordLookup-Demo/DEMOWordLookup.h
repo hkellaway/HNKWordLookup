@@ -12,6 +12,8 @@
 
 - (void)fetchDefinitionsForWord:(NSString *)word
                      completion:(void (^)(NSArray *, NSError *))completion;
+- (void)fetchPronunciationsForWord:(NSString *)word
+                        completion:(void (^)(NSArray *, NSError *))completion;
 - (void)fetchRandomWordWithCompletion:(void (^)(NSString *,
                                                 NSError *))completion;
 - (void)fetchWordOfTheDayWithCompletion:(void (^)(NSString *,

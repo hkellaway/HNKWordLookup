@@ -49,6 +49,12 @@ static NSString *const kDemoApiKey =
   [self.lookup definitionsForWord:word completion:completion];
 }
 
+- (void)fetchPronunciationsForWord:(NSString *)word
+                        completion:(void (^)(NSArray *, NSError *))completion
+{
+  [self.lookup pronunciationsForWord:word completion:completion];
+}
+
 - (void)fetchRandomWordWithCompletion:(void (^)(NSString *,
                                                 NSError *))completion
 {
