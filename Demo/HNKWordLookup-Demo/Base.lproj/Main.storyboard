@@ -342,8 +342,13 @@
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attribution" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo7-TJ-uyC" userLabel="Format Label">
-                                                    <rect key="frame" x="8" y="39" width="390" height="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Format:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzV-74-6Ei" userLabel="Format:">
+                                                    <rect key="frame" x="8" y="39" width="29" height="12"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Format" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo7-TJ-uyC" userLabel="Format Label">
+                                                    <rect key="frame" x="41" y="39" width="27" height="12"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -351,12 +356,23 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="xH8-wX-HHx" firstAttribute="top" secondItem="Vnm-BU-HdM" secondAttribute="topMargin" id="4rZ-sx-e3Y"/>
+                                                <constraint firstItem="vo7-TJ-uyC" firstAttribute="baseline" secondItem="IzV-74-6Ei" secondAttribute="baseline" id="AxP-vm-zUu"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vo7-TJ-uyC" secondAttribute="bottom" id="Bxm-ag-uJX"/>
+                                                <constraint firstItem="vo7-TJ-uyC" firstAttribute="leading" secondItem="IzV-74-6Ei" secondAttribute="trailing" constant="4" id="CT6-wd-eUv"/>
+                                                <constraint firstItem="xH8-wX-HHx" firstAttribute="leading" secondItem="IzV-74-6Ei" secondAttribute="leading" id="G3c-Nz-9oh"/>
                                                 <constraint firstItem="xH8-wX-HHx" firstAttribute="leading" secondItem="Vnm-BU-HdM" secondAttribute="leadingMargin" id="GVS-I1-BWX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IzV-74-6Ei" secondAttribute="bottom" id="ITq-L1-G6L"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="xH8-wX-HHx" secondAttribute="trailing" constant="8" id="LMk-XK-CJZ"/>
                                                 <constraint firstItem="vo7-TJ-uyC" firstAttribute="trailing" secondItem="xH8-wX-HHx" secondAttribute="trailing" id="U8E-AB-ewG"/>
                                                 <constraint firstItem="vo7-TJ-uyC" firstAttribute="leading" secondItem="xH8-wX-HHx" secondAttribute="leading" id="irr-r1-AKV"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Bxm-ag-uJX"/>
+                                                    <exclude reference="U8E-AB-ewG"/>
+                                                    <exclude reference="irr-r1-AKV"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="formatLabel" destination="vo7-TJ-uyC" id="BVi-dm-QAN"/>

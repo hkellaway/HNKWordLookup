@@ -69,7 +69,7 @@ static NSString *const kDemoPronunciationsCellReuseIdentifier =
 
   HNKWordPronunciation *pronunciation = self.pronunciations[indexPath.row];
   cell.pronunciationsLabel.text = pronunciation.pronunciationText;
-  //  cell.attributionLabel.text = pronunciation.formatString;
+  cell.formatLabel.text = pronunciation.formatString;
 
   return cell;
 }
