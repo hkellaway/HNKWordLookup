@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
-  s.version      = "1.1.1"
+  s.version      = "1.1.3"
   s.summary      = "Performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day."
   s.homepage     = "http://cocoapods.org/pods/HNKWordLookup"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -10,16 +10,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source_files  = "Pod/Classes/HNKWordLookup.h"
-
-  s.subspec 'Models' do |ss|
-    ss.dependency 'HNKWordLookup/Utility'
-
-    ss.source_files = 'Pod/Classes/HNKHttpSessionManager.{h,m}', 'Pod/Classes/HNKLookup.{h,m}', 'Pod/Classes/HNKWordDefinition.{h,m}', 'Pod/Classes/HNKWordOfTheDay.{h,m}', 'Pod/Classes/HNKWordPronunciation.{h,m}'
-  end
+  s.source_files  = "Pod/Classes/HNKWordLookup.h", 'Pod/Classes/HNKLookup.{h,m}', 'Pod/Classes/HNKWordDefinition.{h,m}', 'Pod/Classes/HNKWordOfTheDay.{h,m}', 'Pod/Classes/HNKWordPronunciation.{h,m}'
 
   s.subspec 'Utility' do |ss|
-    ss.source_files = 'Pod/Classes/NSDate+HNKAdditions.{h,m}'
+    ss.source_files = 'Pod/Classes/HNKHttpSessionManager.{h,m}', 'Pod/Classes/NSDate+HNKAdditions.{h,m}'
   end
 
   # s.resources = 'Pod/Assets/*.png'  

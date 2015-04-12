@@ -23,13 +23,15 @@
 //
 
 #import "HNKHttpSessionManager.h"
+
 #import "NSDate+HNKAdditions.h"
 
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 #pragma mark - Constants
 
-static NSString *const kHNKApiKeyParameterName = @"api_key";
+static NSString *const kHNKParameterNameApiKey = @"api_key";
+static NSString *const kHNKParameterNameDate = @"date";
 
 #pragma mark Paths
 
@@ -37,6 +39,18 @@ static NSString *const kHNKPathDefinitions = @"word.json/%@/definitions";
 static NSString *const kHNKPathPronunciations = @"word.json/%@/pronunciations";
 static NSString *const kHNKPathRandomWord = @"words.json/randomWord";
 static NSString *const kHNKPathWordOfTheDay = @"words.json/wordOfTheDay";
+
+#pragma mark Parameters
+
+typedef NS_ENUM(NSInteger, HNKWordCountType) { HNKWordCountTypeAny = -1 };
+
+static BOOL const kHNKRandomWordShouldHaveDictionaryDefinition = YES;
+static int const kHNKRandomWordMinimumCorpusCount = 0;
+static int const kHNKRandomWordMaximumCorpusCount = HNKWordCountTypeAny;
+static int const kHNKRandomWordMinimumDictionaryCount = 1;
+static int const kHNKRandomWordMaximumDictionaryCount = HNKWordCountTypeAny;
+static int const kHNKRandomWordMinimumLength = 3;
+static int const kHNKRandomWordMaximumLength = HNKWordCountTypeAny;
 
 @interface HNKHttpSessionManager ()
 
@@ -110,17 +124,21 @@ static HNKHttpSessionManager *sharedManager = nil;
 + (NSUInteger)randomWordWithCompletion:(void (^)(NSURLSessionDataTask *, id,
                                                  NSError *))completion
 {
-  return [self startRequestWithPath:kHNKPathRandomWord
-                         parameters:@{
-                           @"hasDictionaryDef" : @"true",
-                           @"minCorpusCount" : @(0),
-                           @"maxCorpusCount" : @(-1),
-                           @"minDictionaryCount" : @(1),
-                           @"maxDictionaryCount" : @(-1),
-                           @"minLength" : @(3),
-                           @"maxLength" : @(-1)
-                         }
-                         completion:completion];
+  return
+      [self startRequestWithPath:kHNKPathRandomWord
+                      parameters:@{
+                        @"hasDictionaryDef" :
+                            @(kHNKRandomWordShouldHaveDictionaryDefinition),
+                        @"minCorpusCount" : @(kHNKRandomWordMinimumCorpusCount),
+                        @"maxCorpusCount" : @(kHNKRandomWordMaximumCorpusCount),
+                        @"minDictionaryCount" :
+                            @(kHNKRandomWordMinimumDictionaryCount),
+                        @"maxDictionaryCount" :
+                            @(kHNKRandomWordMaximumDictionaryCount),
+                        @"minLength" : @(kHNKRandomWordMinimumLength),
+                        @"maxLength" : @(kHNKRandomWordMaximumLength)
+                      }
+                      completion:completion];
 }
 
 + (NSUInteger)wordOfTheDayForDate:(NSDate *)date
@@ -139,7 +157,7 @@ static HNKHttpSessionManager *sharedManager = nil;
 
   return [self startRequestWithPath:kHNKPathWordOfTheDay
                          parameters:@{
-                           @"date" : dateString
+                           kHNKParameterNameDate : dateString
                          }
                          completion:completion];
 }
@@ -180,10 +198,10 @@ static HNKHttpSessionManager *sharedManager = nil;
                   withApiKey:(NSString *)apiKey
 {
   if (parameters == nil) {
-    parameters = @{kHNKApiKeyParameterName : apiKey};
+    parameters = @{kHNKParameterNameApiKey : apiKey};
   } else {
     NSMutableDictionary *mutableParameters = [parameters mutableCopy];
-    [mutableParameters setValue:apiKey forKey:kHNKApiKeyParameterName];
+    [mutableParameters setValue:apiKey forKey:kHNKParameterNameApiKey];
     parameters = [mutableParameters copy];
   }
 

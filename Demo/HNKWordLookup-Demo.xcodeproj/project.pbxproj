@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		39AE1AF0873E93FB95D552E4 /* libPods-HNKWordLookup-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF9B8792BA6D2432D09C87B /* libPods-HNKWordLookup-Demo.a */; };
+		DC1BD3E51AD4FB1A00A25590 /* DEMOWordLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E41AD4FB1A00A25590 /* DEMOWordLookup.m */; };
+		DC1BD3E81AD505D000A25590 /* DEMOPronunciationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */; };
+		DC1BD3EE1AD6236300A25590 /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3ED1AD6236300A25590 /* StyleSettings.plist */; };
+		DC1BD41A1AD794AB00A25590 /* DEMODefinitionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */; };
+		DC47708A1AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */; };
+		DCBB53131AD2240E00C4592C /* logo-wordnik.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53121AD2240E00C4592C /* logo-wordnik.png */; };
+		DCBB53171AD22FFC00C4592C /* icon-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */; };
+		DCBB531A1AD24AD900C4592C /* DEMODefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */; };
+		DCBB531D1AD4E19500C4592C /* NSDate+DEMOAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB531C1AD4E19500C4592C /* NSDate+DEMOAdditions.m */; };
 		DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9041ABFC53700E2E7E8 /* main.m */; };
-		DCD8F9081ABFC53700E2E7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9071ABFC53700E2E7E8 /* AppDelegate.m */; };
-		DCD8F90B1ABFC53700E2E7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */; };
+		DCD8F9081ABFC53700E2E7E8 /* DEMOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F9071ABFC53700E2E7E8 /* DEMOAppDelegate.m */; };
 		DCD8F90E1ABFC53700E2E7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */; };
 		DCD8F9101ABFC53700E2E7E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */; };
 		DCD8F9131ABFC53700E2E7E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD8F9111ABFC53700E2E7E8 /* LaunchScreen.xib */; };
 		DCD8F91F1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8F91E1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m */; };
+		DCF3B4861AD2188600DF4A77 /* DEMOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF3B4851AD2188600DF4A77 /* DEMOHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +39,34 @@
 /* Begin PBXFileReference section */
 		1BF9B8792BA6D2432D09C87B /* libPods-HNKWordLookup-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HNKWordLookup-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318085C02712CF30461441C3 /* Pods-HNKWordLookup-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		DC1BD3E31AD4FB1A00A25590 /* DEMOWordLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOWordLookup.h; sourceTree = "<group>"; };
+		DC1BD3E41AD4FB1A00A25590 /* DEMOWordLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOWordLookup.m; sourceTree = "<group>"; };
+		DC1BD3E61AD505D000A25590 /* DEMOPronunciationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPronunciationsViewController.h; sourceTree = "<group>"; };
+		DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPronunciationsViewController.m; sourceTree = "<group>"; };
+		DC1BD3ED1AD6236300A25590 /* StyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
+		DC1BD4181AD794AB00A25590 /* DEMODefinitionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMODefinitionsTableViewCell.h; sourceTree = "<group>"; };
+		DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMODefinitionsTableViewCell.m; sourceTree = "<group>"; };
+		DC4770881AD8D212001C97EC /* DEMOPronunciationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPronunciationsTableViewCell.h; sourceTree = "<group>"; };
+		DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPronunciationsTableViewCell.m; sourceTree = "<group>"; };
+		DCBB53121AD2240E00C4592C /* logo-wordnik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-wordnik.png"; sourceTree = "<group>"; };
+		DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-right.png"; sourceTree = "<group>"; };
+		DCBB53181AD24AD900C4592C /* DEMODefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMODefinitionsViewController.h; sourceTree = "<group>"; };
+		DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMODefinitionsViewController.m; sourceTree = "<group>"; };
+		DCBB531B1AD4E19500C4592C /* NSDate+DEMOAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DEMOAdditions.h"; sourceTree = "<group>"; };
+		DCBB531C1AD4E19500C4592C /* NSDate+DEMOAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DEMOAdditions.m"; sourceTree = "<group>"; };
 		DCD8F8FF1ABFC53700E2E7E8 /* HNKWordLookup-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HNKWordLookup-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD8F9031ABFC53700E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD8F9041ABFC53700E2E7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DCD8F9061ABFC53700E2E7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DCD8F9071ABFC53700E2E7E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DCD8F9091ABFC53700E2E7E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCD8F9061ABFC53700E2E7E8 /* DEMOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMOAppDelegate.h; sourceTree = "<group>"; };
+		DCD8F9071ABFC53700E2E7E8 /* DEMOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMOAppDelegate.m; sourceTree = "<group>"; };
 		DCD8F90D1ABFC53700E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DCD8F9121ABFC53700E2E7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DCD8F9181ABFC53700E2E7E8 /* HNKWordLookup-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HNKWordLookup-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD8F91D1ABFC53700E2E7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD8F91E1ABFC53700E2E7E8 /* HNKWordLookup_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNKWordLookup_DemoTests.m; sourceTree = "<group>"; };
+		DCF3B4841AD2188600DF4A77 /* DEMOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOHomeViewController.h; sourceTree = "<group>"; };
+		DCF3B4851AD2188600DF4A77 /* DEMOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOHomeViewController.m; sourceTree = "<group>"; };
 		FAECDC3BEAEFCAF6E48A61D2 /* Pods-HNKWordLookup-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNKWordLookup-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +106,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DCBB53111AD223F000C4592C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCBB53161AD22FFC00C4592C /* icon-arrow-right.png */,
+				DCBB53121AD2240E00C4592C /* logo-wordnik.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DCD8F8F61ABFC53700E2E7E8 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +138,24 @@
 		DCD8F9011ABFC53700E2E7E8 /* HNKWordLookup-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DCD8F9061ABFC53700E2E7E8 /* AppDelegate.h */,
-				DCD8F9071ABFC53700E2E7E8 /* AppDelegate.m */,
-				DCD8F9091ABFC53700E2E7E8 /* ViewController.h */,
-				DCD8F90A1ABFC53700E2E7E8 /* ViewController.m */,
+				DCD8F9061ABFC53700E2E7E8 /* DEMOAppDelegate.h */,
+				DCD8F9071ABFC53700E2E7E8 /* DEMOAppDelegate.m */,
+				DC1BD4181AD794AB00A25590 /* DEMODefinitionsTableViewCell.h */,
+				DC1BD4191AD794AB00A25590 /* DEMODefinitionsTableViewCell.m */,
+				DCBB53181AD24AD900C4592C /* DEMODefinitionsViewController.h */,
+				DCBB53191AD24AD900C4592C /* DEMODefinitionsViewController.m */,
+				DCF3B4841AD2188600DF4A77 /* DEMOHomeViewController.h */,
+				DCF3B4851AD2188600DF4A77 /* DEMOHomeViewController.m */,
+				DC4770881AD8D212001C97EC /* DEMOPronunciationsTableViewCell.h */,
+				DC4770891AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m */,
+				DC1BD3E61AD505D000A25590 /* DEMOPronunciationsViewController.h */,
+				DC1BD3E71AD505D000A25590 /* DEMOPronunciationsViewController.m */,
+				DC1BD3E31AD4FB1A00A25590 /* DEMOWordLookup.h */,
+				DC1BD3E41AD4FB1A00A25590 /* DEMOWordLookup.m */,
+				DCBB531B1AD4E19500C4592C /* NSDate+DEMOAdditions.h */,
+				DCBB531C1AD4E19500C4592C /* NSDate+DEMOAdditions.m */,
 				DCD8F90C1ABFC53700E2E7E8 /* Main.storyboard */,
+				DCBB53111AD223F000C4592C /* Resources */,
 				DCD8F90F1ABFC53700E2E7E8 /* Images.xcassets */,
 				DCD8F9111ABFC53700E2E7E8 /* LaunchScreen.xib */,
 				DCD8F9021ABFC53700E2E7E8 /* Supporting Files */,
@@ -122,6 +168,7 @@
 			children = (
 				DCD8F9031ABFC53700E2E7E8 /* Info.plist */,
 				DCD8F9041ABFC53700E2E7E8 /* main.m */,
+				DC1BD3ED1AD6236300A25590 /* StyleSettings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +202,7 @@
 				DCD8F8FC1ABFC53700E2E7E8 /* Frameworks */,
 				DCD8F8FD1ABFC53700E2E7E8 /* Resources */,
 				D048E9BB2294C83854869800 /* Copy Pods Resources */,
+				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
 			);
 			buildRules = (
 			);
@@ -189,6 +237,7 @@
 		DCD8F8F71ABFC53700E2E7E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DEMO;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Harlan Kellaway";
 				TargetAttributes = {
@@ -226,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD8F90E1ABFC53700E2E7E8 /* Main.storyboard in Resources */,
+				DC1BD3EE1AD6236300A25590 /* StyleSettings.plist in Resources */,
 				DCD8F9131ABFC53700E2E7E8 /* LaunchScreen.xib in Resources */,
 				DCD8F9101ABFC53700E2E7E8 /* Images.xcassets in Resources */,
+				DCBB53171AD22FFC00C4592C /* icon-arrow-right.png in Resources */,
+				DCBB53131AD2240E00C4592C /* logo-wordnik.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +323,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNKWordLookup-Demo/Pods-HNKWordLookup-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Objective-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\"?HNK,DEMO \nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,9 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCD8F90B1ABFC53700E2E7E8 /* ViewController.m in Sources */,
-				DCD8F9081ABFC53700E2E7E8 /* AppDelegate.m in Sources */,
+				DC47708A1AD8D212001C97EC /* DEMOPronunciationsTableViewCell.m in Sources */,
+				DCBB531D1AD4E19500C4592C /* NSDate+DEMOAdditions.m in Sources */,
+				DCD8F9081ABFC53700E2E7E8 /* DEMOAppDelegate.m in Sources */,
+				DC1BD3E81AD505D000A25590 /* DEMOPronunciationsViewController.m in Sources */,
+				DCBB531A1AD24AD900C4592C /* DEMODefinitionsViewController.m in Sources */,
 				DCD8F9051ABFC53700E2E7E8 /* main.m in Sources */,
+				DC1BD41A1AD794AB00A25590 /* DEMODefinitionsTableViewCell.m in Sources */,
+				DC1BD3E51AD4FB1A00A25590 /* DEMOWordLookup.m in Sources */,
+				DCF3B4861AD2188600DF4A77 /* DEMOHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,6 +477,7 @@
 			baseConfigurationReference = FAECDC3BEAEFCAF6E48A61D2 /* Pods-HNKWordLookup-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "HNKWordLookup-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +489,7 @@
 			baseConfigurationReference = 318085C02712CF30461441C3 /* Pods-HNKWordLookup-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "HNKWordLookup-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

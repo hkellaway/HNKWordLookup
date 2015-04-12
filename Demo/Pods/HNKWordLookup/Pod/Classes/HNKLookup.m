@@ -30,7 +30,7 @@
 
 #import <Mantle/MTLJSONAdapter.h>
 
-static NSString *const kBaseUrl = @"http://api.wordnik.com:80/v4";
+static NSString *const kHNKLookupBaseUrl = @"http://api.wordnik.com:80/v4";
 
 @implementation HNKLookup
 
@@ -66,7 +66,7 @@ static HNKLookup *sharedInstance = nil;
   self = [super init];
 
   if (self) {
-    NSURL *url = [NSURL URLWithString:kBaseUrl];
+    NSURL *url = [NSURL URLWithString:kHNKLookupBaseUrl];
     [HNKHttpSessionManager setupSharedManager:url apiKey:apiKey];
   }
 
