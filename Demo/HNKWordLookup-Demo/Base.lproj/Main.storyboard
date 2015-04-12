@@ -529,13 +529,13 @@
                                                     <exclude reference="xZq-3d-JHu"/>
                                                     <exclude reference="Mrt-4J-D97"/>
                                                     <exclude reference="daa-A4-z4J"/>
-                                                    <exclude reference="ZTo-qo-Cwc"/>
-                                                    <exclude reference="sVn-IT-3Ri"/>
                                                     <exclude reference="a0E-Dq-mmG"/>
                                                     <exclude reference="byB-Lo-5Qx"/>
                                                     <exclude reference="czA-m1-NJB"/>
                                                     <exclude reference="p5W-bT-yqU"/>
                                                     <exclude reference="uiQ-md-8dt"/>
+                                                    <exclude reference="ZTo-qo-Cwc"/>
+                                                    <exclude reference="sVn-IT-3Ri"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -543,6 +543,7 @@
                                         <connections>
                                             <outlet property="attributionLabel" destination="WuA-TG-1h1" id="J1V-Ug-gZE"/>
                                             <outlet property="definitionLabel" destination="vEI-gv-DAh" id="GR1-Se-CUa"/>
+                                            <outlet property="partOfSpeechLabel" destination="CZK-ao-ohM" id="7QA-3H-caS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -583,9 +584,6 @@
                             <constraint firstItem="MnM-Yp-OvR" firstAttribute="top" secondItem="YzS-0y-yon" secondAttribute="bottom" constant="16" id="yTp-uj-Vwv"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="8HD-ER-LV2"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="T2G-Tc-TmQ"/>
                                 <exclude reference="yFp-Y1-bip"/>
