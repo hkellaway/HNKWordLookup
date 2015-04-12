@@ -53,10 +53,10 @@ typedef NS_OPTIONS(NSInteger, HNKWordDefinitionPartOfSpeech) {
   HNKWordDefinitionPartOfSpeechNameGiven = 1 << 11,
   HNKWordDefinitionPartOfSpeechNoun = 1 << 12,
   HNKWordDefinitionPartOfSpeechNounPlural = 1 << 13,
-  HNKWordDefinitionPartOfSpeechNounProper = 1 << 14,
-  HNKWordDefinitionPartOfSpeechNounProperPlural = 1 << 15,
-  HNKWordDefinitionPartOfSpeechNounProperPosessive = 1 << 16,
-  HNKWordDefinitionPartOfSpeechNounPosessive = 1 << 17,
+  HNKWordDefinitionPartOfSpeechNounPosessive = 1 << 14,
+  HNKWordDefinitionPartOfSpeechNounProper = 1 << 15,
+  HNKWordDefinitionPartOfSpeechNounProperPlural = 1 << 16,
+  HNKWordDefinitionPartOfSpeechNounProperPosessive = 1 << 17,
   HNKWordDefinitionPartOfSpeechParticiplePast = 1 << 18,
   HNKWordDefinitionPartOfSpeechPrefixPhrasal = 1 << 19,
   HNKWordDefinitionPartOfSpeechPreposition = 1 << 20,
@@ -74,7 +74,11 @@ typedef NS_OPTIONS(NSInteger, HNKWordDefinitionPartOfSpeech) {
 @property (nonatomic, copy) NSString *definitionText;
 @property (nonatomic, copy) NSString *word;
 @property (nonatomic, assign) HNKWordDefinitionPartOfSpeech partOfSpeech;
-@property (nonatomic, readonly) NSString *partOfSpeechString;
 @property (nonatomic, copy) NSString *attribution;
+
+/**
+ *  String equivalent for partOfSpeech
+ */
+- (NSString *)partOfSpeechString;
 
 @end
