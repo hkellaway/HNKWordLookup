@@ -468,11 +468,11 @@
                                     <constraint firstItem="wzj-NB-jwk" firstAttribute="leading" secondItem="MnM-Yp-OvR" secondAttribute="leading" constant="-16" id="h1x-5k-ZsU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="veX-ju-H3g" userLabel="Definitions Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="veX-ju-H3g" userLabel="Definitions Table View">
                                 <rect key="frame" x="0.0" y="94" width="414" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoDefinitionsCellReuseIdentifer" rowHeight="126" id="1aN-2B-Xmw" userLabel="Definitions Cell" customClass="DEMODefinitionsTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoDefinitionsCellReuseIdentifer" rowHeight="140" id="1aN-2B-Xmw" userLabel="Definitions Cell" customClass="DEMODefinitionsTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aN-2B-Xmw" id="9of-2v-jR4">
@@ -483,21 +483,41 @@
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuA-TG-1h1" userLabel="Attribution Label">
-                                                    <rect key="frame" x="8" y="105" width="390" height="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part of Speech:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTU-c5-5gO" userLabel="Part of Speech:">
+                                                    <rect key="frame" x="8" y="103" width="57" height="12"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attribution" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuA-TG-1h1" userLabel="Attribution Label">
+                                                    <rect key="frame" x="8" y="119" width="390" height="12"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-ao-ohM" userLabel="Part of Speech Label">
+                                                    <rect key="frame" x="69" y="103" width="20" height="12"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="CZK-ao-ohM" firstAttribute="centerY" secondItem="aTU-c5-5gO" secondAttribute="centerY" id="EJZ-VU-cLA"/>
                                                 <constraint firstAttribute="centerY" secondItem="vEI-gv-DAh" secondAttribute="centerY" id="JqR-m7-v0v"/>
+                                                <constraint firstItem="aTU-c5-5gO" firstAttribute="leading" secondItem="CZK-ao-ohM" secondAttribute="trailing" constant="4" id="Mrt-4J-D97"/>
+                                                <constraint firstItem="CZK-ao-ohM" firstAttribute="leading" secondItem="aTU-c5-5gO" secondAttribute="trailing" constant="4" id="Pkp-WC-eWf"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vEI-gv-DAh" secondAttribute="trailing" constant="8" id="R5N-8A-lyi"/>
                                                 <constraint firstItem="vEI-gv-DAh" firstAttribute="trailing" secondItem="WuA-TG-1h1" secondAttribute="trailing" id="Saa-yG-7TN"/>
                                                 <constraint firstItem="vEI-gv-DAh" firstAttribute="top" secondItem="9of-2v-jR4" secondAttribute="topMargin" id="Ub6-RT-F22"/>
+                                                <constraint firstItem="CZK-ao-ohM" firstAttribute="baseline" secondItem="aTU-c5-5gO" secondAttribute="baseline" id="ZTo-qo-Cwc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="WuA-TG-1h1" secondAttribute="trailing" constant="329" id="a0E-Dq-mmG"/>
+                                                <constraint firstItem="WuA-TG-1h1" firstAttribute="top" secondItem="aTU-c5-5gO" secondAttribute="bottom" constant="4" id="bME-uS-tQt"/>
+                                                <constraint firstItem="WuA-TG-1h1" firstAttribute="trailing" secondItem="aTU-c5-5gO" secondAttribute="trailing" id="byB-Lo-5Qx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="WuA-TG-1h1" secondAttribute="trailing" constant="329" id="czA-m1-NJB"/>
+                                                <constraint firstItem="aTU-c5-5gO" firstAttribute="leading" secondItem="CZK-ao-ohM" secondAttribute="trailing" constant="-110" id="daa-A4-z4J"/>
+                                                <constraint firstItem="WuA-TG-1h1" firstAttribute="leading" secondItem="aTU-c5-5gO" secondAttribute="leading" id="ddL-st-Jcy"/>
                                                 <constraint firstItem="vEI-gv-DAh" firstAttribute="leading" secondItem="WuA-TG-1h1" secondAttribute="leading" id="lq2-Dw-DOT"/>
+                                                <constraint firstItem="WuA-TG-1h1" firstAttribute="top" secondItem="CZK-ao-ohM" secondAttribute="bottom" constant="4" id="p5W-bT-yqU"/>
+                                                <constraint firstItem="CZK-ao-ohM" firstAttribute="leading" secondItem="aTU-c5-5gO" secondAttribute="trailing" id="sVn-IT-3Ri"/>
                                                 <constraint firstItem="WuA-TG-1h1" firstAttribute="leading" secondItem="9of-2v-jR4" secondAttribute="leadingMargin" constant="41" id="uiQ-md-8dt"/>
                                                 <constraint firstItem="vEI-gv-DAh" firstAttribute="leading" secondItem="9of-2v-jR4" secondAttribute="leadingMargin" id="vTn-Ju-MAr"/>
                                                 <constraint firstItem="WuA-TG-1h1" firstAttribute="bottom" secondItem="9of-2v-jR4" secondAttribute="bottomMargin" id="wHp-6O-7Vb"/>
@@ -507,9 +527,15 @@
                                                 <mask key="constraints">
                                                     <exclude reference="JqR-m7-v0v"/>
                                                     <exclude reference="xZq-3d-JHu"/>
+                                                    <exclude reference="Mrt-4J-D97"/>
+                                                    <exclude reference="daa-A4-z4J"/>
                                                     <exclude reference="a0E-Dq-mmG"/>
+                                                    <exclude reference="byB-Lo-5Qx"/>
                                                     <exclude reference="czA-m1-NJB"/>
+                                                    <exclude reference="p5W-bT-yqU"/>
                                                     <exclude reference="uiQ-md-8dt"/>
+                                                    <exclude reference="ZTo-qo-Cwc"/>
+                                                    <exclude reference="sVn-IT-3Ri"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -517,6 +543,7 @@
                                         <connections>
                                             <outlet property="attributionLabel" destination="WuA-TG-1h1" id="J1V-Ug-gZE"/>
                                             <outlet property="definitionLabel" destination="vEI-gv-DAh" id="GR1-Se-CUa"/>
+                                            <outlet property="partOfSpeechLabel" destination="CZK-ao-ohM" id="7QA-3H-caS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
