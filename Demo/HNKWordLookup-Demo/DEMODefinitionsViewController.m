@@ -68,6 +68,7 @@ static NSString *const kDemoDefinitionsCellReuseIdentifier =
 
   HNKWordDefinition *definition = self.definitions[indexPath.row];
   cell.definitionLabel.text = definition.definitionText;
+  cell.partOfSpeechLabel.text = definition.partOfSpeechString;
   cell.attributionLabel.text = definition.attribution;
 
   return cell;
