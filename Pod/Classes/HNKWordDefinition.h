@@ -53,19 +53,20 @@ typedef NS_OPTIONS(NSInteger, HNKWordDefinitionPartOfSpeech) {
   HNKWordDefinitionPartOfSpeechNameGiven = 1 << 11,
   HNKWordDefinitionPartOfSpeechNoun = 1 << 12,
   HNKWordDefinitionPartOfSpeechNounPlural = 1 << 13,
-  HNKWordDefinitionPartOfSpeechNounProperPlural = 1 << 14,
-  HNKWordDefinitionPartOfSpeechNounProperPosessive = 1 << 15,
-  HNKWordDefinitionPartOfSpeechNounPosessive = 1 << 16,
-  HNKWordDefinitionPartOfSpeechParticiplePast = 1 << 17,
-  HNKWordDefinitionPartOfSpeechPrefixPhrasal = 1 << 18,
-  HNKWordDefinitionPartOfSpeechPreposition = 1 << 19,
-  HNKWordDefinitionPartOfSpeechPronoun = 1 << 20,
-  HNKWordDefinitionPartOfSpeechSuffix = 1 << 21,
-  HNKWordDefinitionPartOfSpeechVerb = 1 << 22,
-  HNKWordDefinitionPartOfSpeechVerbAuxiliary = 1 << 23,
-  HNKWordDefinitionPartOfSpeechVerbIntransitive = 1 << 24,
-  HNKWordDefinitionPartOfSpeechVerbPhrasal = 1 << 25,
-  HNKWordDefinitionPartOfSpeechVerbTransitive = 1 << 26
+  HNKWordDefinitionPartOfSpeechNounProper = 1 << 14,
+  HNKWordDefinitionPartOfSpeechNounProperPlural = 1 << 15,
+  HNKWordDefinitionPartOfSpeechNounProperPosessive = 1 << 16,
+  HNKWordDefinitionPartOfSpeechNounPosessive = 1 << 17,
+  HNKWordDefinitionPartOfSpeechParticiplePast = 1 << 18,
+  HNKWordDefinitionPartOfSpeechPrefixPhrasal = 1 << 19,
+  HNKWordDefinitionPartOfSpeechPreposition = 1 << 20,
+  HNKWordDefinitionPartOfSpeechPronoun = 1 << 21,
+  HNKWordDefinitionPartOfSpeechSuffix = 1 << 22,
+  HNKWordDefinitionPartOfSpeechVerb = 1 << 23,
+  HNKWordDefinitionPartOfSpeechVerbAuxiliary = 1 << 24,
+  HNKWordDefinitionPartOfSpeechVerbIntransitive = 1 << 25,
+  HNKWordDefinitionPartOfSpeechVerbPhrasal = 1 << 26,
+  HNKWordDefinitionPartOfSpeechVerbTransitive = 1 << 27
 };
 
 @interface HNKWordDefinition : MTLModel <MTLJSONSerializing>

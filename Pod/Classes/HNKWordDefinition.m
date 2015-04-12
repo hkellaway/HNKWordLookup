@@ -81,6 +81,7 @@ static NSDictionary *HNKPartsOfSpeechDictionary;
     @"noun" : @(HNKWordDefinitionPartOfSpeechNoun),
     @"noun-plural" : @(HNKWordDefinitionPartOfSpeechNounPlural),
     @"noun-posessive" : @(HNKWordDefinitionPartOfSpeechNounPosessive),
+    @"proper-noun" : @(HNKWordDefinitionPartOfSpeechNounProper),
     @"proper-noun-plural" : @(HNKWordDefinitionPartOfSpeechNounProperPlural),
     @"proper-noun-possessive" :
         @(HNKWordDefinitionPartOfSpeechNounProperPosessive),
