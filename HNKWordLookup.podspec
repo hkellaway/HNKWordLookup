@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HNKWordLookup"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "Performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day."
   s.homepage     = "http://cocoapods.org/pods/HNKWordLookup"
   s.license      = { :type => "MIT", :file => "LICENSE" }
