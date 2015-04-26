@@ -7,6 +7,8 @@
 
 HNKWordLookup is a Cocoapod that performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
 
+<img src="https://raw.githubusercontent.com/hkellaway/HNKWordLookup/develop/Demo/demo.gif" title="demo gif" height="600" />
+
 ## Communication
 
 - If you **have found a bug**, _and can provide steps to reliably reproduce it_, [open an issue](https://github.com/hkellaway/HNKWordLookup/issues/new).
