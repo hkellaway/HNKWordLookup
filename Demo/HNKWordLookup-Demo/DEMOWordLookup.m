@@ -14,7 +14,7 @@
 
 #warning Replace YOUR_API_KEY with your API key
 static NSString *const kDemoApiKey =
-    @"6c178ad0c2380bea5f47519d6924aade3522e60a23fa51db1";
+    @"YOUR_API_KEY";
 
 @interface DEMOWordLookup () <HNKLookupDelegate>
 
