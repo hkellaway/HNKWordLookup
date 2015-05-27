@@ -163,7 +163,7 @@ To have the activity indicator displayed, the class that implements the `HNKLook
 
 ## Credits
 
-HNKWordLookup was created by [Harlan Kellaway](http://harlankellaway.com).
+HNKWordLookup was created by [Harlan Kellaway](http://harlankellaway.com) and uses the [Wordnik API](http://developer.wordnik.com/docs.html).
 
 ## License
 
