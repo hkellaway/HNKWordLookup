@@ -1,6 +1,7 @@
 # HNKWordLookup
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/HNKWordLookup.svg)](http://cocoapods.org/pods/HNKWordLookup)
+![Objective-C](https://img.shields.io/badge/language-objective--c-blue.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/l/HNKWordLookup.svg)](https://raw.githubusercontent.com/hkellaway/HNKWordLookup/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/p/HNKWordLookup.svg)](http://cocoapods.org/pods/HNKWordLookup)
 [![Build Status](https://travis-ci.org/hkellaway/HNKWordLookup.svg?branch=master)](https://travis-ci.org/hkellaway/HNKWordLookup)
