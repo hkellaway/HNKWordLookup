@@ -23,7 +23,7 @@ HNKWordLookup is a Cocoapod that performs standard English-language dictionary q
 
 ### Installation with CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like HNKWordLookup in your projects. Cocoapods is the preferred way to incorporate HNKWordLookup in your project; if you are unfamiliar with how to install Cocoapods or how create a Podfile, there are many tutorials online.
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like HNKWordLookup in your projects. CocoaPods is the preferred way to incorporate HNKWordLookup in your project; if you are unfamiliar with how to install CocoaPods or how create a Podfile, there are many tutorials online.
 
 #### Podfile
 
